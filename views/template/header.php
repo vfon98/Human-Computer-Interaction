@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Quản lý danh sách học viên</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 
@@ -19,11 +20,11 @@
 		<div class="bg-dark border-right" id="sidebar-wrapper">
 			<div class="sidebar-heading">QL CTDT</div>
 			<div class="list-group list-group-flush">
-				<a href="#" class="list-group-item list-group-item-action bg-dark active">
+				<a href="../manager/registrars.php" class="list-group-item list-group-item-action bg-dark active">
 					Danh sách đăng ký
 				</a>
 				<a href="../manager/education_programs.php" class="list-group-item list-group-item-action bg-dark">Quản lý CTDT</a>
-				<a href="#" class="list-group-item list-group-item-action bg-dark">Overview</a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark">Quản lý môn học</a>
 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
 				<a href="#" class="list-group-item list-group-item-action bg-dark">Profile</a>
 				<a href="#" class="list-group-item list-group-item-action bg-dark">Status</a>
@@ -40,9 +41,9 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="/">Trang chủ</a>
 					</li>
-					<li class="nav-item">
+<!-- 					<li class="nav-item">
 						<a class="nav-link" href="#">Link</a>
-					</li>
+					</li> -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Tài khoản

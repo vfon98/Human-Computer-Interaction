@@ -20,13 +20,13 @@
 					<a class="btn btn-success js-btn-approve"
 						href="/php/student/approve_student.php?id='.$row['st_id'].'"
 					>
-						<i class="fa fa-check"></i> Xét duyệt
+						<i class="fa fa-check"></i> Duyệt
 					</a>
 
 					<a class="btn btn-danger js-btn-decline"
 						href="/php/student/decline_student.php?id='.$row['st_id'].'"
 					>
-						<i class="fa fa-times"></i> Loại bỏ
+						<i class="fa fa-times"></i> Loại
 					</a>
 				</td>
 			</tr>';

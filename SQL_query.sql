@@ -20,7 +20,7 @@ INSERT INTO programs(name, tuition) VALUES
 CREATE TABLE students (
 	id INT AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    birthday VARCHAR(50),
+    birthday DATE,
     email VARCHAR(100),
     address VARCHAR(200),
     status VARCHAR(50),

@@ -3,13 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Đăng ký học</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	  <div class="container">
+	    <a class="navbar-brand" href="/">Tương tác người máy</a>
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item">
+	          <a class="nav-link" href="/">Trang chủ</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#">Liên hệ</a>
+	        </li>
+	        <li class="nav-item active">
+	          <a class="nav-link" href="/views/register.php">Đăng ký học</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/views/manager/registrars.php">Đăng nhập</a>
+	        </li>
+	      </ul>
+	  </div>
+	</nav>
+
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-6">
 				<form id="js-register-form" action="/php/student/register_program.php" method="POST">
@@ -34,7 +55,7 @@
 						<label>Chọn khóa học</label>
 						<select id="" name="program_id" class="form-control" required>
 							<option value="" disabled selected>--- Chọn khóa học muốn đăng ký ---</option>
-							<?php require '../php/program/get_program_name.php'; ?>
+							<?php require '../php/program/get_name.php'; ?>
 						</select>
 					</fieldset>
 
@@ -53,19 +74,25 @@
 			</div>
 
 			<div class="col-md-6">
-				<table class="table">
-					<h2>Danh sách chương trình đào tạo</h2>
-					<thead>
-						<tr>
-							<th>STT</th>
-							<th>Tên chương trình</th>
-							<th>Học phí</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php require '../php/program/get_all_program.php'; ?>
-					</tbody>
-				</table>
+				<div class="card mt-2">
+					<div class="card-header">
+						<h2>Danh sách chương trình đào tạo</h2>
+					</div>
+					<div class="card-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>STT</th>
+									<th>Tên chương trình</th>
+									<th>Học phí</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php require '../php/program/get_all.php'; ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

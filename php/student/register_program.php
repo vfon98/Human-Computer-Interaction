@@ -13,6 +13,7 @@
 		$sql = "INSERT INTO students (name, birthday, email, address, status, program_id, username)
 			VALUES ('$name', '$birthday', '$email', '$address', 'Có ý thích', '$program_id', '$username')";
 		$conn->query(htmlspecialchars($sql));
+		echo $sql;
 		// INSERT CANDIDATE ACCOUNT
 		$sql = "INSERT INTO accounts (username, password) VALUES ('$username', '$password')";
 		$conn->query(htmlspecialchars($sql));
