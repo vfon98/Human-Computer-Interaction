@@ -8,5 +8,6 @@
 			VALUES ($program_id, $subject_id)";
 		echo "$sql";
 		$conn->query($sql);
+		header('location: '.$_SERVER['HTTP_REFERER']);
 	}
 ?>

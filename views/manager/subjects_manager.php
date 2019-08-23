@@ -1,5 +1,7 @@
 <?php include '../template/header.php'; ?>
 
+<?php include '../../php/subject/suggest_next_id.php'; ?>
+
 <div class="container-fluid p-3">
 	<div class="row">
 		<div class="col-4">
@@ -11,7 +13,7 @@
 					<form action="/php/subject/create.php" method="POST">
 						<fieldset class="form-group">
 							<label>Mã môn</label>
-							<input name="sub-id" type="text" class="form-control" placeholder="Nhập tên chương trình" maxlength="50" value="CT001" required>
+							<input name="sub-id" type="text" class="form-control" placeholder="Nhập tên chương trình" maxlength="50" value="<?php echo $next_id; ?>" readonly>
 						</fieldset>
 						<fieldset class="form-group">
 							<label>Tên môn</label>

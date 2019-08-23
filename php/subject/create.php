@@ -6,7 +6,11 @@
 		require '../../php/connection.php';
 		$sql = "INSERT INTO subjects (sub_id, name, teacher_id) 
 			VALUES ('$sub_id', '$name', $teacher_id)";
+		echo $sql;
 		$conn->query(htmlspecialchars($sql));
 		header('location: '.$_SERVER['HTTP_REFERER']);
+	}
+	else {
+		echo "failed";
 	}
 ?>

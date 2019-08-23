@@ -10,7 +10,9 @@
 			<td class="text-left">'.$row['name'].'</td>
 			<td>'.$row['duration'].'</td>
 			<td>'.$row['begin_at'].'</td>
-			<td>'.$row['tuition'].' &#8363;</td>
+			<td>'
+				.number_format($row['tuition']).' &#8363;
+			</td>
 			<td>
 				<a href="/views/manager/program_detail.php?id='.$row['id'].'" class="btn btn-warning"><i class="fa fa-cog"></i> Quản lý
 				</a>

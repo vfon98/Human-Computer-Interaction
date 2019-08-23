@@ -63,6 +63,7 @@
 					<fieldset class="form-group">
 						<label>Tên đăng nhập</label>
 						<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" required>
+						<div class="invalid-feedback">Wrong</div>
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Mật khẩu</label>
