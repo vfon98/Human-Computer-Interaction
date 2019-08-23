@@ -15,7 +15,10 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	  <div class="container">
-	    <a class="navbar-brand" href="#">Tương tác người máy</a>
+	    <a class="navbar-brand" href="#">
+	    	<!-- <img src="/assets/img/logo_ctu.gif" alt="logo" style="height: 2rem"> -->
+	    	Quản lý đào tạo
+		</a>
 	      <ul class="navbar-nav ml-auto">
 	        <li class="nav-item active">
 	          <a class="nav-link" href="#">Trang chủ</a>

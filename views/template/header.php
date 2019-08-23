@@ -23,11 +23,11 @@
 				<a href="../manager/registrars.php" class="list-group-item list-group-item-action bg-dark active">
 					Danh sách đăng ký
 				</a>
-				<a href="../manager/education_programs.php" class="list-group-item list-group-item-action bg-dark">Quản lý CTDT</a>
-				<a href="#" class="list-group-item list-group-item-action bg-dark">Quản lý môn học</a>
-				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
+				<a href="../manager/programs_manager.php" class="list-group-item list-group-item-action bg-dark">Quản lý CTDT</a>
+				<a href="../manager/subjects_manager.php" class="list-group-item list-group-item-action bg-dark">Quản lý môn học</a>
+<!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
 				<a href="#" class="list-group-item list-group-item-action bg-dark">Profile</a>
-				<a href="#" class="list-group-item list-group-item-action bg-dark">Status</a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark">Status</a> -->
 			</div>
 		</div>
 		<!-- /#sidebar-wrapper -->

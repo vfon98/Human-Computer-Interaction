@@ -9,14 +9,18 @@
 		$username = $_POST['username'];
 		$password = md5($_POST['password']);
 
+
 		// INSERT NEW CANDIDATE
 		$sql = "INSERT INTO students (name, birthday, email, address, status, program_id, username)
 			VALUES ('$name', '$birthday', '$email', '$address', 'Có ý thích', '$program_id', '$username')";
 		$conn->query(htmlspecialchars($sql));
-		echo $sql;
 		// INSERT CANDIDATE ACCOUNT
 		$sql = "INSERT INTO accounts (username, password) VALUES ('$username', '$password')";
 		$conn->query(htmlspecialchars($sql));
+		
+		echo "<h2>Đăng ký thành công !</h2>";
+		echo "<h3>Vui lòng chờ Quản lý CTDT xét duyệt</h3>";
+		echo "<a href='/'>Trở về trang chủ</a>";
 		// header('location: /');
 	}
 ?>

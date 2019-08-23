@@ -12,7 +12,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	  <div class="container">
-	    <a class="navbar-brand" href="/">Tương tác người máy</a>
+	    <a class="navbar-brand" href="/">Quản lý đào tạo</a>
 	      <ul class="navbar-nav ml-auto">
 	        <li class="nav-item">
 	          <a class="nav-link" href="/">Trang chủ</a>
@@ -32,7 +32,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 shadow">
 				<form id="js-register-form" action="/php/student/register_program.php" method="POST">
 					<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin chung</legend>
 					<fieldset class="form-group">
@@ -62,11 +62,11 @@
 					<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin đăng nhập</legend>
 					<fieldset class="form-group">
 						<label>Tên đăng nhập</label>
-						<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana">
+						<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" required>
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Mật khẩu</label>
-						<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự">
+						<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự" required>
 					</fieldset>
 					<hr>
 					<button type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block">Đăng ký ngay</button>
@@ -74,9 +74,9 @@
 			</div>
 
 			<div class="col-md-6">
-				<div class="card mt-2">
+				<div class="card mt-2 shadow">
 					<div class="card-header">
-						<h2>Danh sách chương trình đào tạo</h2>
+						<h2 class="text-center">Danh sách chương trình đào tạo</h2>
 					</div>
 					<div class="card-body">
 						<table class="table">

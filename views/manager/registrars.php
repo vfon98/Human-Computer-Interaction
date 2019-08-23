@@ -13,7 +13,7 @@
 					<th>Địa chỉ</th>
 					<th>Chương trình</th>
 					<th>Ngày đăng ký</th>
-					<th>Tùy chọn</th>
+					<th class="text-center">Tùy chọn</th>
 				</tr>
 			</thead>
 			<tbody>

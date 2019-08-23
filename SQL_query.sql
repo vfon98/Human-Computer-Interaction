@@ -1,6 +1,8 @@
 CREATE TABLE programs (
 	id INT AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
+    duration VARCHAR(50) DEFAULT '4 năm',
+    begin_at DATE DEFAULT CURRENT_DATE;
     tuition DECIMAL(12, 0) DEFAULT 0,
     KEY(id)
 );
@@ -36,4 +38,26 @@ CREATE TABLE accounts (
     password VARCHAR(200),
     role VARCHAR(50) DEFAULT 'student',
     KEY(id)
-)
+);
+
+CREATE TABLE teachers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    username VARCHAR(50),
+    created_at DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sub_id VARCHAR(10) NOT NULL,
+    name VARCHAR(100),
+    teacher_id INT,
+    created_at DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE program_subject (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    program_id INT,
+    subject_id INT
+);
