@@ -30,7 +30,7 @@
 	          <a class="nav-link" href="./views/register.php">Đăng ký học</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="./views/manager/registrars.php">Đăng nhập</a>
+	          <a class="nav-link" href="./views/login.php">Đăng nhập</a>
 	        </li>
 	      </ul>
 	  </div>

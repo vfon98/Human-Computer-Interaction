@@ -22,3 +22,13 @@ body, html {
 .table > tbody > tr > td {
      vertical-align: middle;
 }
+
+#table-student > tbody > tr > td:first-child {
+	width: 9em;
+	text-align: right;
+	font-weight: 500;
+}
+
+#table-student > tbody > tr > td:last-child {
+	padding-left: 0.7em;
+}

@@ -49,7 +49,7 @@
 							<a class="dropdown-item" href="#">Action</a>
 							<a class="dropdown-item" href="#">Another action</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Đăng xuất</a>
+							<a class="dropdown-item" href="../logout.php">Đăng xuất</a>
 						</div>
 					</li>
 				</ul>
