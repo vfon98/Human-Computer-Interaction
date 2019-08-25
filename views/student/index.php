@@ -1,13 +1,15 @@
 <?php require 'check_role.php'; ?>
-<?php include '../template/header.php'; ?>
 <?php require '../../php/student/get_by_username.php'; ?>
+<?php include '../template/header.php'; ?>
 
 <div class="container-fluid pt-3">
 	<div class="row">
 		<div class="col-5">
 			<div class="card shadow">
-				<div class="card-header text-center pb-1"><h5>Thông tin sinh viên</h5></div>
-				<div class="card-body">
+				<div class="card-header text-center pb-1 bg-secondary text-white">
+					<h5>Thông tin sinh viên</h5>
+				</div>
+				<div class="card-body py-2">
 					<table class="table table-sm table-inverse table-hover table-borderless" id="table-student">
 						<thead>
 						</thead>
@@ -48,9 +50,18 @@
 				</div>
 			</div>
 		</div>
+		<!-- TUITION MODAL -->
+		<?php
+			if ($_SESSION['student_is_paid'] == false) {
+				require 'pay_tuition.php';
+			}
+		?>
+
 		<div class="col-7">
 			<div class="card shadow">
-				<div class="card-header text-center pb-1"><h5>Chương trình hiện tại</h5></div>
+				<div class="card-header text-center pb-1 bg-secondary text-white">
+					<h5>Chương trình hiện tại</h5>
+				</div>
 				<div class="card-body">
 					<table class="table table-inverse table-hover table-striped">
 						<thead>
@@ -87,5 +98,6 @@
 		</div>
 	</div>
 </div>
+
 
 <?php include '../template/footer.php'; ?>
