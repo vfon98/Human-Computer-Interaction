@@ -1,3 +1,4 @@
+<?php require 'check_role.php'; ?>
 <?php include '../template/header.php'; ?>
 
 <div class="container-fluid p-3" id="root">

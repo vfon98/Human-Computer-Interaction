@@ -6,8 +6,14 @@
 			case 'student':
 				header('location: student');
 				break;
+			case 'teacher':
+				header('location: teacher');
+				break;
 			case 'manager':
 				header('location: manager');
+				break;
+			case 'admin':
+				header('location: admin');
 				break;
 		}
 	}
@@ -93,25 +99,25 @@
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 			<div class="input-group">
 				<div class="input-group-prepend">
-					<span class="input-group-text"><i class="fa fa-user pr-1"></i></span>
+					<span class="input-group-text"><i class="fa fa-user fa-fw"></i></span>
 				</div>
-				<input type="text" name="username" class="form-control" placeholder="Username" required autofocus />
+				<input type="text" name="username" class="form-control" placeholder="Tên đăng nhập" required autofocus />
 			</div><br />
 			
 			<div class="input-group">
 				<div class="input-group-prepend">
-					<span class="input-group-text"><i class="fa fa-key"></i></span>
+					<span class="input-group-text"><i class="fa fa-key fa-fw"></i></span>
 				</div>
-				<input type="password" name="pass" class="form-control" placeholder="Password" required/>
+				<input type="password" name="pass" class="form-control" placeholder="Mật khẩu" required/>
 			</div><br />
 			<div class="text-danger mt-n3 mb-2"><?php echo $pass_error; ?></div>
-			<button type="submit" name="btn-login" class="btn btn-success btn-lg btn-block">Login</button>
+			<button type="submit" name="btn-login" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
 		</form>
 
 		<hr>
 		<div class="footer">
 			<p>Chưa đăng ký học? <a href="/views/register.php">Đăng ký ngay !</a></p>
-			<p><a href="/"><i class="fa fa-home"></i> Trở về trang chủ </a></p>
+			<p><a href="/"><i class="fa fa-home fa-lg"></i> Trở về trang chủ </a></p>
 		</div>
 
 	</div>

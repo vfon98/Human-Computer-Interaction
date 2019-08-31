@@ -1,5 +1,5 @@
 <?php
-	if (isset($_POST)) {
+	if (isset($_POST) && $_SESSION['logged_role'] == 'manager') {
 		$program_id = $_POST['program-id'];
 		$subject_id = $_POST['subject-id'];
 
@@ -9,5 +9,8 @@
 		echo "$sql";
 		$conn->query($sql);
 		header('location: '.$_SERVER['HTTP_REFERER']);
+	}
+	else {
+		header('location: ../views/error/unauthorized.php');
 	}
 ?>

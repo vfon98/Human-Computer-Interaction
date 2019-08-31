@@ -17,13 +17,20 @@
 <body>
 	<div class="d-flex" id="wrapper">
 		<!-- Sidebar -->
+		<!-- CHECK CURRENT ROLE BASED ON SITE ADDRESS -->
 		<?php
 			switch (basename(getcwd())) {
+				case 'student':
+					include 'sidebar/student.php';
+					break;
+				case 'teacher':
+					include 'sidebar/teacher.php';
+					break;
 				case 'manager':
 					include 'sidebar/manager.php';
 					break;
-				case 'student':
-					include 'sidebar/student.php';
+				case 'admin':
+					include 'sidebar/admin.php';
 					break;
 			}
 		?>
@@ -43,13 +50,17 @@
 					</li> -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Tài khoản
+							<i class="fa fa-user"></i> Tài khoản
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
+							<!-- <a class="dropdown-item" href="#">Thay đổi quyền</a> -->
+							<a class="dropdown-item" href="#">
+								<i class="fa fa-wrench text-dark"></i>&nbsp; Sửa thông tin
+							</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="../logout.php">Đăng xuất</a>
+							<a class="dropdown-item" href="../logout.php">
+								<i class="fa fa-power-off text-danger"></i>&nbsp; Đăng xuất
+							</a>
 						</div>
 					</li>
 				</ul>

@@ -1,3 +1,4 @@
+<?php require 'check_role.php'; ?>
 <?php include '../template/header.php'; ?>
 
 <?php include '../../php/subject/suggest_next_id.php'; ?>

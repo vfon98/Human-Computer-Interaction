@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (isset($_SESSION['logged_user']) && $_SESSION['logged_role'] == 'student') {
+	if (isset($_SESSION['logged_user']) && $_SESSION['logged_role'] == 'teacher') {
 		$logged_user = $_SESSION['logged_user'];
 		$logged_role = $_SESSION['logged_role'];
 	}
