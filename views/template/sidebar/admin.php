@@ -1,5 +1,5 @@
 <div class="bg-dark border-right" id="sidebar-wrapper">
-	<div class="sidebar-heading">QL CTDT</div>
+	<div class="sidebar-heading">Quản trị hệ thống</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/admin" class="list-group-item list-group-item-action bg-dark active">
 			Quản lý tài khoản

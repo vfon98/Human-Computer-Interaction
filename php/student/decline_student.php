@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if (isset($_GET['id']) && $_SESSION['logged_role'] ==  'manager') {
 		$id = $_GET['id'];
 		require_once '../../php/connection.php';

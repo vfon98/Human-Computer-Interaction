@@ -1,5 +1,7 @@
 <?php
-	if($_SESSION['logged_role'] == 'manager' && isset($_POST['sub-id']) && isset($_POST['name']) && isset($_POST['teacher'])) {
+	session_start();
+	if($_SESSION['logged_role'] == 'manager' 
+		&& isset($_POST['sub-id']) && isset($_POST['name']) && isset($_POST['teacher'])) {
 		$sub_id = $_POST['sub-id'];
 		$name = $_POST['name'];
 		$teacher_id = $_POST['teacher'];

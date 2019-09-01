@@ -11,7 +11,11 @@
 				<td>'.$row['username'].'</td>
 				<td>'.$row['role'].'</td>
 				<td>
-					<button type="button" class="btn btn-danger"><i class="fa fa-wrench" aria-hidden="true"></i> Đổi MK</button>
+					<button data-toggle="modal" data-target="#modal-change-password"
+						onclick="passIdToModal('.$row['id'].')" type="button" class="btn btn-danger"
+					>
+						<i class="fa fa-wrench" aria-hidden="true"></i> Đổi MK
+					</button>
 				</td>
 			</tr>';
 		}

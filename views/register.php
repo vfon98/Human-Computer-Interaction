@@ -62,12 +62,12 @@
 					<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin đăng nhập</legend>
 					<fieldset class="form-group">
 						<label>Tên đăng nhập</label>
-						<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" required>
+						<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" maxlength="20" required>
 						<div class="invalid-feedback">Wrong</div>
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Mật khẩu</label>
-						<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự" required>
+						<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
 					</fieldset>
 					<hr>
 					<button type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block">Đăng ký ngay</button>

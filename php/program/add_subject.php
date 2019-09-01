@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if (isset($_POST) && $_SESSION['logged_role'] == 'manager') {
 		$program_id = $_POST['program-id'];
 		$subject_id = $_POST['subject-id'];

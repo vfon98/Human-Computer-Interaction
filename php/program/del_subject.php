@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if (isset($_GET['p_id']) && isset($_GET['s_id']) && $_SESSION['logged_role'] == 'manager') {
 		$p_id = $_GET['p_id'];
 		$s_id = $_GET['s_id'];

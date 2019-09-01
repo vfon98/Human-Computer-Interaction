@@ -36,6 +36,9 @@
 			if ($role == 'student') {
 				header('location: student');
 			}
+			if ($role == 'teacher') {
+				header('location: teacher');
+			}
 			if ($role == 'manager') {
 				header('location: manager');
 			}
@@ -75,7 +78,7 @@
 		      background-image: url('../assets/img/login_bg.jpg');
 			  background-size: cover;                      /* <------ */
 	          background-repeat: no-repeat;
-	          background-position: center center; 
+	          /*background-position: center center; */
 		  }
 		  h1{
 		      margin:auto;
@@ -89,7 +92,7 @@
 	</style>
 </head>
 <body>
-	<div class="container shadow bg-light">
+	<div class="container shadow bg-light" id="login-div">
 		<div class="row">
 			<h1><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
 
@@ -121,5 +124,12 @@
 		</div>
 
 	</div>
+	<script>
+		$(document).ready(function() {
+			$('#login-div').animate({
+				marginTop: '-250px'
+			}, 0).animate({marginTop: 0}, 1000);
+		});
+	</script>
 </body>
 </html>

@@ -28,6 +28,7 @@ CREATE TABLE students (
     status VARCHAR(50),
     program_id INT NOT NULL,
     is_paid BIT DEFAULT FALSE,
+    username VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     KEY(id)
 );
