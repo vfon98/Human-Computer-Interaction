@@ -27,6 +27,9 @@
 	          <a class="nav-link" href="#">Liên hệ</a>
 	        </li>
 	        <li class="nav-item">
+	          <a class="nav-link" href="./views/program_list.php">Chương trình đào tạo</a>
+	        </li>
+	        <li class="nav-item">
 	          <a class="nav-link" href="./views/register.php">Đăng ký học</a>
 	        </li>
 	        <li class="nav-item">
@@ -39,6 +42,7 @@
 	<!-- Page Content -->
 	<div class="container">
 	  <h1 class="mt-4">Hệ thống quản lý đào tạo</h1>
+	</div>
 	<!-- /.container -->
 </body>
 </html>

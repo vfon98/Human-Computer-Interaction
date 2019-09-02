@@ -20,6 +20,9 @@
 	        <li class="nav-item">
 	          <a class="nav-link" href="#">Liên hệ</a>
 	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="program_list.php">Chương trình đào tạo</a>
+	        </li>
 	        <li class="nav-item active">
 	          <a class="nav-link" href="/views/register.php">Đăng ký học</a>
 	        </li>
@@ -32,46 +35,50 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-6 shadow">
-				<form id="js-register-form" action="/php/student/register_program.php" method="POST">
-					<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin chung</legend>
-					<fieldset class="form-group">
-						<label>Họ tên</label>
-						<input type="text" name="name" class="form-control" placeholder="VD: Nguyễn Văn A" required autofocus>
-					</fieldset>
-					<fieldset class="form-group">
-						<label>Ngày sinh</label>
-						<input type="date" name="birthday" class="form-control" placeholder="VD: Nguyễn Văn A">
-					</fieldset>
-					<fieldset class="form-group">
-						<label>Email</label>
-						<input type="email" name="email" class="form-control" placeholder="VD: example@mail.com">
-					</fieldset>
-					<fieldset class="form-group">
-						<label>Địa chỉ</label>
-						<input type="text" name="address" class="form-control" placeholder="VD: 3/2, Ninh Kiều, Cần Thơ">
-					</fieldset>
-					<fieldset class="form-group">
-						<label>Chọn khóa học</label>
-						<select id="" name="program_id" class="form-control" required>
-							<option value="" disabled selected>--- Chọn khóa học muốn đăng ký ---</option>
-							<?php require '../php/program/get_name.php'; ?>
-						</select>
-					</fieldset>
-
-					<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin đăng nhập</legend>
-					<fieldset class="form-group">
-						<label>Tên đăng nhập</label>
-						<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" maxlength="20" required>
-						<div class="invalid-feedback">Wrong</div>
-					</fieldset>
-					<fieldset class="form-group">
-						<label>Mật khẩu</label>
-						<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
-					</fieldset>
-					<hr>
-					<button type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block">Đăng ký ngay</button>
-				</form>
+			<div class="col-6 pt-2">
+				<div class="card shadow">
+					<div class="card-body pt-2">
+						<form id="js-register-form" action="/php/student/register_program.php" method="POST">
+							<legend class="pb-1 mb-2 border-bottom text-primary">Thông tin chung</legend>
+							<fieldset class="form-group">
+								<label>Họ tên</label>
+								<input type="text" name="name" class="form-control" placeholder="VD: Nguyễn Văn A" required autofocus>
+							</fieldset>
+							<fieldset class="form-group">
+								<label>Ngày sinh</label>
+								<input type="date" name="birthday" class="form-control" placeholder="VD: Nguyễn Văn A">
+							</fieldset>
+							<fieldset class="form-group">
+								<label>Email</label>
+								<input type="email" name="email" class="form-control" placeholder="VD: example@mail.com">
+							</fieldset>
+							<fieldset class="form-group">
+								<label>Địa chỉ</label>
+								<input type="text" name="address" class="form-control" placeholder="VD: 3/2, Ninh Kiều, Cần Thơ">
+							</fieldset>
+							<fieldset class="form-group">
+								<label>Chọn khóa học</label>
+								<select id="" name="program_id" class="form-control" required>
+									<option value="" disabled selected>--- Chọn khóa học muốn đăng ký ---</option>
+									<?php require '../php/program/get_name.php'; ?>
+								</select>
+							</fieldset>
+						
+							<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin đăng nhập</legend>
+							<fieldset class="form-group">
+								<label>Tên đăng nhập</label>
+								<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" maxlength="20" required>
+								<div class="invalid-feedback">Wrong</div>
+							</fieldset>
+							<fieldset class="form-group">
+								<label>Mật khẩu</label>
+								<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+							</fieldset>
+							<hr>
+							<button type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block">Đăng ký ngay</button>
+						</form>
+					</div>
+				</div>
 			</div>
 
 			<div class="col-md-6">
@@ -89,7 +96,18 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php require '../php/program/get_all.php'; ?>
+								<?php
+								require '../php/program/get_all.php';
+								$i = 1;
+								while($row = $result->fetch_assoc()) {
+									echo 
+									'<tr>
+									<td>'.$i++.'</td>
+									<td>'.$row['name'].'</td>
+									<td>'.$row['tuition'].' VND</td>
+									</tr>';
+								}
+								?>
 							</tbody>
 						</table>
 					</div>
