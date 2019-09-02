@@ -11,13 +11,13 @@
 		</form>
 	</div>
 	<div class="row">
-		<div class="col">
+		<div class="col-6">
 			<table class="table table-inverse">
 				<thead>
 					<tr>
 						<th>STT</th>
 						<th>Tên sinh viên</th>
-						<th>Điểm</th>
+						<th class="text-center">Điểm</th>
 					</tr>
 				</thead>
 				<tbody>

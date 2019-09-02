@@ -13,7 +13,8 @@ if (isset($_GET['id'])) {
 }
 ?>
 <div class="container-fluid">
-	<div class="card mt-2">
+	<a href="programs_manager.php" class="btn btn-link"><i class="fa fa-reply"></i> Trở về</a>
+	<div class="card shadow">
 		<div class="card-header bg-info text-white p-2 text-center">
 			<h4 class="em">Chương trình: <em><?php echo $p_name; ?></em></h5>
 			<h6>Thời gian đào tạo: <?php echo $duration ?></h5>
@@ -30,7 +31,7 @@ if (isset($_GET['id'])) {
 								<input type="hidden" name="program-id" value="<?php echo $id; ?>">
 								<fieldset class="form-group">
 									<label>Chọn môn học</label>
-									<select name="subject-id" class="form-control" size="10">
+									<select name="subject-id[]" class="form-control" size="10" multiple>
 										<?php require '../../php/subject/manager_get_name.php' ?>
 									</select>
 								</fieldset>
