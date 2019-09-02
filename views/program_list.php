@@ -46,8 +46,8 @@
 		<div class="row">
 			<div class="col">
 				<div class="card shadow mt-2">
-					<div class="card-header">
-						<h5 class="text-center mb-0">Danh sách chương trình</h5>
+					<div class="card-header bg-info text-white">
+						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
 					<div class="card-body">
 						<table class="table table-inverse table-hover table-striped text-center">

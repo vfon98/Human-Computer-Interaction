@@ -54,7 +54,9 @@
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 							<!-- <a class="dropdown-item" href="#">Thay đổi quyền</a> -->
-							<a class="dropdown-item" href="#">
+							<a class="dropdown-item" href="#"
+								data-toggle="modal" data-target="#modal-account"
+							>
 								<i class="fa fa-wrench text-dark"></i>&nbsp; Sửa thông tin
 							</a>
 							<div class="dropdown-divider"></div>

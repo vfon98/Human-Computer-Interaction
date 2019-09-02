@@ -83,8 +83,8 @@
 
 			<div class="col-md-6">
 				<div class="card mt-2 shadow">
-					<div class="card-header">
-						<h2 class="text-center">Danh sách chương trình đào tạo</h2>
+					<div class="card-header bg-info text-white">
+						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
 					<div class="card-body">
 						<table class="table">
