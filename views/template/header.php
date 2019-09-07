@@ -13,6 +13,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/assets/css/sidebar.css">
 	<link rel="stylesheet" href="/assets/css/main.css">
+	<style>
+		.table > tbody > tr > td {
+		     vertical-align: middle;
+		}
+	</style>
 </head>
 <body>
 	<div class="d-flex" id="wrapper">

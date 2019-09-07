@@ -62,3 +62,11 @@ CREATE TABLE program_subject (
     program_id INT,
     subject_id INT
 );
+
+CREATE TABLE program_student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    program_id INT NOT NULL,
+    student_id INT NOT NULL,
+    status VARCHAR(50) DEFAULT 'Có ý thích',
+    is_paid BIT DEFAULT 0
+);

@@ -22,7 +22,7 @@
 						<hr>
 						<fieldset class="form-group" id="inp-name">
 							<label>Tên giáo viên</label>
-							<input class="form-control" type="text" name="name" placeholder="VD: Nguyễn Văn A">
+							<input class="form-control" id="inp-teacher" type="text" name="name" placeholder="VD: Nguyễn Văn A">
 						</fieldset>
 						<fieldset class="form-group" id="inp-email">
 							<label>Email</label>
@@ -32,7 +32,7 @@
 						</fieldset>
 						<fieldset class="form-group">
 							<label>Tên đăng nhập</label>
-							<input class="form-control" type="text" name="username" placeholder="VD: nguyenvana">
+							<input class="form-control" id="inp-user" type="text" name="username" placeholder="VD: nguyenvana">
 						</fieldset>
 						<fieldset class="form-group">
 							<label>Mật khẩu</label>
@@ -114,10 +114,12 @@
 			if (role == 'teacher') {
 				$('#inp-name').slideDown('slow');
 				$('#inp-email').slideDown('slow');
+				$('#inp-teacher').focus();
 			}
 			else if (role == 'manager') {
 				$('#inp-name').slideUp('slow');
 				$('#inp-email').slideUp('slow');
+				$('#inp-user').focus();
 			}
 		});
 		// AUTO SELECT FIRST PART OF EMAIL

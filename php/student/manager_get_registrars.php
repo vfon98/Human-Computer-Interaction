@@ -16,20 +16,22 @@
 				<td>'.$row['address'].'</td>
 				<td>'.$row['pro_name'].'</td>
 				<td>'.$row['created_at'].'</td>
-				<td>
-					<a class="btn btn-success js-btn-approve"
-						href="/php/student/approve_student.php?id='.$row['st_id'].'"
-					>
-						<i class="fa fa-check"></i> Duyệt
-					</a>
-
-					<a class="btn btn-danger js-btn-decline"
-						href="/php/student/decline_student.php?id='.$row['st_id'].'"
-					>
-						<i class="fa fa-times"></i> Loại
-					</a>
+				<td class="text-center">
+					<input type="checkbox" class="selected-id" name="selected-id[]" style="width: 1.2em; height: 1.2em; margin: 0.4em 0" value="'.$row['st_id'].'">
 				</td>
 			</tr>';
 		}
+		echo 
+		'<tr>
+			<td colspan="8" class="text-right">
+				<button name="btn-approve" type="submit" class="btn btn-success js-btn-approve">
+					<i class="fa fa-check"></i> Duyệt
+				</button>
+
+				<button name="btn-decline" type="submit" class="btn btn-danger js-btn-decline">
+					<i class="fa fa-times"></i> Loại
+				</button>
+			</td>
+		</tr>';
 	}
 ?>

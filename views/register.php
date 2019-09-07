@@ -46,7 +46,7 @@
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Ngày sinh</label>
-								<input type="date" name="birthday" class="form-control" placeholder="VD: Nguyễn Văn A">
+								<input type="date" name="birthday" class="form-control" placeholder="VD: Nguyễn Văn A" id="inp-bday">
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Email</label>
@@ -116,5 +116,11 @@
 		</div>
 	</div>
 	<script src="/assets/js/register.js"></script>
+	<script>
+		$(document).ready(function() {
+			// document.getElementById("inp-bday").valueAsDate = new Date();
+			$('#inp-bday').val("1999-01-01");
+		});
+	</script>
 </body>
 </html>

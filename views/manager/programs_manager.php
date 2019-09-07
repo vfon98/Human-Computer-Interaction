@@ -4,9 +4,9 @@
 <div class="container-fluid p-3" id="root">
 	<div class="row">
 		<!-- ADD NEW PROGRAM MODEL -->
-		<div class="col">
+		<div class="col-12">
 			<button class="btn btn-success mb-2" data-toggle="modal" data-target="#modalAdd">
-				Thêm mới CTDT <i class="fa fa-angle-double-right"></i>
+				<i class="fa fa-plus"></i> Thêm mới CTDT
 			</button>
 		</div>
 
@@ -21,6 +21,7 @@
 		        <!-- Modal body -->
 		        <div class="modal-body">
 		        	<form action="/php/program/create.php" method="POST">
+		        		<input type="hidden" name="manager-acc" value="<?php echo $_SESSION['logged_user'] ?>">
 		        		<fieldset class="form-group">
 		        			<label>Tên chương trình</label>
 		        			<input name="name" type="text" class="form-control" placeholder="Nhập tên chương trình" maxlength="50" autofocus required>
@@ -61,9 +62,9 @@
 		<div class="col-12">
 			<div class="card shadow p-0">
 				<div class="card-header bg-secondary text-white">
-					<h4 class="mb-0 text-center">Danh sách CTDT</h4>
+					<h4 class="mb-0 text-center">Danh sách CTDT đang quản lý</h4>
 				</div>
-				<div class="card-body">
+				<div class="card-body py-2">
 					<table class="text-center table table-inverse table-striped table-hover">
 						<thead>
 							<tr>

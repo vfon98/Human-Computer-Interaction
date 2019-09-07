@@ -8,7 +8,7 @@
 		<div class="col-4">
 			<div class="card shadow">
 				<div class="card-header bg-secondary text-white">
-					<h4 class="mb-0">Thêm CTDT</h4>
+					<h4 class="mb-0">Thêm môn học</h4>
 				</div>
 				<div class="card-body">
 					<form action="/php/subject/create.php" method="POST">

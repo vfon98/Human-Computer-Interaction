@@ -8,12 +8,15 @@
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		$username = $row['username'];
-		// DELETE FROM students AND accounts
+		// DELETE FROM students AND accounts AND program_student
 		$sql = "DELETE FROM students WHERE id='$id'";
 		$conn->query($sql);
 
 		$sql = "DELETE FROM accounts WHERE username='$username'";
 		$conn-> query($sql);
+
+		$sql = "DELETE FROM program_student WHERE student_id='$id'";
+		$conn->query($sql);
 
 		header("location: /views/manager/registrars.php");
 	}

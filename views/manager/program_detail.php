@@ -26,16 +26,22 @@ if (isset($_GET['id'])) {
 						<div class="card-header">
 							<h4 class="mb-0 text-center">Thêm môn học</h4>
 						</div>
-						<div class="card-body">
+						<div class="card-body pt-0">
 							<form action="/php/program/add_subject.php" method="POST">
 								<input type="hidden" name="program-id" value="<?php echo $id; ?>">
+								<button type="button" class="btn btn-sm btn-secondary my-2"
+									data-toggle="modal" data-target="#modal-new-subject"
+								>
+									<i class="fa fa-plus"></i> Tạo mới môn học
+								</button>
 								<fieldset class="form-group">
-									<label>Chọn môn học</label>
 									<select name="subject-id[]" class="form-control" size="10" multiple>
 										<?php require '../../php/subject/manager_get_name.php' ?>
 									</select>
 								</fieldset>
-								<button type="submit" class="btn btn-success">Thêm môn học</button>
+								<button type="submit" class="btn btn-success">
+									Thêm vào CTDT <i class="fa fa-angle-double-right"></i>
+								</button>
 							</form>
 						</div>
 					</div>
@@ -66,5 +72,48 @@ if (isset($_GET['id'])) {
 		</div>
 	</div>
 </div>
+
+<!-- MODAL FOR NEW SUBJECT -->
+<?php include '../../php/subject/suggest_next_id.php'; ?>
+
+<div class="modal fade" id="modal-new-subject">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Thêm mới môn học</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="/php/subject/create.php" method="POST">
+					<fieldset class="form-group">
+						<label>Mã môn</label>
+						<input name="sub-id" type="text" class="form-control" placeholder="Nhập tên chương trình" maxlength="50" value="<?php echo $next_id; ?>" readonly>
+					</fieldset>
+					<fieldset class="form-group">
+						<label>Tên môn</label>
+						<input name="name" type="text" class="form-control" 
+							placeholder="VD: Lập trình căn bản" autofocus required>
+					</fieldset>
+					<fieldset class="form-group">
+						<label>Giáo viên phụ trách</label>
+						<select name="teacher" id="" class="form-control" required>
+							<option value="" disabled selected>-- Chọn giáo viên phụ trách --</option>
+							<?php require '../../php/teacher/get_name.php'; ?>
+						</select>
+					</fieldset>
+					<button type="submit" class="btn btn-success">
+						<i class="fa fa-plus"></i> Thêm môn học
+					</button>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Đóng</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <?php include '../template/footer.php'; ?>
