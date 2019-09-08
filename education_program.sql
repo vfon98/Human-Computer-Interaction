@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2019 at 05:08 PM
+-- Generation Time: Sep 08, 2019 at 01:31 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -47,7 +47,7 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `role`) VALUES
 (2, 'nguyenvan', 'e7fab94348aa85c3043f077a75d2f395', 'student'),
 (9, 'nmnhat', '73c4eade589a95de502b2ad0db9f61e9', 'student'),
 (11, 'ntthanh', '2c0813259df4854e1cbe0b61bff8b5d5', 'student'),
-(10, 'qtthao', 'cee318148813aa44f8822ccb2d342dc4', 'student'),
+(17, 'student', 'cd73502828457d15655bbd7a63fb0bc8', 'student'),
 (6, 'teacher', '8d788385431273d11e8b43bb78f3aa41', 'teacher'),
 (5, 'vhtram', 'e901c4278258ad9166619d017fe4fea0', 'teacher');
 
@@ -102,8 +102,8 @@ CREATE TABLE `program_student` (
 
 INSERT INTO `program_student` (`id`, `program_id`, `student_id`, `status`, `is_paid`) VALUES
 (1, 1, 1, 'Có ý thích', b'0'),
-(2, 12, 6, 'Đăng ký', b'0'),
-(3, 4, 7, 'Có ý thích', b'0');
+(3, 4, 7, 'Đăng ký', b'0'),
+(10, 3, 14, 'Đăng ký', b'1');
 
 -- --------------------------------------------------------
 
@@ -161,9 +161,6 @@ CREATE TABLE `students` (
   `birthday` date DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `address` varchar(200) DEFAULT NULL,
-  `status` varchar(50) DEFAULT NULL,
-  `program_id` int(11) NOT NULL,
-  `is_paid` bit(1) DEFAULT b'0',
   `username` varchar(50) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -172,12 +169,12 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `name`, `birthday`, `email`, `address`, `status`, `program_id`, `is_paid`, `username`, `created_at`) VALUES
-(1, 'Nguyễn Văn A', '1998-04-25', 'mail@mail.com', 'Cần Thơ', 'Có ý thích', 5, b'1', 'nguyenvan', '2019-08-31 09:22:07'),
-(4, 'Nguyễn Trung Dũng', '1996-12-24', 'dung@mail.com', 'Hậu Giang', 'Đăng ký', 8, b'0', 'dungrua', '2019-09-02 02:42:48'),
-(5, 'Nguyễn Minh Nhật', '1999-08-25', 'mail@mail.com', 'An Giang', 'Đăng ký', 3, b'0', 'nmnhat', '2019-09-07 13:05:48'),
-(6, 'Quách Thị Thảo', '1998-10-20', 'thao@mail.com', 'An Giang', 'Đăng ký', 12, b'0', 'qtthao', '2019-09-07 13:24:31'),
-(7, 'Nguyễn Tấn Thành', '1996-08-25', 'thanh@mail.com', 'Cà Mau', 'Có ý thích', 4, b'0', 'ntthanh', '2019-09-07 13:34:57');
+INSERT INTO `students` (`id`, `name`, `birthday`, `email`, `address`, `username`, `created_at`) VALUES
+(1, 'Nguyễn Văn A', '1998-04-25', 'mail@mail.com', 'Cần Thơ', 'nguyenvan', '2019-08-31 09:22:07'),
+(4, 'Nguyễn Trung Dũng', '1996-12-24', 'dung@mail.com', 'Hậu Giang', 'dungrua', '2019-09-02 02:42:48'),
+(5, 'Nguyễn Minh Nhật', '1999-08-25', 'mail@mail.com', 'An Giang', 'nmnhat', '2019-09-07 13:05:48'),
+(7, 'Nguyễn Tấn Thành', '1996-08-25', 'thanh@mail.com', 'Cà Mau', 'ntthanh', '2019-09-07 13:34:57'),
+(14, 'student', '1999-01-01', 'mail@mail.com', 'Cần Thơ', 'student', '2019-09-08 08:45:50');
 
 -- --------------------------------------------------------
 
@@ -283,7 +280,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `programs`
@@ -295,7 +292,7 @@ ALTER TABLE `programs`
 -- AUTO_INCREMENT for table `program_student`
 --
 ALTER TABLE `program_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `program_subject`
@@ -307,7 +304,7 @@ ALTER TABLE `program_subject`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `subjects`

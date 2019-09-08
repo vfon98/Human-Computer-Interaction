@@ -8,7 +8,7 @@
 
 <div class="container mt-5">
     <div class="jumbotron">
-        <div class="text-center"><i class="fa fa-5x fa-frown-o" style="color:#d9534f;"></i></div>
+        <div class="text-center text-danger" id="icon"><i class="fa fa-5x fa-frown-o"></i></div>
         <h1 class="text-center">401 Unauthorized<p> </p>
           <p><small class="text-center"> Oops ! Bạn không quyền truy cập</small></p>
         </h1>
@@ -16,3 +16,10 @@
         <p class="text-center"><a class="btn btn-primary" href="/"><i class="fa fa-home"></i> Trang chủ</a></p>
     </div>
 </div>
+
+<script>
+	$(document).ready(function() {
+		// $('#icon').fadeOut(0).fadeIn(1500);
+		$('#icon').animate({zoom: '150%'}, "slow");
+	});
+</script>

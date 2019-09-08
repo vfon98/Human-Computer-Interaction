@@ -2,11 +2,21 @@ $(document).ready(function() {
 	changeActiveClass();
 	// CONFIRM BUTTON CLICK
 	$('.js-btn-approve').click(function(e) {
+		if ($('.selected-id:checkbox:checked').length <= 0) {
+			alert('Vui lòng chọn học viên muốn xét duyệt !');
+			e.preventDefault();
+			return;
+		}
 		if (!confirm('Đồng ý xét duyệt đơn đăng ký ?')) {
 			e.preventDefault();
 		} 
 	});
 	$('.js-btn-decline').click(function(e) {
+		if ($('.selected-id:checkbox:checked').length <= 0) {
+			alert('Vui lòng chọn học viên muốn loại !');
+			e.preventDefault();
+			return;
+		}
 		if (!confirm('Xác nhận loại hồ sơ ?')) {
 			e.preventDefault();
 		} 

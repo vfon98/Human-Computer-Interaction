@@ -24,7 +24,7 @@
 		require_once '../php/connection.php';
 		$username = trim($_POST['username']);
 		$pass = md5($_POST['pass']);
-		$sql = "SELECT username, role FROM accounts WHERE username='$username' AND password='$pass'";
+		$sql = "SELECT id, username, role FROM accounts WHERE username='$username' AND password='$pass'";
 		$result = $conn->query(htmlspecialchars($sql));
 		$row = $result->fetch_assoc();
 		$role = $row['role'];
@@ -32,6 +32,7 @@
 			// SET SESSION FOR LOGGED ACCOUNT
 			$_SESSION['logged_role'] = $role;
 			$_SESSION['logged_user'] = $row['username'];
+			$_SESSION['logged_id'] = $row['id'];
 			// AUTHORIZATION
 			if ($role == 'student') {
 				header('location: student');

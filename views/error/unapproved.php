@@ -8,16 +8,17 @@
 
 <div class="container mt-5">
     <div class="jumbotron">
-        <div class="text-center text-success" id="icon"><i class="fa fa-5x fa-check-circle"></i></div>
-        <h1 class="text-center text-success" id="banner">Đăng ký thành công !</h1>
-        <p class="text-center">Vui lòng chờ người quản lý CTDT xét duyệt đơn đăng ký trước khi sử dụng hệ thống</p>
+        <div class="text-center text-danger" id="icon"><i class="fa fa-5x fa-frown-o"></i></div>
+        <h1 class="text-center" id="banner">Tài khoản chưa được xét duyệt !</h1>
+        <p class="text-center">Vui lòng chờ quản lý CTDT xét duyệt tài khoản của bạn. Bạn sẽ nhận được thông báo qua email ngay khi được xét duyệt !</p>
         <p class="text-center"><a class="btn btn-primary" href="/"><i class="fa fa-home"></i> Trang chủ</a></p>
     </div>
 </div>
 
 <script>
 	$(document).ready(function() {
-		$('#icon').animate({zoom: '140%'}, "slow");
-		$('#banner').hide(0).show(1000);
+		$('#icon').animate({zoom: '150%'}, "slow");
+        $('#banner').hide(0).show(800);
+        $('.btn.btn-primary').focus();
 	});
 </script>

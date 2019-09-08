@@ -4,6 +4,7 @@
 		exit;
 	}
 ?>
+<!-- BE LOADED TO INDEX IF NOT PAY TUITION -->
 <div class="modal fade" id="modal-tuition">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">

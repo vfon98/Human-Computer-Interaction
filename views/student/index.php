@@ -77,7 +77,7 @@
 							$sql = "SELECT sub_id, s.name as s_name, t.name as t_name 
 								FROM subjects s JOIN teachers t ON s.teacher_id = t.id
 								WHERE s.id IN (
-									SELECT subject_id FROM program_subject WHERE program_id=".$row['program_id']."
+									SELECT subject_id FROM program_subject WHERE program_id=".$row['p_id']."
 								)";
 							$result = $conn->query($sql);
 							$i = 1;
