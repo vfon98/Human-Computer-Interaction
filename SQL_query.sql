@@ -70,3 +70,12 @@ CREATE TABLE program_student (
     status VARCHAR(50) DEFAULT 'Có ý thích',
     is_paid BIT DEFAULT 0
 );
+
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    begin_at DATE DEFAULT CURRENT_DATE,
+    end_at DATE DEFAULT CURRENT_DATE,
+    student_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
