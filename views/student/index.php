@@ -19,6 +19,10 @@
 								<td><?php echo $row['st_name'] ?></td>
 							</tr>
 							<tr>
+								<td>Tài khoản: </td>
+								<td><?php echo $logged_user ?></td>
+							</tr>
+							<tr>
 								<td>Ngày sinh: </td>
 								<td><?php echo $row['birthday'] ?></td>
 							</tr>
@@ -60,7 +64,9 @@
 		<div class="col-7">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-secondary text-white">
-					<h5>Chương trình hiện tại</h5>
+					<h5>
+						Chương trình hiện tại
+					</h5>
 				</div>
 				<div class="card-body">
 					<table class="table table-inverse table-hover table-striped">

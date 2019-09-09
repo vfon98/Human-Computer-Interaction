@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2019 at 01:31 PM
+-- Generation Time: Sep 09, 2019 at 11:57 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -103,7 +103,9 @@ CREATE TABLE `program_student` (
 INSERT INTO `program_student` (`id`, `program_id`, `student_id`, `status`, `is_paid`) VALUES
 (1, 1, 1, 'Có ý thích', b'0'),
 (3, 4, 7, 'Đăng ký', b'0'),
-(10, 3, 14, 'Đăng ký', b'1');
+(10, 3, 14, 'Đăng ký', b'1'),
+(11, 5, 14, 'Có ý thích', b'0'),
+(12, 9, 14, 'Có ý thích', b'0');
 
 -- --------------------------------------------------------
 
@@ -147,7 +149,12 @@ INSERT INTO `program_subject` (`id`, `program_id`, `subject_id`) VALUES
 (32, 12, 1),
 (33, 12, 2),
 (34, 12, 3),
-(35, 12, 4);
+(35, 12, 4),
+(36, 3, 1),
+(37, 3, 2),
+(38, 3, 4),
+(39, 3, 5),
+(40, 3, 6);
 
 -- --------------------------------------------------------
 
@@ -292,13 +299,13 @@ ALTER TABLE `programs`
 -- AUTO_INCREMENT for table `program_student`
 --
 ALTER TABLE `program_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `program_subject`
 --
 ALTER TABLE `program_subject`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `students`
