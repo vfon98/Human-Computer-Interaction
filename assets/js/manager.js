@@ -39,4 +39,8 @@ function changeActiveClass() {
 		$('.list-group-item.active').removeClass('active');
 		$('.list-group-item').eq(2).addClass('active');
 	}
+	if (pathname == '/views/student/personal_programs.php') {
+		$('.list-group-item.active').removeClass('active');
+		$('.list-group-item').eq(1).addClass('active');
+	}
 }

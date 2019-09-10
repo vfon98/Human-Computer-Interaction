@@ -5,7 +5,7 @@
 	}
 ?>
 <!-- BE LOADED TO INDEX IF NOT PAY TUITION -->
-<div class="modal fade" id="modal-tuition">
+<div class="modal fade" id="modal-tuition" tabindex="-1">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">

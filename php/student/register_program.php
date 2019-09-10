@@ -11,8 +11,9 @@
 
 
 		// INSERT NEW CANDIDATE
-		$sql = "INSERT INTO students (name, birthday, email, address, status, program_id, username)
-			VALUES ('$name', '$birthday', '$email', '$address', 'Có ý thích', '$program_id', '$username')";
+		$sql = "INSERT INTO students (name, birthday, email, address, username)
+			VALUES ('$name', '$birthday', '$email', '$address', '$username')";
+		// echo $sql;
 		$conn->query(htmlspecialchars($sql));
 		// GET LAST INSERTED ID
 		$student_id = $conn->insert_id;
