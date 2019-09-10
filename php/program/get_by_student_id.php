@@ -29,7 +29,6 @@
 				<td>
 					'.($row['status'] == 'Đăng ký' ? $status_changable : $row['status']).'
 				</td>
-
 			</tr>';
 		}
 	}
