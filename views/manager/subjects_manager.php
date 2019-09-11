@@ -3,12 +3,12 @@
 
 <?php include '../../php/subject/suggest_next_id.php'; ?>
 
-<div class="container-fluid p-3">
+<div class="container-fluid pt-2">
 	<div class="row">
 		<div class="col-4">
 			<div class="card shadow">
-				<div class="card-header bg-secondary text-white">
-					<h4 class="mb-0">Thêm môn học</h4>
+				<div class="card-header bg-info text-white">
+					<h5 class="mb-0">Thêm môn học</h5>
 				</div>
 				<div class="card-body">
 					<form action="/php/subject/create.php" method="POST">
@@ -37,8 +37,8 @@
 		<!-- TABLE OF PROGRAMS -->
 		<div class="col-8">
 			<div class="card shadow p-0">
-				<div class="card-header bg-secondary text-white">
-					<h4 class="mb-0 text-center">Danh sách môn học</h4>
+				<div class="card-header bg-info text-white">
+					<h5 class="mb-0 text-center">Danh sách môn học</h5>
 				</div>
 				<div class="card-body">
 					<table class="text-center table table-inverse table-striped table-hover">

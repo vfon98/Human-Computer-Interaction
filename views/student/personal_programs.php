@@ -34,19 +34,19 @@
 		<div class="col-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>Khóa học đã tham gia</h4>
+					<h4>Khóa đào tạo đã tham gia</h4>
 				</div>
 				<div class="card-body pt-2">
 					<button type="button" class="btn btn-sm btn-success mb-2"
 						data-toggle="modal" data-target="#modal-courses"
 					>
-						<i class="fa fa-plus-circle"></i> Thêm khóa học
+						<i class="fa fa-plus-circle"></i> Thêm khóa đào tạo
 					</button>
 					<table class="table table-sm table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
 								<th>STT</th>
-								<th>Tên khóa học</th>
+								<th>Tên khóa</th>
 								<th>Ngày bắt đầu</th>
 								<th>Ngày kết thúc</th>
 								<th>Tùy chọn</th>
@@ -89,7 +89,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Thêm khóa học</h4>
+				<h4 class="modal-title">Thêm khóa đào tạo</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span>&times;</span>
 				</button>
@@ -99,7 +99,7 @@
 					<!-- SESSION created from index.php load -->
 					<input type="hidden" name="st_id" value="<?php echo $_SESSION['student_id'] ?>">
 					<fieldset class="form-group">
-						<label>Tên khóa học</label>
+						<label>Tên khóa đào tạo</label>
 						<input type="text" name="c-name" class="form-control" placeholder="VD: Kỹ năng mềm" required>
 					</fieldset>
 					<fieldset class="form-group">

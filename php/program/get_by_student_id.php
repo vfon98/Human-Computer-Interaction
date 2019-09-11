@@ -5,7 +5,7 @@
 		$st_id = $_SESSION['student_id'];
 		$sql = "SELECT * 
 				FROM program_student ps JOIN programs p ON ps.program_id = p.id
-				WHERE student_id='$st_id' ORDER BY ps.status DESC";
+				WHERE student_id='$st_id' ORDER BY ps.status DESC, ps.created_at";
 		$result = $conn->query($sql);
 		$i = 1;
 		while ($row = $result->fetch_assoc()) {

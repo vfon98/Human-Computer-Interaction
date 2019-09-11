@@ -1,5 +1,5 @@
 <div class="bg-dark border-right" id="sidebar-wrapper">
-	<div class="sidebar-heading">QL Sinh Viên</div>
+	<div class="sidebar-heading" title="<?php echo $_SESSION['student_id'] ?>">QL Sinh Viên</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/student" class="list-group-item list-group-item-action bg-dark active">
 			Thông tin sinh viên

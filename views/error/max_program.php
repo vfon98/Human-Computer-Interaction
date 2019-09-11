@@ -9,11 +9,11 @@
 <div class="container mt-5">
     <div class="jumbotron">
         <div class="text-center text-danger" id="icon"><i class="fa fa-5x fa-frown-o"></i></div>
-        <h1 class="text-center">401 Unauthorized<p> </p>
-          <p><small class="text-center"> Oops ! Bạn không quyền truy cập</small></p>
+        <h1 class="text-center">Khoan đã !!!<p> </p>
+          <p><small class="text-center">Bạn chỉ có thể đăng ký thêm tối đa 1 CTDT tại một thời điểm</small></p>
         </h1>
-        <p class="text-center">Chỉ có những người có quyền nhất định mới có thể truy cập chức năng này !</p>
-        <p class="text-center"><a class="btn btn-success" href="/"><i class="fa fa-home"></i> Trang chủ</a></p>
+        <p class="text-center">Vui lòng chờ xét duyệt chương trình hiện tại trước khi đăng ký mới !</p>
+        <p class="text-center"><a class="btn btn-success" href="<?php echo $_SERVER['HTTP_REFERER'] ?>"><i class="fa fa-reply"></i> Trở về</a></p>
     </div>
 </div>
 

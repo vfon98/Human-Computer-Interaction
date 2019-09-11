@@ -14,9 +14,11 @@
 				<td>'.$row['s_name'].'</td>
 				<td>'.$row['t_name'].'</td>
 				<td>
-					<a href="/php/subject/manage.php?id='.$row['id'].'" class="btn btn-secondary js-btn-update"><i class="fa fa-wrench"></i> Sửa</a>
+					<a href="#" class="btn btn-secondary js-btn-update"><i class="fa fa-wrench"></i> Sửa</a>
 
-				<a href="/php/subject/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del"><i class="fa fa-trash-o"></i> Xóa</a>
+					<a href="/php/subject/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del">
+						<i class="fa fa-trash-o"></i> Xóa
+					</a>
 				</td>
 			</tr>';
 		}

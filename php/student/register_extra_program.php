@@ -5,8 +5,16 @@
 		print_r($_POST);
 		$p_id = $_POST['p_id'];
 		$st_id = $_POST['st_id'];
-		$sql = "INSERT INTO program_student (program_id, student_id)
-				VALUES ('$p_id', '$st_id')";
+		// CHECK MAX AMOUNT OF PROGRAM REGISTED
+		$sql = "SELECT * FROM program_student WHERE student_id='$st_id' and status='Có ý thích'";
+		$result = $conn->query($sql);
+		if ($result->num_rows >= 1) {
+			header('location: ../../views/error/max_program.php');
+			exit;
+		}
+
+		$sql = "INSERT INTO program_student (program_id, student_id, is_paid)
+				VALUES ('$p_id', '$st_id', 1)";
 		echo $sql;
 		$conn->query($sql);
 		header('location: '.$_SERVER['HTTP_REFERER']);

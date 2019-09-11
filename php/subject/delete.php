@@ -7,6 +7,9 @@
 		echo $sql;
 		$conn->query($sql);
 
+		$sql = "DELETE FROM program_subject WHERE subject_id='$id'";
+		$conn->query($sql);
+
 		header('location: '.$_SERVER['HTTP_REFERER']);
 	}
 	else {

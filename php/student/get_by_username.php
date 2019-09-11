@@ -16,7 +16,7 @@
 		}
 
 		$sql = "SELECT s.id as st_id, s.name as st_name, birthday, email, address, 
-					p.id as p_id, p.name as p_name, duration, tuition, created_at, is_paid
+					p.id as p_id, p.name as p_name, duration, tuition, s.created_at as created_at, is_paid
 				FROM students s JOIN program_student ps JOIN programs p
 				ON s.id = ps.student_id AND ps.program_id = p.id 
 				WHERE username='$logged_user' AND status='Đăng ký'";
