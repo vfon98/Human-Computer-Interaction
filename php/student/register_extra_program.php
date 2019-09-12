@@ -13,8 +13,8 @@
 			exit;
 		}
 
-		$sql = "INSERT INTO program_student (program_id, student_id, is_paid)
-				VALUES ('$p_id', '$st_id', 1)";
+		$sql = "INSERT INTO program_student (program_id, student_id, is_paid, is_extra)
+				VALUES ('$p_id', '$st_id', 0, 1)";
 		echo $sql;
 		$conn->query($sql);
 		header('location: '.$_SERVER['HTTP_REFERER']);

@@ -14,23 +14,44 @@
 		}
 		// HANDLE APPROVE STUDENTS
 		if (isset($_POST['btn-approve'])) {
-			$sql = "UPDATE program_student SET status='Đăng ký'
-					WHERE student_id IN ($str_id)";
-			$conn->query($sql);
+			foreach ($arr_id as $st_id) {
+				$sql = "SELECT * FROM program_student WHERE student_id='$st_id' AND status='Đăng ký'";
+				$result = $conn->query($sql);
+				$is_extra = $result->num_rows >= 1;
+				if ($is_extra == true) {
+					$sql = "UPDATE program_student SET status='Tạm hoãn' WHERE status='Đăng ký'";
+					$conn->query($sql);
+					
+					$sql = "UPDATE program_student SEt status='Đăng ký' WHERE student_id='$st_id' AND is_extra=1";
+					$conn->query($sql);
+				}
+				else {
+					$sql = "UPDATE program_student SET status='Đăng ký'
+							WHERE student_id='$st_id'";
+					$conn->query($sql);
+				}
+			}
 		}
 		// HANDLE DECLINE STUDENTS
 		if (isset($_POST['btn-decline'])) {
-			// DELETE FROM students AND accounts AND program_student
-			$sql = "DELETE FROM accounts WHERE username IN (
-						SELECT username FROM students WHERE id IN ($str_id)
-					)";
-			$conn-> query($sql);
+			foreach ($arr_id as $st_id) {
+				$sql = "SELECT * FROM program_student WHERE student_id='$st_id' AND status='Đăng ký'";
+				$result = $conn->query($sql);
+				$is_extra = $result->num_rows >= 1;
+				// DELETE student, account WHEN WAS NOT EXTRA STUDENT
+				if ($is_extra == false) {
+					$sql = "DELETE FROM accounts WHERE username IN (
+								SELECT username FROM students WHERE id='$st_id'
+							)";
+					$conn-> query($sql);
 
-			$sql = "DELETE FROM students WHERE id IN ($str_id)";
-			$conn->query($sql);
+					$sql = "DELETE FROM students WHERE id='$st_id'";
+					$conn->query($sql);
+				}
+				$sql = "DELETE FROM program_student WHERE student_id='$st_id' AND status='Có ý thích'";
+				$conn->query($sql);
+			}
 
-			$sql = "DELETE FROM program_student WHERE student_id IN ($str_id)";
-			$conn->query($sql);
 		}
 
 		header("location: /views/manager/registrars.php");
