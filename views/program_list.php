@@ -116,9 +116,6 @@
 							</tr>
 						</thead>
 						<tbody id="table-content">
-							<tr>
-								<td></td>
-							</tr>
 						</tbody>
 					</table>
 				</div>

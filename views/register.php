@@ -50,7 +50,7 @@
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Email</label>
-								<input type="email" name="email" class="form-control" placeholder="VD: example@mail.com">
+								<input type="text" id="inp-email" name="email" class="form-control" placeholder="VD: example@mail.com" value="example@mail.com" pattern="[^@]+@[^\.]+\..+" title="Email không hợp lệ !">
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Địa chỉ</label>
@@ -67,15 +67,15 @@
 							<legend class="pb-1 mt-4 mb-2 border-bottom text-primary">Thông tin đăng nhập</legend>
 							<fieldset class="form-group">
 								<label>Tên đăng nhập</label>
-								<input type="text" name="username" class="form-control" placeholder="VD: nguyenvana" maxlength="20" required>
-								<div class="invalid-feedback">Wrong</div>
+								<input type="text" name="username" id="inp-username" class="form-control" placeholder="VD: nguyenvana" maxlength="20" required>
+								<div class="invalid-feedback">Tài khoản đã tồn tại !</div>
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Mật khẩu</label>
 								<input type="password" name="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
 							</fieldset>
 							<hr>
-							<button type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block">Đăng ký ngay</button>
+							<button type="submit" name="submit-btn" id="btn-submit" class="btn btn-primary btn-lg btn-block">Đăng ký ngay</button>
 						</form>
 					</div>
 				</div>

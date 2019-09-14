@@ -43,4 +43,8 @@ function changeActiveClass() {
 		$('.list-group-item.active').removeClass('active');
 		$('.list-group-item').eq(1).addClass('active');
 	}
+	if (pathname == '/views/teacher/subject_detail.php') {
+		$('.list-group-item.active').removeClass('active');
+		$('.list-group-item').eq(1).addClass('active');
+	}
 }

@@ -1,5 +1,7 @@
 <div class="bg-dark border-right" id="sidebar-wrapper">
-	<div class="sidebar-heading">Giáo viên</div>
+	<div class="sidebar-heading" title="<?php echo $_SESSION['teacher_id'] ?>">
+		<?php echo $_SESSION['logged_user'] ?>
+	</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/teacher" class="list-group-item list-group-item-action bg-dark active">
 			Quản lý giảng dạy
