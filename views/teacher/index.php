@@ -70,17 +70,19 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="modal-body pt-2 pb-0" id="ajax-content">
-				<!-- LOAD BY AJAX LINE 89 -->
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success">
-					<i class="fa fa-cloud-download"></i> Xuất file Excel
-				</button>
-				<button type="button" class="btn btn-danger" data-dismiss="modal">
-					<i class="fa fa-times"></i> Đóng
-				</button>
-			</div>
+			<form action="../../php/student/export_student_excel.php" method="POST">
+				<div class="modal-body pt-2 pb-0" id="ajax-content">
+					<!-- LOAD BY AJAX LINE 89 -->
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success">
+						<i class="fa fa-cloud-download"></i> Xuất file Excel
+					</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						<i class="fa fa-times"></i> Đóng
+					</button>
+				</div>
+			</form>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

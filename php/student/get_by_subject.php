@@ -1,14 +1,19 @@
 <?php
+	// CALL BY AJAX
+	session_start();
 	if (isset($_POST['s_id'])) {
 		require_once '../connection.php';
 		$s_id = $_POST['s_id'];
+		$t_id = $_SESSION['teacher_id'];
 		$sql = "SELECT st.name as st_name, st.birthday, st.email, p.name as p_name
 				FROM subjects s JOIN program_subject ps JOIN program_student pst JOIN students st JOIN programs p
 				ON s.id=ps.subject_id AND ps.program_id=pst.program_id AND pst.student_id=st.id AND pst.program_id=p.id
-				WHERE s.id='$s_id' AND pst.status='Đăng ký'";
+				WHERE s.id='$s_id' AND s.teacher_id='$t_id' AND pst.status='Đăng ký'";
 		$result = $conn->query($sql);
 	}
 ?>
+
+<input type="hidden" name="s_id" value="<?php echo $s_id ?>">
 <table class="table table-sm table-inverse table-hover table-striped mb-2">
 	<thead>
 		<tr>

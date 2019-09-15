@@ -6,8 +6,8 @@
 		<a href="/views/teacher" class="list-group-item list-group-item-action bg-dark active">
 			Quản lý giảng dạy
 		</a>
-		<a href="/views/teacher/subject_detail.php" class="list-group-item list-group-item-action bg-dark">
-			Đánh giá môn học
+		<a href="/views/teacher/subject_grading.php" class="list-group-item list-group-item-action bg-dark">
+			Chấm điểm môn học
 		</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark"></a>
 <!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
