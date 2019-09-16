@@ -79,3 +79,10 @@ CREATE TABLE courses (
     student_id INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+SELECT st.id as st_id, st.name as st_name, st.email, ss.mark
+FROM subjects s JOIN program_subject ps ON s.id = ps.subject_id
+JOIN program_student pst ON pst.program_id = ps.program_id
+JOIN students st ON st.id = pst.student_id
+JOIN student_subject ss ON ss.student_id = st.id AND ss.subject_id = s.id
+-- WHERE pst.status='Đăng ký' AND s.id='5'
