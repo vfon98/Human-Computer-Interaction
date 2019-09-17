@@ -34,7 +34,7 @@
 			}
 			$has_mark = false;
 			while ($row = $result->fetch_assoc()) {
-				$has_mark = $row['mark'] ? true : false;
+				$has_mark = $row['mark'] !== NULL ? true : false;
 				echo
 				'<tr>
 					<td>'.$i++.'</td>
@@ -42,7 +42,7 @@
 					<td>'.$row['email'].'</td>
 					<td>'.
 					'<input type="hidden" name="st_id[]" value="'.$row['st_id'].'">'.
-					'<span class="js-mark-cell">'.($has_mark ? $row['mark'] : 'Chưa có').'</span>'
+					'<span class="js-mark-cell" style="font-weight: 550">'.($has_mark ? $row['mark'] : 'Chưa có').'</span>'
 					.'</td>
 				</tr>';
 			}

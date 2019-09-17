@@ -12,6 +12,6 @@
 					VALUES ('$arr_id[$i]', '$s_id', '$arr_mark[$i]')";
 			$conn->query($sql);
 		}
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.$_SERVER['HTTP_REFERER'].'?s_id='.$s_id);
 	}
 ?>

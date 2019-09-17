@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-5">
 			<div class="card shadow">
-				<div class="card-header text-center pb-1 bg-secondary text-white">
+				<div class="card-header text-center pb-1 bg-info text-white">
 					<h5>Thông tin sinh viên</h5>
 				</div>
 				<div class="card-body py-2">
@@ -63,7 +63,7 @@
 
 		<div class="col-7">
 			<div class="card shadow">
-				<div class="card-header text-center pb-1 bg-secondary text-white">
+				<div class="card-header text-center pb-1 bg-info text-white">
 					<h5>
 						Chương trình hiện tại
 					</h5>

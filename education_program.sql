@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2019 at 12:00 PM
+-- Generation Time: Sep 17, 2019 at 12:30 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -44,12 +44,14 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `role`) VALUES
 (7, 'dungrua', 'cfbabadf4ac3d677ef3972dff9fad18e', 'student'),
 (23, 'hqnghi', 'f23842d328c526c9c463f2b5cc2a4b59', 'teacher'),
 (22, 'hxhiep', 'f602de1cc3d1bac4897f4ef257d1d29f', 'teacher'),
+(30, 'ltkbinh', '17e66d2461c981a472fbcb5cc181167b', 'student'),
 (3, 'manager', '1d0258c2440a8d19e716292b231e3190', 'manager'),
 (8, 'manager2', '8df5127cd164b5bc2d2b78410a7eea0c', 'manager'),
 (2, 'nguyenvan', 'e7fab94348aa85c3043f077a75d2f395', 'student'),
 (9, 'nmnhat', '73c4eade589a95de502b2ad0db9f61e9', 'student'),
 (11, 'ntthanh', '2c0813259df4854e1cbe0b61bff8b5d5', 'student'),
 (24, 'pnquyen', 'e3a63fb1b4d787383ad0608409ddc19e', 'teacher'),
+(29, 'student', 'cd73502828457d15655bbd7a63fb0bc8', 'student'),
 (18, 'student2', '213ee683360d88249109c2f92789dbc3', 'student'),
 (26, 'student3', '8e4947690532bc44a8e41e9fb365b76a', 'student'),
 (6, 'teacher', '8d788385431273d11e8b43bb78f3aa41', 'teacher'),
@@ -115,7 +117,9 @@ INSERT INTO `program_student` (`id`, `program_id`, `student_id`, `status`, `is_p
 (20, 3, 18, 'Đăng ký', b'1', b'0', '2019-09-11 14:54:43'),
 (32, 5, 18, 'Tạm hoãn', b'1', b'1', '2019-09-12 03:02:34'),
 (33, 3, 20, 'Có ý thích', b'0', b'0', '2019-09-12 03:03:41'),
-(34, 2, 18, 'Có ý thích', b'1', b'1', '2019-09-12 03:35:39');
+(34, 2, 18, 'Có ý thích', b'1', b'1', '2019-09-12 03:35:39'),
+(35, 3, 21, 'Đăng ký', b'1', b'0', '2019-09-14 12:18:08'),
+(36, 3, 22, 'Đăng ký', b'0', b'0', '2019-09-14 12:18:50');
 
 -- --------------------------------------------------------
 
@@ -158,7 +162,7 @@ INSERT INTO `program_subject` (`id`, `program_id`, `subject_id`) VALUES
 (25, 1, 6),
 (32, 12, 1),
 (33, 12, 2),
-(34, 12, 3),
+(34, 12, 2),
 (35, 12, 4),
 (36, 3, 1),
 (37, 3, 2),
@@ -195,7 +199,9 @@ INSERT INTO `students` (`id`, `name`, `birthday`, `email`, `address`, `username`
 (17, 'Nguyễn Trường An', '1999-01-01', 'an@mail.com', 'Hậu Giang', 'truongan', '2019-09-11 03:50:51'),
 (18, 'Tô Vủ Phong', '1999-01-01', 'vfon98@gmail.com', 'Can Tho', 'student3', '2019-09-11 04:01:28'),
 (19, 'Nguyễn Học Sinh', '1999-01-01', 'mail@mail.com', 'Kiên Giang', 'vfon', '2019-09-11 15:34:17'),
-(20, 'Võ Tấn Sang', '1999-01-01', 'vts@mail.com', 'Đồng Tháp', 'vtsang', '2019-09-12 03:03:41');
+(20, 'Võ Tấn Sang', '1999-01-01', 'vts@mail.com', 'Đồng Tháp', 'vtsang', '2019-09-12 03:03:41'),
+(21, 'Nguyễn Học Sinh', '1999-01-01', 'nhsinh@mail.com', 'Long An', 'student', '2019-09-14 12:18:08'),
+(22, 'Lê T.K Bình', '1998-01-01', 'example@mail.com', 'Sóc Trăng', 'ltkbinh', '2019-09-14 12:18:50');
 
 -- --------------------------------------------------------
 
@@ -309,7 +315,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `programs`
@@ -321,7 +327,7 @@ ALTER TABLE `programs`
 -- AUTO_INCREMENT for table `program_student`
 --
 ALTER TABLE `program_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `program_subject`
@@ -333,7 +339,7 @@ ALTER TABLE `program_subject`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `subjects`

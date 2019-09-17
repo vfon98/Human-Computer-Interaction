@@ -10,9 +10,12 @@
 		if ($_SESSION['student_is_paid'] == true) {
 			echo
 			'<a href="/views/student/personal_programs.php" class="list-group-item list-group-item-action bg-dark">Chương trình đào tạo</a>';
+			echo
+			'<a href="/views/student/study_result.php" class="list-group-item list-group-item-action bg-dark">Kết quả học tập</a>';
 		}
 		else {
 			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark">Chương trình đào tạo</a>';
+			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark">Kết quả học tập</a>';
 			echo 
 			'<a class="list-group-item list-group-item-action bg-dark"
 			data-toggle="modal" href="#modal-tuition"

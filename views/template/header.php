@@ -43,7 +43,7 @@
 
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"  style="font-size: 17px">
 				<button class="btn btn-dark" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
 				<a class="navbar-brand ml-2" href="/">Quản lý đào tạo</a>
 				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">

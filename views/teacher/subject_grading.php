@@ -6,7 +6,7 @@
 		<div class="col">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h5>Chấm điểm môn học</h5>
+					<h4>Chấm điểm môn học</h4>
 				</div>
 				<div class="card-body">
 					<div class="form-group">
@@ -31,6 +31,12 @@
 			let s_id = $(this).val();
 			ajaxGetStudentList(s_id);
 		});
+		<?php
+		if (isset($_GET['s_id'])) {
+			$s_id = $_GET['s_id'];
+			echo "ajaxGetStudentList($s_id);";
+		}
+		?>
 	});
 	
 	function ajaxGetStudentList(s_id) {
