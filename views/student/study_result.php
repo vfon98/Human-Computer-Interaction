@@ -16,7 +16,9 @@
 								<th>Mã môn</th>
 								<th>Tên môn học</th>
 								<th>GV phụ trách</th>
-								<th>Điểm</th>
+								<th>Lần thi</th>
+								<th style="width: 180px">Điểm</th>
+								<th>Tích lũy</th>
 							</tr>
 						</thead>
 						<tbody>

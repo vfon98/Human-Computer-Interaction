@@ -8,10 +8,10 @@
 		$arr_mark = $_POST['mark'];
 		$length = count($_POST['st_id']);
 		for ($i=0; $i < $length ; $i++) { 
-			$sql = "UPDATE student_subject
-				SET mark='$arr_mark[$i]'
-				WHERE student_id='$arr_id[$i]' AND subject_id='$s_id';";
-			// echo $sql.'<br>';
+			$sql = "INSERT INTO student_subject (student_id, subject_id, mark)
+					VALUES ($arr_id[$i], $s_id, $arr_mark[$i]) ON DUPLICATE KEY 
+					UPDATE mark=IF(count >= 2 AND $arr_mark[$i] >= 5.5, 5.5, $arr_mark[$i])";
+			echo $sql.'<br>';
 			$conn->query($sql);
 		}
 		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?s_id='.$s_id);

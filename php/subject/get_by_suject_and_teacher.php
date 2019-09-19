@@ -33,8 +33,12 @@
 				exit;
 			}
 			$has_mark = false;
+			$is_all_unmarked = true;
 			while ($row = $result->fetch_assoc()) {
 				$has_mark = $row['mark'] !== NULL ? true : false;
+				if ($has_mark) {
+					$is_all_unmarked = false;
+				}
 				echo
 				'<tr>
 					<td>'.$i++.'</td>
@@ -46,7 +50,7 @@
 					.'</td>
 				</tr>';
 			}
-			if (!$has_mark) {
+			if ($is_all_unmarked) {
 				echo
 				'<tr class="bg-light">
 					<td colspan="3"></td>

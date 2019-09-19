@@ -22,6 +22,7 @@
 				WHERE username='$logged_user' AND status='Đăng ký'";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
+		$p_id = $row['p_id'];
 
 		$_SESSION['student_id'] = $row['st_id'];
 		$_SESSION['student_is_paid'] = $row['is_paid'];

@@ -39,7 +39,7 @@ function changeActiveClass() {
 		$('.list-group-item.active').removeClass('active');
 		$('.list-group-item').eq(2).addClass('active');
 	}
-	if (pathname == '/views/teacher/subject_grading.php' || pathname.startsWith('/views/manager/subject_grading.php')) {
+	if (pathname == '/views/teacher/subject_grading.php') {
 		$('.list-group-item.active').removeClass('active');
 		$('.list-group-item').eq(1).addClass('active');
 	}

@@ -2,7 +2,7 @@
 	if ($_SESSION['logged_role'] == 'student') {
 		require_once '../../php/connection.php';
 		$st_id = $_SESSION['student_id'];
-		$sql = "SELECT sub_id, s.name as s_name, t.name as t_name, mark
+		$sql = "SELECT sub_id, s.name as s_name, t.name as t_name, mark, count, ss.id as ss_id
 			FROM students st JOIN program_student pst ON st.id=pst.student_id
 			JOIN program_subject ps ON ps.program_id=pst.program_id
 			JOIN subjects s ON s.id=ps.subject_id
@@ -10,16 +10,52 @@
 			LEFT JOIN student_subject ss ON ss.subject_id=s.id AND ss.student_id=st.id
 			WHERE st.id='$st_id'";
 		$result = $conn->query($sql);
+		if ($result->num_rows <= 0) {
+			echo 
+			'<tr>
+				<td colspan="5" class="text-center text-danger"><h5>Chưa có môn nào trong CTDT</h5></td>
+			</tr>';
+			exit;
+		}
+		// =======================
 		$i = 1;
+		$total_mark = 0;
+		$avg_mark = 0;
+		$mark_rows = 0;
+		$check_icon = '<span class="font-weight-bold text-success">&#x2713;</span>';
+		// $check_icon = '<i class="fa fa-check text-success"></i>';
 		while ($row = $result->fetch_assoc()) {
+			$has_mark = $row['mark'] === NULL ? false : true;
 			echo
 			'<tr>
 				<td>'.$i++.'</td>
 				<td>'.$row['sub_id'].'</td>
 				<td>'.$row['s_name'].'</td>
 				<td>'.$row['t_name'].'</td>
-				<td style="font-weight: 550">'.($row['mark'] === NULL ? '<span class="">Chưa có</span>' : $row['mark']).'</td>
+				<td>'.$row['count'].'</td>
+				<td style="font-weight: 550">'.($has_mark ? $row['mark'] : '<span>Chưa có</span>').'</td>
+				<td>
+					'.($row['mark'] >= 5.5 ? $check_icon : 
+						($has_mark && $row['count'] != 2 ? 
+							'<a href="/php/student/retest.php?ss_id='.$row['ss_id'].'" class="btn btn-link text-danger p-0">Thi lại <i class="fa fa-undo"></i></a>' : 
+							'<i class="fa fa-times text-danger"></i>')).'
+				</td>
 			</tr>';
+			if ($has_mark) {
+				$total_mark += $row['mark'];
+				$mark_rows++;
+			}
 		}
+		$mark_rows != 0 && $avg_mark = round($total_mark / $mark_rows, 2);
 	}
 ?>
+<tr class="bg-light">
+	<form action="/php/student/export_mark_excel.php" method="POST">
+		<input type="hidden" name="avg_mark" value="<?php echo $avg_mark ?>">
+		<td colspan="3" class="font-italic text-secondary text-left">* Điểm tối đa của lần thi lại là 5.5</td>
+		<td colspan="4" class="text-right">
+			<strong>Điểm trung bình: <?php echo $avg_mark ?></strong>
+			<button type="submit" class="btn btn-success ml-3"><i class="fa fa-cloud-download"></i> Xuất file Excel</button>
+		</td>
+	</form>
+</tr>

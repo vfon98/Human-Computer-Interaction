@@ -83,18 +83,20 @@
 							$sql = "SELECT sub_id, s.name as s_name, t.name as t_name 
 								FROM subjects s JOIN teachers t ON s.teacher_id = t.id
 								WHERE s.id IN (
-									SELECT subject_id FROM program_subject WHERE program_id=".$row['p_id']."
+									SELECT subject_id FROM program_subject WHERE program_id='$p_id'
 								)";
 							$result = $conn->query($sql);
-							$i = 1;
-							while ($row = $result->fetch_assoc()) {
-								echo
-								'<tr>
-									<td>'.$i++.'</td>
-									<td>'.$row['sub_id'].'</td>
-									<td>'.$row['s_name'].'</td>
-									<td>'.$row['t_name'].'</td>
-								</tr>';
+							if ($result->num_rows > 0) {
+								$i = 1;
+								while ($row = $result->fetch_assoc()) {
+									echo
+									'<tr>
+										<td>'.$i++.'</td>
+										<td>'.$row['sub_id'].'</td>
+										<td>'.$row['s_name'].'</td>
+										<td>'.$row['t_name'].'</td>
+									</tr>';
+								}
 							}
 							?>
 						</tbody>
