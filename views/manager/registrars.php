@@ -7,7 +7,7 @@
 		<table class="table table-sm table-hover table-striped shadow">
 			<thead>
 				<tr>
-					<th>STT</th>
+					<th class="text-center">STT</th>
 					<th>Tên học viên</th>
 					<th>Ngày sinh</th>
 					<th>Địa chỉ</th>

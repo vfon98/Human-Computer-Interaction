@@ -49,3 +49,26 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script>
+	$(document).ready(function() {
+		$('#re-pass').keyup(function() {
+			handleInput();
+		});
+		$('#new-pass').keyup(function() {
+			handleInput();
+		});
+	});
+	function handleInput() {
+		let newPass = $('#new-pass').val();
+		let rePass = $('#re-pass').val();
+		if (rePass !== newPass || rePass === '') {
+			$('#re-pass').addClass('is-invalid');
+			$('#btn-submit').prop('disabled', true);
+		}
+		else {
+			$('#re-pass').removeClass('is-invalid').addClass('is-valid');
+			$('#btn-submit').prop('disabled', false);
+		}
+	}
+</script>

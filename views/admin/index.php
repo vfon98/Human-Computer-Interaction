@@ -73,39 +73,40 @@
 
 <!-- CHANGE PASSWORD MODAL -->
 
-		<div class="modal fade" id="modal-change-password">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">Đổi mật khẩu tài khoản</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<form action="/php/account/change_password.php" method="POST">
-						<div class="modal-body">
-							<input type="hidden" name="acc-id" id="hid-acc-id" value="">
-							<fieldset class="form-group was-validated">
-								<label>Mật khẩu mới</label>
-								<input name="new-pass" id="new-pass" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
-							</fieldset>
-							<fieldset class="form-group">
-								<label>Nhập lại mật khẩu mới</label>
-								<input id="re-pass" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
-							</fieldset>
-						</div>
-						<div class="modal-footer">
-							<button type="submit" id="btn-submit" class="btn btn-secondary" disabled>
-								<i class="fa fa-save"></i> Lưu thay đổi
-							</button>
-							<button type="button" class="btn btn-danger" data-dismiss="modal">
-								<i class="fa fa-close"></i> Đóng
-							</button>
-						</div>
-					</form>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+<div class="modal fade" id="modal-change-password">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Đổi mật khẩu tài khoản</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form action="/php/account/change_password.php" method="POST">
+				<div class="modal-body">
+					<!-- HIDDEN VALUE PASS BY JS -->
+					<input type="hidden" name="acc-id" id="hid-acc-id" value="">
+					<fieldset class="form-group was-validated">
+						<label>Mật khẩu mới</label>
+						<input name="new-pass" id="new-pass" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+					</fieldset>
+					<fieldset class="form-group">
+						<label>Nhập lại mật khẩu mới</label>
+						<input id="re-pass" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+					</fieldset>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" id="btn-submit" class="btn btn-secondary" disabled>
+						<i class="fa fa-save"></i> Lưu thay đổi
+					</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">
+						<i class="fa fa-close"></i> Đóng
+					</button>
+				</div>
+			</form>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script>
 	$(document).ready(function() {
