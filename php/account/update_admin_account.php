@@ -7,7 +7,7 @@
 		$new_pass = md5($_POST['new_pass']);
 		$sql = "UPDATE accounts SET password='$new_pass' WHERE id='$user_id'";
 		if ($conn->query($sql)) {
-			header('location: /views/success/password_changed.php');
+			header('location: /views/success/info_changed.php');
 			exit;
 		}
 	}

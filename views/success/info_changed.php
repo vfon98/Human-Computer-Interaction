@@ -15,7 +15,7 @@
 <div class="container mt-5">
     <div class="jumbotron">
         <div class="text-center text-success" id="icon"><i class="fa fa-5x fa-check-circle"></i></div>
-        <h1 class="text-center">Đổi mật khẩu thành công !!!<p> </p>
+        <h1 class="text-center">Đổi thông tin thành công !!!<p> </p>
           <p><small class="text-center">Vui lòng đăng nhập lại để cập nhật thay đổi</small></p>
         </h1>
         <p class="text-center"><a class="btn btn-primary" href="../login.php"><i class="fa fa-user"></i> Đăng nhập</a></p>

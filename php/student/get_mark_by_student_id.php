@@ -8,7 +8,7 @@
 			JOIN subjects s ON s.id=ps.subject_id
 			JOIN teachers t ON t.id=s.teacher_id
 			LEFT JOIN student_subject ss ON ss.subject_id=s.id AND ss.student_id=st.id
-			WHERE st.id='$st_id'";
+			WHERE st.id='$st_id' AND pst.status='Đăng ký'";
 		$result = $conn->query($sql);
 		if ($result->num_rows <= 0) {
 			echo 
