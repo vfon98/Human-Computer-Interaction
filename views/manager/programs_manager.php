@@ -61,7 +61,7 @@
 		<!-- TABLE OF PROGRAMS -->
 		<div class="col-12">
 			<div class="card shadow p-0">
-				<div class="card-header bg-secondary text-white">
+				<div class="card-header bg-info text-white">
 					<h4 class="mb-0 text-center">Danh sách CTDT đang quản lý</h4>
 				</div>
 				<div class="card-body py-2">

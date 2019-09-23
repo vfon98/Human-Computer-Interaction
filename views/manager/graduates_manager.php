@@ -8,8 +8,8 @@
 				<div class="card-header bg-info text-white text-center pb-1">
 					<h4>Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
 				</div>
-				<div class="card-body py-2">
-					<table class="table table-inverse">
+				<div class="card-body py-2 px-3">
+					<table class="table table-inverse table-sm table-hover table-striped text-center">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -17,13 +17,13 @@
 								<th>Ngày sinh</th>
 								<th>Email</th>
 								<th>Chương trình</th>
+								<th>Điểm TB</th>
+								<th>Xếp loại</th>
 								<th>Tùy chọn</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td></td>
-							</tr>
+							<?php include '../../php/student/get_all_graduates.php' ?>
 						</tbody>
 					</table>
 				</div>
