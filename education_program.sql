@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2019 at 10:45 AM
+-- Generation Time: Sep 24, 2019 at 07:15 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.31
 
@@ -65,6 +65,34 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `courses`
+--
+
+CREATE TABLE `courses` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `begin_at` date DEFAULT curdate(),
+  `end_at` date DEFAULT curdate(),
+  `student_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`id`, `name`, `begin_at`, `end_at`, `student_id`, `created_at`) VALUES
+(5, 'Kỹ năng mềm', '2015-01-01', '2016-01-01', 14, '2019-09-09 08:14:59'),
+(6, 'Kỹ năng cứng', '2015-01-01', '2016-01-01', 14, '2019-09-09 08:21:10'),
+(7, 'Lập trình căn bản', '2015-02-17', '2016-01-05', 14, '2019-09-09 08:21:44'),
+(8, 'Kỹ năng mềm', '2015-01-01', '2016-01-01', 15, '2019-09-10 09:40:17'),
+(9, 'Kỹ năng mềm', '2015-01-01', '2016-01-01', 17, '2019-09-11 03:52:17'),
+(10, 'Kỹ năng cứng', '2015-01-01', '2016-01-01', 17, '2019-09-11 03:52:20'),
+(11, 'Kỹ năng mềm', '2015-01-01', '2016-01-01', 18, '2019-09-11 04:02:40');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `programs`
 --
 
@@ -106,28 +134,30 @@ CREATE TABLE `program_student` (
   `status` varchar(50) DEFAULT 'Có ý thích',
   `is_paid` bit(1) DEFAULT b'0',
   `is_extra` bit(1) DEFAULT b'0',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `is_graduated` bit(1) DEFAULT b'0',
+  `avg_mark` float DEFAULT NULL
+) ;
 
 --
 -- Dumping data for table `program_student`
 --
 
-INSERT INTO `program_student` (`id`, `program_id`, `student_id`, `status`, `is_paid`, `is_extra`, `created_at`) VALUES
-(1, 1, 1, 'Tạm hoãn', b'0', b'0', '2019-09-11 14:54:43'),
-(3, 4, 7, 'Tạm hoãn', b'0', b'0', '2019-09-11 14:54:43'),
-(16, 2, 16, 'Tạm hoãn', b'0', b'0', '2019-09-11 14:54:43'),
-(20, 3, 18, 'Tạm hoãn', b'1', b'0', '2019-09-11 14:54:43'),
-(32, 5, 18, 'Tạm hoãn', b'1', b'1', '2019-09-12 03:02:34'),
-(33, 3, 20, 'Có ý thích', b'0', b'0', '2019-09-12 03:03:41'),
-(34, 2, 18, 'Có ý thích', b'1', b'1', '2019-09-12 03:35:39'),
-(35, 3, 21, 'Đăng ký', b'1', b'0', '2019-09-14 12:18:08'),
-(36, 3, 22, 'Tạm hoãn', b'0', b'0', '2019-09-14 12:18:50'),
-(37, 4, 23, 'Tạm hoãn', b'1', b'0', '2019-09-18 01:43:29'),
-(38, 8, 23, 'Tạm hoãn', b'1', b'1', '2019-09-18 01:46:41'),
-(39, 3, 23, 'Đăng ký', b'1', b'1', '2019-09-18 01:47:35'),
-(40, 5, 24, 'Đăng ký', b'0', b'0', '2019-09-18 02:05:05'),
-(41, 2, 25, 'Đăng ký', b'0', b'0', '2019-09-18 02:06:38');
+INSERT INTO `program_student` (`id`, `program_id`, `student_id`, `status`, `is_paid`, `is_extra`, `is_graduated`, `avg_mark`, `created_at`) VALUES
+(1, 1, 1, 'Tạm hoãn', b'0', b'0', b'0', NULL, '2019-09-11 14:54:43'),
+(3, 4, 7, 'Tạm hoãn', b'0', b'0', b'0', NULL, '2019-09-11 14:54:43'),
+(16, 2, 16, 'Tạm hoãn', b'0', b'0', b'0', NULL, '2019-09-11 14:54:43'),
+(20, 3, 18, 'Tạm hoãn', b'1', b'0', b'0', NULL, '2019-09-11 14:54:43'),
+(32, 5, 18, 'Tạm hoãn', b'1', b'1', b'0', NULL, '2019-09-12 03:02:34'),
+(33, 3, 20, 'Có ý thích', b'0', b'0', b'0', NULL, '2019-09-12 03:03:41'),
+(34, 2, 18, 'Có ý thích', b'1', b'1', b'0', NULL, '2019-09-12 03:35:39'),
+(35, 3, 21, 'Đăng ký', b'1', b'0', b'1', 7.08, '2019-09-14 12:18:08'),
+(36, 3, 22, 'Tạm hoãn', b'0', b'0', b'0', NULL, '2019-09-14 12:18:50'),
+(37, 4, 23, 'Tạm hoãn', b'1', b'0', b'0', NULL, '2019-09-18 01:43:29'),
+(38, 8, 23, 'Tạm hoãn', b'1', b'1', b'0', NULL, '2019-09-18 01:46:41'),
+(39, 3, 23, 'Đăng ký', b'1', b'1', b'1', 7.43, '2019-09-18 01:47:35'),
+(40, 5, 24, 'Đăng ký', b'0', b'0', b'0', NULL, '2019-09-18 02:05:05'),
+(41, 2, 25, 'Đăng ký', b'0', b'0', b'0', NULL, '2019-09-18 02:06:38'),
+(42, 6, 21, 'Có ý thích', b'0', b'1', b'0', NULL, '2019-09-21 04:38:48');
 
 -- --------------------------------------------------------
 
@@ -207,11 +237,59 @@ INSERT INTO `students` (`id`, `name`, `birthday`, `email`, `address`, `username`
 (17, 'Nguyễn Trường An', '1999-01-01', 'an@mail.com', 'Hậu Giang', 'truongan', '2019-09-11 03:50:51'),
 (18, 'Tô Vủ Phong', '1999-01-01', 'vfon98@gmail.com', 'Can Tho', 'student3', '2019-09-11 04:01:28'),
 (20, 'Võ Tấn Sang', '1999-01-01', 'vts@mail.com', 'Đồng Tháp', 'vtsang', '2019-09-12 03:03:41'),
-(21, 'Nguyễn Học Sinh', '1999-01-01', 'nhsinh@mail.com', 'Long An', 'student', '2019-09-14 12:18:08'),
+(21, 'Nguyễn Học Sinh', '1999-10-03', 'nhsinh@gmail.com', 'Đồng Tháp', 'student', '2019-09-14 12:18:08'),
 (22, 'Lê T.K Bình', '1998-01-01', 'example@mail.com', 'Sóc Trăng', 'ltkbinh', '2019-09-14 12:18:50'),
 (23, 'Nguyễn Văn B', '1999-04-25', 'nvb@mail.com', 'Bến Tre', 'vfon', '2019-09-18 01:43:29'),
 (24, 'Lê Tuệ Minh', '1999-01-01', 'ltminh@mail.com', 'Cà Mau', 'ltminh', '2019-09-18 02:05:04'),
 (25, 'Nguyễn Văn Tuấn', '1997-01-01', 'ngc@mail.com', 'Cần Thơ', 'nvtuan', '2019-09-18 02:06:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_subject`
+--
+
+CREATE TABLE `student_subject` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `subject_id` int(11) NOT NULL,
+  `mark` float DEFAULT NULL
+) ;
+
+--
+-- Dumping data for table `student_subject`
+--
+
+INSERT INTO `student_subject` (`id`, `student_id`, `subject_id`, `mark`, `count`) VALUES
+(1, 18, 2, 1, 1),
+(2, 21, 2, 6.5, 1),
+(3, 22, 2, 7, 1),
+(4, 18, 5, 6, 1),
+(6, 22, 5, 8, 1),
+(7, 18, 1, 0, 1),
+(8, 21, 1, 5.5, 2),
+(9, 22, 1, 8, 1),
+(10, 18, 3, 2, 1),
+(12, 22, 3, 4, 1),
+(13, 18, 6, 2, 1),
+(14, 21, 6, 8, 2),
+(15, 22, 6, 0, 1),
+(16, 23, 1, 5.5, 2),
+(17, 23, 6, 9, 1),
+(25, 25, 2, 6, 1),
+(26, 24, 2, 7, 1),
+(27, 23, 2, 8, 1),
+(28, 21, 5, 7, 1),
+(29, 23, 5, 6.6, 2),
+(38, 25, 3, 4, 1),
+(39, 21, 3, 5.5, 2),
+(40, 23, 3, 8.5, 1),
+(41, 24, 3, 7, 1),
+(48, 24, 4, 6, 1),
+(50, 23, 4, 7, 1),
+(51, 21, 4, 10, 1),
+(60, 25, 1, 5, 1),
+(61, 24, 1, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -263,11 +341,37 @@ CREATE TABLE `teachers` (
 
 INSERT INTO `teachers` (`id`, `name`, `email`, `username`, `created_at`) VALUES
 (1, 'Võ Huỳnh Trâm', 'vhtram@ctu.edu.vn', 'vhtram', '2019-08-31'),
-(2, 'Nguyễn Giáo Viên', 'gv@ctu.edu.vn', 'teacher', '2019-08-31'),
+(2, 'Ths. Nguyễn Giáo Viên', 'ngv@ctu.edu.vn', 'teacher', '2019-08-31'),
 (3, 'TS. Trương Minh Thái', 'tmthai@ctu.edu.vn', 'tmthai', '2019-09-11'),
 (4, 'PGs. TS. Huỳnh Xuân Hiệp', 'hxhiep@ctu.edu.vn', 'hxhiep', '2019-09-11'),
 (5, 'TS. Huỳnh Quang Nghi', 'hqnghi@ctu.edu.vn', 'hqnghi', '2019-09-11'),
 (6, 'Ths. Phạm Ngọc Quyền', 'pnquyen@ctu.edu.vn', 'pnquyen', '2019-09-11');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v_registars_list`
+-- (See below for the actual view)
+--
+CREATE TABLE `v_registars_list` (
+`st_id` int(11)
+,`st_name` varchar(50)
+,`birthday` date
+,`email` varchar(100)
+,`address` varchar(200)
+,`p_name` varchar(100)
+,`created_at` timestamp
+,`status` varchar(50)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v_registars_list`
+--
+DROP TABLE IF EXISTS `v_registars_list`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_registars_list`  AS  select `st`.`id` AS `st_id`,`st`.`name` AS `st_name`,`st`.`birthday` AS `birthday`,`st`.`email` AS `email`,`st`.`address` AS `address`,`p`.`name` AS `p_name`,`st`.`created_at` AS `created_at`,`ps`.`status` AS `status` from ((`students` `st` join `program_student` `ps`) join `programs` `p` on(`st`.`id` = `ps`.`student_id` and `ps`.`program_id` = `p`.`id`)) where `ps`.`status` = 'Có ý thích' ;
 
 --
 -- Indexes for dumped tables
@@ -281,16 +385,16 @@ ALTER TABLE `accounts`
   ADD KEY `id` (`id`);
 
 --
+-- Indexes for table `courses`
+--
+ALTER TABLE `courses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `programs`
 --
 ALTER TABLE `programs`
   ADD KEY `id` (`id`);
-
---
--- Indexes for table `program_student`
---
-ALTER TABLE `program_student`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `program_subject`
@@ -328,6 +432,12 @@ ALTER TABLE `accounts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
+-- AUTO_INCREMENT for table `courses`
+--
+ALTER TABLE `courses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `programs`
 --
 ALTER TABLE `programs`
@@ -337,7 +447,7 @@ ALTER TABLE `programs`
 -- AUTO_INCREMENT for table `program_student`
 --
 ALTER TABLE `program_student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `program_subject`
@@ -350,6 +460,12 @@ ALTER TABLE `program_subject`
 --
 ALTER TABLE `students`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `student_subject`
+--
+ALTER TABLE `student_subject`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `subjects`

@@ -9,7 +9,7 @@
 					<h4>Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
 				</div>
 				<div class="card-body py-2 px-3">
-					<table class="table table-inverse table-sm table-hover table-striped text-center">
+					<table class="table table-inverse table-sm table-hover table-striped text-center mb-0">
 						<thead>
 							<tr>
 								<th>STT</th>
