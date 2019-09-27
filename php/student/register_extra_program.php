@@ -17,7 +17,7 @@
 				VALUES ('$p_id', '$st_id', 0, 1)";
 		echo $sql;
 		$conn->query($sql);
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=new');
 	}
 	else {
 		header('location: ../../views/error/unauthorized.php');

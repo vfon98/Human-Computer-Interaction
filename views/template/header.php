@@ -5,12 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Quản lý đào tạo</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- BOOSTRAP CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- TOASTR CDN -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<!-- FONTAWESOME CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- SELF DEFINED CSS -->
 	<link rel="stylesheet" href="/assets/css/sidebar.css">
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<style>
@@ -18,6 +23,26 @@
 		     vertical-align: middle;
 		}
 	</style>
+	<script src="/assets/js/main.js"></script>
+	<script>
+		// TOASTR CONFIG
+		$(document).ready(function() {
+			toastr.options = {
+			  "closeButton": true,
+			  "newestOnTop": true,
+			  "positionClass": "toast-top-right",
+			  "preventDuplicates": true,
+			  "showDuration": "200",
+			  "hideDuration": "1500",
+			  "timeOut": "1600",
+			  "showEasing": "swing",
+			  "hideEasing": "linear",
+			  "showMethod": "fadeIn",
+			  "hideMethod": "slideToggle",
+			  "tapToDismiss": true
+			}
+		});
+	</script>
 </head>
 <body>
 	<div class="d-flex" id="wrapper">

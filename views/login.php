@@ -65,6 +65,26 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script>
+		// TOASTR CONFIG
+		$(document).ready(function() {
+			toastr.options = {
+			  "closeButton": true,
+			  "newestOnTop": true,
+			  "positionClass": "toast-top-right",
+			  "preventDuplicates": true,
+			  "showDuration": "1000",
+			  "hideDuration": "1500",
+			  "timeOut": "2000",
+			  "showEasing": "swing",
+			  "hideEasing": "linear",
+			  "showMethod": "fadeIn",
+			  "hideMethod": "slideToggle",
+			  "tapToDismiss": true			}
+		});
+	</script>
 	<style>
 		.container{
 		      border:2px solid grey;
@@ -89,6 +109,9 @@
 		      width:396px;
 		      background-color:paleturquoise;
 		      border-radius: 1em 1em 0 0;
+		  }
+		  #toast-container > div {
+		      opacity:1;
 		  }
 	</style>
 </head>
@@ -127,6 +150,16 @@
 	</div>
 	<script>
 		$(document).ready(function() {
+			if (performance && performance.navigation.type === 0) {
+			<?php
+				if (isset($_GET['m'])) {
+					$method = $_GET['m'];
+					if ($method == 'outted') {
+						echo 'toastr.success("Đăng xuất thành công !", "Thông báo");';
+					}
+				}
+			?>
+			}
 			$('#login-div').animate({
 				marginTop: '-250px'
 			}, 0).animate({marginTop: 0}, 1000);

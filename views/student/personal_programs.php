@@ -122,6 +122,28 @@
 
 <script>
 	$(document).ready(function() {
+		if (performance && performance.navigation.type === 0) {
+		<?php
+			if (isset($_GET['m'])) {
+				$method = $_GET['m'];
+				if ($method == 'add') {
+					echo 'toastr.success("Thêm thành công !", "Thông báo");';
+				}
+				elseif ($method == 'del') {
+					echo 'toastr.error("Xóa thành công !", "Thông báo");';
+				}
+				elseif ($method == 'delay') {
+					echo 'toastr.info("Tạm hoãn thành công !", "Thông báo");';
+				}
+				elseif ($method == 'new') {
+					echo 'toastr.success("Đăng ký thêm CTDT thành công !", "Thông báo");';
+				}
+				elseif ($method == 'delay_failed') {
+					echo 'toastr.error("Không thể tạm hoãn tất cả CTDT !", "Thông báo");';
+				}
+			}
+		?>
+		}
 		$('#modal-courses').on('shown.bs.modal', function() {
 			$('input[name="c-name"]').focus();
 		});

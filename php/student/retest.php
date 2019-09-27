@@ -8,7 +8,7 @@
 		$row = $result->fetch_assoc();
 		// CHECK IF MAX OF ATTEMPT
 		if ($row['count'] > 2) {
-			header('location: '.$_SERVER['HTTP_REFERER']);
+			header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=retest');
 			exit;
 		}
 		$sql = "UPDATE student_subject 

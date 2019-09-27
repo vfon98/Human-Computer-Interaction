@@ -6,12 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/main.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </head>
 <body>
 	<!-- Navigation -->
@@ -50,7 +54,7 @@
 						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
 					<div class="card-body">
-						<table class="table table-inverse table-hover table-striped text-center">
+						<table class="table table-inverse table-hover table-striped text-center" id="tbl-program">
 							<thead>
 								<tr>
 									<th>STT</th>
@@ -106,7 +110,7 @@
 					</button>
 				</div>
 				<div class="modal-body py-2">
-					<table class="table table-inverse table-hover table-striped m-0">
+					<table class="table table-inverse table-hover table-striped text-center m-0">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -127,7 +131,32 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
-
+	<script>
+		$(document).ready(function() {
+			$('#tbl-program').DataTable({
+				dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+					"<'row'<'col-sm-12'tr>>" +
+					"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+				// info: false,
+				language: {
+					"sProcessing":   "Đang xử lý...",
+					   "sLengthMenu":   "Số dòng mỗi trang: _MENU_",
+					   "sZeroRecords":  "<h5 class='text-danger'>Không tìm thấy dòng nào phù hợp !</h5>",
+					   "sInfo":         "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+					   "sInfoEmpty":    "Đang xem 0 đến 0 trong tổng số 0 mục",
+					   "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+					   "sInfoPostFix":  "",
+					   "sSearch":       "Tìm kiếm:",
+					   "oPaginate": {
+					       "sFirst":    "Đầu",
+					       "sLast":     "Cuối",
+					       "sPrevious": "<i class='fa fa-chevron-left'></i>",
+					       "sNext":     "<i class='fa fa-chevron-right'></i>"
+					   }
+				}
+			});
+		});
+	</script>
 	<script>
 		function ajaxGetDetail(id) {
 			console.log("ajaxGetDetail", id);

@@ -22,7 +22,7 @@
 			>Đóng học phí</a>';
 		}
 		?>
-		<a href="" class="list-group-item list-group-item-action bg-dark"></a>
+		<a href="" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 	</div>
 </div>
 <!-- ACCOUNT MODAL -->

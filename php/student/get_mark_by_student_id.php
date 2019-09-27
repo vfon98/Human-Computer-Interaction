@@ -13,7 +13,7 @@
 		if ($result->num_rows <= 0) {
 			echo 
 			'<tr>
-				<td colspan="5" class="text-center text-danger"><h5>Chưa có môn nào trong CTDT</h5></td>
+				<td colspan="7" class="text-center text-danger"><h5>Chưa có môn nào trong CTDT</h5></td>
 			</tr>';
 			exit;
 		}

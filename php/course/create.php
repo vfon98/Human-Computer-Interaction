@@ -10,6 +10,6 @@
 		$sql = "INSERT INTO courses (name, begin_at, end_at, student_id) 
 				VALUES ('$name', '$begin_at', '$end_at', '$st_id')";
 		$conn->query($sql);
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=add');
 	}
 ?>

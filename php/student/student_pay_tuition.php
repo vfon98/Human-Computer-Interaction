@@ -10,6 +10,6 @@
 		"<script>
 			alert('Thanh toán thành công');
 		</script>";
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=paid');
 	}
 ?>

@@ -5,7 +5,7 @@
 		$c_id = $_GET['id'];
 		$sql = "DELETE FROM courses WHERE id='$c_id'";
 		$conn->query($sql);
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=del');
 	}
 	else {
 		header('location: ../../views/unauthorized.php');

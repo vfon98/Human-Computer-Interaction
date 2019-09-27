@@ -9,7 +9,7 @@
 		<a href="/views/teacher/subject_grading.php" class="list-group-item list-group-item-action bg-dark">
 			Chấm điểm môn học
 		</a>
-		<a href="#" class="list-group-item list-group-item-action bg-dark"></a>
+		<a href="#" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 <!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark">Profile</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark">Status</a> -->

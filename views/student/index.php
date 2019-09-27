@@ -69,7 +69,7 @@
 					</h5>
 				</div>
 				<div class="card-body">
-					<table class="table table-inverse table-hover table-striped">
+					<table class="table table-inverse table-hover table-striped mb-1">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -98,6 +98,9 @@
 									</tr>';
 								}
 							}
+							else {
+								echo '<tr><td colspan="4" class="text-center text-danger font-italic"><h5>Chương trình chưa có môn nào !</h5></td></tr>';
+							}
 							?>
 						</tbody>
 					</table>
@@ -106,6 +109,21 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function() {
+		if (performance && performance.navigation.type === 0) {
+		<?php
+			if (isset($_GET['m'])) {
+				$method = $_GET['m'];
+				if ($method == 'paid') {
+					echo 'toastr.success("Thanh toán học phí thành công !", "Thông báo");';
+				}
+			}
+		?>
+		}
+	});
+</script>
 
 
 <?php include '../template/footer.php'; ?>

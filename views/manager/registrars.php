@@ -32,6 +32,19 @@
 
 <script>
 	$(document).ready(function() {
+		if (performance && performance.navigation.type === 0) {
+		<?php
+			if (isset($_GET['m'])) {
+				$method = $_GET['m'];
+				if ($method == 'approve') {
+					echo 'toastr.success("Xét duyệt sinh viên thành công !", "Thông báo");';
+				}
+				elseif ($method == 'decline') {
+					echo 'toastr.error("Loại bỏ sinh viên thành công !", "Thông báo");';
+				}
+			}
+		?>
+		}
 		let cbType = "checked";
 		$('#btn-check-all').click(function() {
 			if (cbType == "checked") {
