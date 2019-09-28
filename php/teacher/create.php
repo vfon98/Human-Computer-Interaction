@@ -22,7 +22,7 @@
 				VALUES ('$username', '$pass', 'manager')";
 			$conn->query($sql);
 		}
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=created');
 	}
 	else {
 		header('location: ../error/unauthorized.php');

@@ -47,18 +47,18 @@
 			</div>
 		</div>
 		<div class="col-7">
-			<div class="card shadow">
+			<div class="card shadow mb-5">
 				<div class="card-header bg-secondary text-white pb-0 text-center">
 					<h5>Danh sách tài khoản</h5>
 				</div>
-				<div class="card-body">
-					<table class="table table-inverse">
+				<div class="card-body pt-3">
+					<table class="table table-inverse table-striped table-hover text-center" id="tbl-account">
 						<thead>
 							<tr>
 								<th>STT</th>
 								<th>Tên đăng nhập</th>
 								<th>Loại tài khoản</th>
-								<th>Đổi mật khẩu</th>
+								<th>Mật khẩu</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -73,7 +73,7 @@
 
 <!-- CHANGE PASSWORD MODAL -->
 
-<div class="modal fade" id="modal-change-password">
+<div class="modal fade" id="modal-change-password" tabindex="-1">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -88,15 +88,15 @@
 					<input type="hidden" name="acc-id" id="hid-acc-id" value="">
 					<fieldset class="form-group was-validated">
 						<label>Mật khẩu mới</label>
-						<input name="new-pass" id="new-pass" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+						<input name="new-pass" id="new-pass-user" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Nhập lại mật khẩu mới</label>
-						<input id="re-pass" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+						<input id="re-pass-user" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
 					</fieldset>
 				</div>
 				<div class="modal-footer">
-					<button type="submit" id="btn-submit" class="btn btn-secondary" disabled>
+					<button type="submit" id="btn-submit-user" class="btn btn-secondary" disabled>
 						<i class="fa fa-save"></i> Lưu thay đổi
 					</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">
@@ -107,6 +107,18 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script>
+	$(document).ready(function() {
+		$('#tbl-account').DataTable({
+			dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+			ordering: true,
+			language: {
+				url: "/assets/lang-vi.json"
+			}
+		});
+	});
+</script>
 
 <script>
 	$(document).ready(function() {
@@ -140,6 +152,22 @@
 				$(this).removeClass('is-invalid').addClass('is-valid');
 				$('#btn-submit').prop('disabled', false);
 			}
+		});
+		$('#re-pass-user').keyup(function() {
+			let newPass = $('#new-pass-user').val();
+			let rePass = $('#re-pass-user').val();
+			if (rePass !== newPass) {
+				$(this).addClass('is-invalid');
+				$('#btn-submit-user').prop('disabled', true);
+			}
+			else {
+				$(this).removeClass('is-invalid').addClass('is-valid');
+				$('#btn-submit-user').prop('disabled', false);
+			}
+		});
+		// FOCUS ON MODAL SHOWN
+		$('#modal-change-password').on('shown.bs.modal', function () {
+			$('#new-pass-user').focus();
 		});
 	});
 	function passIdToModal(id) {

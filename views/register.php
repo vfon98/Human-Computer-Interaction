@@ -8,6 +8,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -58,7 +64,7 @@
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Chọn khóa học</label>
-								<select id="" name="program_id" class="form-control" required>
+								<select id="sel-program" name="program_id" class="form-control" required>
 									<option value="" disabled selected>--- Chọn khóa học muốn đăng ký ---</option>
 									<?php require '../php/program/get_name.php'; ?>
 								</select>
@@ -93,6 +99,7 @@
 									<th>STT</th>
 									<th>Tên chương trình</th>
 									<th>Học phí</th>
+									<th>Tùy chọn</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -105,6 +112,9 @@
 									<td>'.$i++.'</td>
 									<td>'.$row['name'].'</td>
 									<td>'.$row['tuition'].' VND</td>
+									<td><button onclick="setProgram('.$row['id'].')" class="btn btn-link p-0">
+										Đăng ký <i class="fa fa-paper-plane"></i></button>
+									</td>
 									</tr>';
 								}
 								?>
@@ -121,6 +131,10 @@
 			// document.getElementById("inp-bday").valueAsDate = new Date();
 			$('#inp-bday').val("1999-01-01");
 		});
+		function setProgram(p_id) {
+			location.assign('#sel-program');
+			$('#sel-program').val(p_id).focus();
+		}
 	</script>
 </body>
 </html>

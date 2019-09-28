@@ -16,6 +16,15 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<style>
+		ul.pagination {
+			display: flex;
+			justify-content: center !important;
+		}
+		#tbl-program_info {
+			padding: 0;
+		}
+	</style>
 </head>
 <body>
 	<!-- Navigation -->
@@ -49,7 +58,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<div class="card shadow mt-2">
+				<div class="card shadow mt-2 mb-4">
 					<div class="card-header bg-info text-white">
 						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
@@ -109,8 +118,8 @@
 						<span class="sr-only">Close</span>
 					</button>
 				</div>
-				<div class="modal-body py-2">
-					<table class="table table-inverse table-hover table-striped text-center m-0">
+				<div class="modal-body py-2 pb-0">
+					<table class="table table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -125,7 +134,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">
-						<i class="fa fa-times"></i> Close
+						<i class="fa fa-times"></i> Đóng
 					</button>
 				</div>
 			</div><!-- /.modal-content -->
@@ -134,25 +143,9 @@
 	<script>
 		$(document).ready(function() {
 			$('#tbl-program').DataTable({
-				dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
-					"<'row'<'col-sm-12'tr>>" +
-					"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
-				// info: false,
+				dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
 				language: {
-					"sProcessing":   "Đang xử lý...",
-					   "sLengthMenu":   "Số dòng mỗi trang: _MENU_",
-					   "sZeroRecords":  "<h5 class='text-danger'>Không tìm thấy dòng nào phù hợp !</h5>",
-					   "sInfo":         "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
-					   "sInfoEmpty":    "Đang xem 0 đến 0 trong tổng số 0 mục",
-					   "sInfoFiltered": "(được lọc từ _MAX_ mục)",
-					   "sInfoPostFix":  "",
-					   "sSearch":       "Tìm kiếm:",
-					   "oPaginate": {
-					       "sFirst":    "Đầu",
-					       "sLast":     "Cuối",
-					       "sPrevious": "<i class='fa fa-chevron-left'></i>",
-					       "sNext":     "<i class='fa fa-chevron-right'></i>"
-					   }
+					url: "/assets/lang-vi.json"
 				}
 			});
 		});

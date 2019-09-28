@@ -12,6 +12,6 @@
 					VALUES ('$arr_id[$i]', '$s_id', '$arr_mark[$i]')";
 			$conn->query($sql);
 		}
-		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?s_id='.$s_id);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=graded&s_id='.$s_id);
 	}
 ?>

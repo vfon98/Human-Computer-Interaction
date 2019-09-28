@@ -6,8 +6,7 @@
 		$new_pass = md5($_POST['new-pass']);
 		$sql = "UPDATE accounts SET password='$new_pass' WHERE id='$acc_id'";
 		$conn->query($sql);
-		echo "Đổi mật khẩu thành công ! <br>";
-		echo '<a href="'.$_SERVER['HTTP_REFERER'].'">Trở về</a>';
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=changed');
 	}
 	else {
 		header('location: ../../views/error/unauthorized.php');

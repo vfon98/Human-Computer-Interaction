@@ -29,11 +29,11 @@
 					</fieldset>
 					<fieldset class="form-group was-validated">
 						<label>Mật khẩu mới</label>
-						<input type="password" name="new_pass" class="form-control" id="new-pass" required minlength="4">
+						<input type="password" name="new_pass" class="form-control" id="new-pass" minlength="4" placeholder="Tối thiểu 4 ký tự" required>
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Nhập lại mật khẩu mới</label>
-						<input type="password" class="form-control" id="re-pass" required>
+						<input type="password" class="form-control" id="re-pass" placeholder="Tối thiểu 4 ký tự" required>
 					</fieldset>
 				</div>
 				<div class="modal-footer">

@@ -1,0 +1,16 @@
+{
+					"sProcessing":   "Đang xử lý...",
+				    "sLengthMenu":   "<span class='text-secondary'>Số dòng mỗi trang:</span> _MENU_",
+				    "sZeroRecords":  "<h5 class='text-danger'>Không tìm thấy dòng nào phù hợp !</h5>",
+				    "sInfo":         "Đang xem <b>_END_</b> trong tổng số <b>_TOTAL_</b> mục",
+				    "sInfoEmpty":    "Không có mục nào !",
+				    "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+				    "sInfoPostFix":  "",
+				    "sSearch":       "<span class='text-secondary'>Tìm kiếm:</span>",
+				    "oPaginate": {
+				       "sFirst":    "Đầu",
+				       "sLast":     "Cuối",
+				       "sPrevious": "<i class='fa fa-chevron-left'></i>",
+				       "sNext":     "<i class='fa fa-chevron-right'></i>"
+				    }
+				}

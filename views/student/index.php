@@ -69,7 +69,7 @@
 					</h5>
 				</div>
 				<div class="card-body">
-					<table class="table table-inverse table-hover table-striped mb-1">
+					<table class="table table-inverse table-hover table-striped mb-1" id="tbl-current-program">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -112,18 +112,16 @@
 
 <script>
 	$(document).ready(function() {
-		if (performance && performance.navigation.type === 0) {
-		<?php
-			if (isset($_GET['m'])) {
-				$method = $_GET['m'];
-				if ($method == 'paid') {
-					echo 'toastr.success("Thanh toán học phí thành công !", "Thông báo");';
+		$(document).ready(function() {
+			$('#tbl-current-program').DataTable({
+				dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+				ordering: false,
+				language: {
+					url: "/assets/lang-vi.json"
 				}
-			}
-		?>
-		}
+			});
+		});
 	});
 </script>
-
 
 <?php include '../template/footer.php'; ?>

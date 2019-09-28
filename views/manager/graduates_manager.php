@@ -8,8 +8,8 @@
 				<div class="card-header bg-info text-white text-center pb-1">
 					<h4>Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
 				</div>
-				<div class="card-body py-2 px-3">
-					<table class="table table-inverse table-sm table-hover table-striped text-center mb-0">
+				<div class="card-body py-3 px-3">
+					<table class="table table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -31,5 +31,17 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function() {
+		$('#tbl-graduates').DataTable({
+			dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+			ordering: false,
+			language: {
+				url: "/assets/lang-vi.json"
+			}
+		});
+	});
+</script>
 
 <?php include '../template/footer.php'; ?>

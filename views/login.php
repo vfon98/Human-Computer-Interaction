@@ -143,7 +143,7 @@
 
 		<hr>
 		<div class="footer">
-			<p>Chưa đăng ký học? <a href="/views/register.php">Đăng ký ngay !</a></p>
+			<p>Chưa đăng ký học? <a href="/views/register.php">Đăng ký ngay ! <i class="fa fa-hand-o-left"></i></a></p>
 			<p><a href="/"><i class="fa fa-home fa-lg"></i> Trở về trang chủ </a></p>
 		</div>
 
