@@ -1,7 +1,7 @@
 <?php
 	if (true) {
 		require '../../php/connection.php';
-		$sql = "SELECT st.id as st_id, st.name as st_name, birthday, email, username, address,
+		$sql = "SELECT st.id as st_id, st.name as st_name, DATE_FORMAT(birthday, '%d/%m/%Y') as birthday, email, username, address,
 					 p.name as p_name, ps.created_at, ps.is_paid, ps.is_extra
 				FROM students st JOIN program_student ps JOIN programs p
 				ON st.id = ps.student_id AND ps.program_id = p.id

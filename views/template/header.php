@@ -43,12 +43,12 @@
 			  "newestOnTop": true,
 			  "positionClass": "toast-top-right",
 			  "preventDuplicates": true,
-			  "showDuration": "200",
+			  "showDuration": "1000",
 			  "hideDuration": "1500",
 			  "timeOut": "1600",
 			  "showEasing": "swing",
 			  "hideEasing": "linear",
-			  "showMethod": "fadeIn",
+			  "showMethod": "slideDown",
 			  "hideMethod": "slideToggle",
 			  "tapToDismiss": true
 			}
@@ -80,7 +80,7 @@
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"  style="font-size: 17px">
-				<button class="btn btn-dark" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
+				<button class="btn btn-dark btn-outline-secondary" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
 				<a class="navbar-brand ml-2" href="/">Quản lý đào tạo</a>
 				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 					<li class="nav-item active">
@@ -101,7 +101,7 @@
 								<i class="fa fa-wrench text-dark"></i>&nbsp; Sửa thông tin
 							</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="../logout.php">
+							<a class="dropdown-item" href="../logout.php" title="Ctrl+Shift+X">
 								<i class="fa fa-power-off text-danger"></i>&nbsp; Đăng xuất
 							</a>
 						</div>

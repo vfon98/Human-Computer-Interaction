@@ -102,7 +102,7 @@
 		});
 		$('.js-mark-cell').html(
 			`<input type="number" name="mark[]" class="inp-mark" style="width: 45px" 
-				min="0" max="10" step=".1" value="6" required/>`
+				min="0" max="10" step=".1"/>`
 		);
 		// FILL INPUT WITH PREVIOUS VALUES
 		$('.js-mark-cell input').each(function(index, el) {

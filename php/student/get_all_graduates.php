@@ -19,7 +19,8 @@
 	}
 	if ($_SESSION['logged_role'] == 'manager') {
 		require_once '../../php/connection.php';
-		$sql = "SELECT st.id as st_id, st.name as st_name, st.birthday, st.email, p.name as p_name, pst.avg_mark
+		$sql = "SELECT st.id as st_id, st.name as st_name, DATE_FORMAT(st.birthday, '%d/%m/%Y') as birthday, 
+					st.email, p.name as p_name, pst.avg_mark
 				FROM program_student pst
 				JOIN students st ON st.id=pst.student_id
 				JOIN programs p ON p.id=pst.program_id

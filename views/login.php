@@ -80,7 +80,7 @@
 			  "timeOut": "2000",
 			  "showEasing": "swing",
 			  "hideEasing": "linear",
-			  "showMethod": "fadeIn",
+			  "showMethod": "slideDown",
 			  "hideMethod": "slideToggle",
 			  "tapToDismiss": true			}
 		});
@@ -150,7 +150,7 @@
 	</div>
 	<script>
 		$(document).ready(function() {
-			if (performance && performance.navigation.type === 0) {
+			if (performance && performance.navigation.type !== 0) {
 			<?php
 				if (isset($_GET['m'])) {
 					$method = $_GET['m'];

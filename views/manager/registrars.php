@@ -6,7 +6,7 @@
 		<div class="card-header bg-info text-white">
 			<h4 class="text-center mb-0">Danh sách học viên đăng ký</h4>
 		</div>
-		<div class="card-body px-1">
+		<div class="card-body px-1 py-2">
 			<div class="table-responsive">
 				<table class="table table-sm table-hover table-striped shadow" id="tbl-registrar">
 					<thead>

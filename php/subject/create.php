@@ -10,7 +10,7 @@
 			VALUES ('$sub_id', '$name', $teacher_id)";
 		echo $sql;
 		$conn->query(htmlspecialchars($sql));
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=created');
 	}
 	else {
 		header('location: ../../views/error/unauthorized.php');

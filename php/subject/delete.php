@@ -10,7 +10,7 @@
 		$sql = "DELETE FROM program_subject WHERE subject_id='$id'";
 		$conn->query($sql);
 
-		header('location: '.$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=del');
 	}
 	else {
 		header('location: ../../views/error/unauthorized.php');

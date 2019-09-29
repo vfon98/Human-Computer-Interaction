@@ -20,7 +20,7 @@
 				<td>'.$i++.'</td>
 				<td class="text-left">'.$row['name'].'</td>
 				<td>'.$row['duration'].'</td>
-				<td>'.$row['begin_at'].'</td>
+				<td>'.date('d/m/Y', strtotime($row['begin_at'])).'</td>
 				<td>'
 					.number_format($row['tuition']).' &#8363;
 				</td>

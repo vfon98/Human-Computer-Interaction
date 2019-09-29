@@ -28,7 +28,7 @@
 						echo 'toastr.success("Tạo mới thành công !", "Thông báo");';
 					}
 					elseif ($method == 'changed') {
-						echo 'toastr.info("Thay đổi thành công !", "Thông báo");';
+						echo 'toastr.warning("Thay đổi thành công !", "Thông báo");';
 					}
 					elseif ($method == 'paid') {
 						echo 'toastr.success("Thanh toán học phí thành công !", "Thông báo");';

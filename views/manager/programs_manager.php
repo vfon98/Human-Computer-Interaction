@@ -60,12 +60,12 @@
 		  </div>
 		<!-- TABLE OF PROGRAMS -->
 		<div class="col-12">
-			<div class="card shadow p-0">
+			<div class="card shadow p-0 mb-4">
 				<div class="card-header bg-info text-white">
 					<h4 class="mb-0 text-center">Danh sách CTDT đang quản lý</h4>
 				</div>
 				<div class="card-body py-2">
-					<table class="text-center table table-inverse table-striped table-hover">
+					<table class="text-center table table-inverse table-striped table-hover" id="tbl-programs">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -86,5 +86,17 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function() {
+		$('#tbl-programs').DataTable({
+			dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+			ordering: false,
+			language: {
+				url: "/assets/lang-vi.json"
+			}
+		});
+	});
+</script>
 
 <?php include '../template/footer.php'; ?>

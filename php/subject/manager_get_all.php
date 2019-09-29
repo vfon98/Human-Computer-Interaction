@@ -1,7 +1,7 @@
 <?php
 	if (true) {
 		require_once '../../php/connection.php';
-		$sql = "SELECT s.id as id, sub_id, s.name as s_name, t.name as t_name
+		$sql = "SELECT s.id as id, sub_id, s.name as s_name, t.name as t_name, t.id as t_id
 			FROM subjects s JOIN teachers t
 			ON s.teacher_id = t.id";
 		$result = $conn->query($sql);
@@ -14,7 +14,9 @@
 				<td>'.$row['s_name'].'</td>
 				<td>'.$row['t_name'].'</td>
 				<td>
-					<a href="#" class="btn btn-secondary js-btn-update mb-1"><i class="fa fa-wrench"></i> Sửa</a>
+					<button class="btn btn-secondary js-btn-update mb-1 js-btn-update"
+						data-toggle="modal" data-target="#modal-subject"
+						data-t-id="'.$row['t_id'].'"><i class="fa fa-wrench"></i> Sửa</button>
 
 					<a href="/php/subject/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del">
 						<i class="fa fa-trash-o"></i> Xóa

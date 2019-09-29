@@ -19,7 +19,11 @@ if (isset($_GET['id'])) {
 			<h4 class="em">Chương trình: <em><?php echo $p_name; ?></em></h5>
 			<h6>Thời gian đào tạo: <?php echo $duration ?></h5>
 		</div>
-		<div class="card-body">
+		<div class="card-body py-2">
+			<button type="button" class="btn btn-light text-primary mb-2"
+				data-toggle="modal" data-target="#modal-student-list">
+				<i class="fa fa-address-card-o"></i> Danh sách sinh viên
+			</button>
 			<div class="row">
 				<div class="col-4">
 					<div class="card shadow">
@@ -47,12 +51,12 @@ if (isset($_GET['id'])) {
 					</div>
 				</div>
 				<div class="col-8">
-					<div class="card shadow">
+					<div class="card shadow mb-4">
 						<div class="card-header">
 							<h4 class="mb-0 text-center">Danh sách môn học</h4>
 						</div>
-						<div class="card-body">
-							<table class="table table-striped table-inverse table-hover">
+						<div class="card-body py-2">
+							<table class="table table-striped table-inverse table-hover" id="tbl-subject">
 								<thead>
 									<tr>
 										<th>STT</th>
@@ -76,7 +80,7 @@ if (isset($_GET['id'])) {
 <!-- MODAL FOR NEW SUBJECT -->
 <?php include '../../php/subject/suggest_next_id.php'; ?>
 
-<div class="modal fade" id="modal-new-subject">
+<div class="modal fade" id="modal-new-subject" tabindex="-1">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -115,5 +119,34 @@ if (isset($_GET['id'])) {
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<!-- MODAL FOR STUDENT LIST -->
+<div class="modal fade" id="modal-student-list" tabindex="-1">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Danh sách sinh viên đăng ký</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+			</div>
+			<div class="modal-body py-2">
+				<?php include '../../php/student/get_by_program_id.php' ?>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Đóng</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+	$(document).ready(function() {
+		$('#tbl-subject').DataTable({
+			dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+			ordering: false,
+			language: {
+				url: "/assets/lang-vi.json"
+			}
+		});
+	});
+</script>
 
 <?php include '../template/footer.php'; ?>
