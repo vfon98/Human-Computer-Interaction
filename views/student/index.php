@@ -7,7 +7,7 @@
 		<div class="col-5">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h5>Thông tin sinh viên</h5>
+					<h4>Thông tin sinh viên</h4>
 				</div>
 				<div class="card-body py-2">
 					<table class="table table-sm table-inverse table-hover table-borderless" id="table-student">
@@ -64,9 +64,9 @@
 		<div class="col-7">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h5>
+					<h4>
 						Chương trình hiện tại
-					</h5>
+					</h4>
 				</div>
 				<div class="card-body">
 					<table class="table table-inverse table-hover table-striped mb-1" id="tbl-current-program">

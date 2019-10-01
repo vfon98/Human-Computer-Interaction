@@ -66,5 +66,4 @@
 		});	
 });
 </script>
-
 <?php include '../template/footer.php'; ?>

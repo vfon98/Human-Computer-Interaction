@@ -104,15 +104,16 @@
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Ngày bắt đầu</label>
-						<input type="date" name="c-begin" class="form-control" value="2015-01-01">
+						<input type="date" id="begin-date" name="c-begin" class="form-control" value="2015-01-01">
 					</fieldset>
 					<fieldset class="form-group">
 						<label>Ngày kết thúc</label>
-						<input type="date" name="c-end" class="form-control" value="2016-01-01">
+						<input type="date" id="end-date" name="c-end" class="form-control" value="2016-01-01">
+						<div class="invalid-feedback">Ngày kết thúc không thể nhỏ hơn ngày bắt đầu !</div>
 					</fieldset>
 				</div>
 				<div class="modal-footer">
-					<button type="submit" name="btn-submit" class="btn btn-success"><i class="fa fa-download"></i> Thêm</button>
+					<button type="submit" id="js-btn-submit" name="btn-submit" class="btn btn-success"><i class="fa fa-download"></i> Thêm</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Đóng</button>
 				</div>
 			</form>
@@ -124,6 +125,19 @@
 	$(document).ready(function() {
 		$('#modal-courses').on('shown.bs.modal', function() {
 			$('input[name="c-name"]').focus();
+		});
+
+		$('#end-date').change(function() {
+			let endDate = new Date($(this).val());
+			let beginDate = new Date($('#begin-date').val());
+			if (endDate < beginDate) {
+				$(this).addClass('is-invalid');
+				$('#js-btn-submit').prop('disabled', true);
+			}
+			else {
+				$(this).removeClass('is-invalid');
+				$('#js-btn-submit').prop('disabled', false);
+			}
 		});
 	});
 </script>

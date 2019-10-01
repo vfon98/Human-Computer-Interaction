@@ -53,6 +53,7 @@
 							<fieldset class="form-group">
 								<label>Ngày sinh</label>
 								<input type="date" name="birthday" class="form-control" placeholder="VD: Nguyễn Văn A" id="inp-bday">
+								<div class="invalid-feedback">Ngày sinh không thể lớn hơn ngày hiện tại !</div>
 							</fieldset>
 							<fieldset class="form-group">
 								<label>Email</label>

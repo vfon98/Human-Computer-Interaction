@@ -127,7 +127,10 @@
 	}
 	function cancelChangeMode() {
 		$('.js-mark-cell').each(function(index, el) {
-			$(this).text(arr_mark[index]);
+			if (!isNaN(arr_mark[index]))
+				$(this).text(arr_mark[index]);
+			else
+				$(this).text('Chưa có');
 		});
 		$('#js-btn-cell').html(
 			`<button type="button" class="btn btn-dark" id="btn-grading" onclick="enableChangeMode()">

@@ -1,4 +1,15 @@
 $(document).ready(function() {
+	$('#inp-bday').change(function() {
+		let selectedDate = new Date($(this).val());
+		let currentDate = new Date();
+		if (selectedDate > currentDate) {
+			$(this).addClass('is-invalid');
+		}
+		else {
+			$(this).removeClass('is-invalid');
+		}
+	});
+
 	$('#inp-username').change(function() {
 		let username = $(this).val();
 		$.post('/php/account/check_username.php', {

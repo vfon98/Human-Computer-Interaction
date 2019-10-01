@@ -150,7 +150,7 @@
 	</div>
 	<script>
 		$(document).ready(function() {
-			if (performance && performance.navigation.type !== 0) {
+			if (performance && performance.navigation.type === 0) {
 			<?php
 				if (isset($_GET['m'])) {
 					$method = $_GET['m'];
