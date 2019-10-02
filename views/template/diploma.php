@@ -28,11 +28,8 @@
 		else if ($mark >= 7) {
 			return 'Khá';
 		}
-		else if ($mark >= 6.5) {
-			return 'Trung bình';
-		}
 		else {
-			return 'Lỗi';
+			return 'Trung bình';
 		}
 	}
 ?>

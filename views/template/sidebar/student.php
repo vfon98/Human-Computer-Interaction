@@ -7,7 +7,7 @@
 		<!-- CHECK PAID TUITION -->
 		<?php 
 			// SESSION INITIALIZED IN /php/student/get_by_username.php
-		if ($_SESSION['student_is_paid'] == true) {
+		if ($_SESSION['student_is_paid'] == 1) {
 			echo
 			'<a href="/views/student/personal_programs.php" class="list-group-item list-group-item-action bg-dark">Chương trình đào tạo</a>';
 			echo
@@ -27,7 +27,7 @@
 </div>
 <!-- ACCOUNT MODAL -->
 <?php
-	if ($_SERVER['REQUEST_URI'] != '/views/student/') {
+	if ($_SERVER['REQUEST_URI'] != '/views/student/' && $_SERVER['REQUEST_URI'] != '/views/student/?m=paid') {
 		require_once '../../php/connection.php';
 		$st_id = $_SESSION['student_id'];
 		$sql = "SELECT name as st_name, birthday, email, address FROM students WHERE id='$st_id'";

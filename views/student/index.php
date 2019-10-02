@@ -1,6 +1,6 @@
 <?php require 'check_role.php'; ?>
 <?php require '../../php/student/get_by_username.php'; ?>
-<?php include '../template/header.php'; ?>
+<?php require_once '../template/header.php'; ?>
 
 <div class="container-fluid pt-3">
 	<div class="row">

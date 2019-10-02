@@ -108,7 +108,7 @@
 	<!-- /.container -->
 
 	<!-- MODEL DETAIL OF PROGRAM -->
-	<div class="modal fade" id="modal-detail">
+	<div class="modal fade" id="modal-detail" tabindex="-1">
 		<div class="modal-dialog modal-dialog-scrollable" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
