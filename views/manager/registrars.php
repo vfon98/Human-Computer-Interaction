@@ -54,16 +54,24 @@
 		let cbType = "checked";
 		$('#btn-check-all').click(function() {
 			if (cbType == "checked") {
-				$('.selected-id').prop('checked', true);
+				$('.selected-id').prop('checked', true).trigger('change');
 				// $('#js-chbx-all').html('Bỏ chọn');
 				cbType = "unchecked";
 			}
 			else {
-				$('.selected-id').prop('checked', false);
+				$('.selected-id').prop('checked', false).trigger('change');
 				// $('#js-chbx-all').html('Chọn tất');
 				cbType = "checked";
 			}
 		});	
+		$('.selected-id').change(function() {
+			if (this.checked) {
+				$(this).closest('tr').css('backgroundColor', '#ffe69d');;
+			}
+			else {
+				$(this).closest('tr').css('backgroundColor', 'initial');
+			}
+		});
 });
 </script>
 <?php include '../template/footer.php'; ?>

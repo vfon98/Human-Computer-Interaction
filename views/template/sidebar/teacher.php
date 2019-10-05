@@ -4,10 +4,10 @@
 	</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/teacher" class="list-group-item list-group-item-action bg-dark active">
-			Quản lý giảng dạy
+			<i class="fa fa-graduation-cap fa-fw mr-1"></i> Quản lý giảng dạy
 		</a>
 		<a href="/views/teacher/subject_grading.php" class="list-group-item list-group-item-action bg-dark">
-			Chấm điểm môn học
+			<i class="fa fa-pencil fa-fw mr-1"></i> Chấm điểm môn học
 		</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 <!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>

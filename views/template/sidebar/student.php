@@ -2,16 +2,18 @@
 	<div class="sidebar-heading" title="<?php echo $_SESSION['student_id'] ?>">QL Sinh Viên</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/student" class="list-group-item list-group-item-action bg-dark active">
-			Thông tin sinh viên
+			<i class="fa fa-graduation-cap fa-fw mr-1"></i> Thông tin sinh viên
 		</a>
 		<!-- CHECK PAID TUITION -->
 		<?php 
 			// SESSION INITIALIZED IN /php/student/get_by_username.php
 		if ($_SESSION['student_is_paid'] == 1) {
 			echo
-			'<a href="/views/student/personal_programs.php" class="list-group-item list-group-item-action bg-dark">Chương trình đào tạo</a>';
+			'<a href="/views/student/personal_programs.php" class="list-group-item list-group-item-action bg-dark">
+				<i class="fa fa-television fa-fw mr-1"></i> Chương trình đào tạo</a>';
 			echo
-			'<a href="/views/student/study_result.php" class="list-group-item list-group-item-action bg-dark">Kết quả học tập</a>';
+			'<a href="/views/student/study_result.php" class="list-group-item list-group-item-action bg-dark">
+				<i class="fa fa-bar-chart fa-fw mr-1"></i> Kết quả học tập</a>';
 		}
 		else {
 			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark">Chương trình đào tạo</a>';

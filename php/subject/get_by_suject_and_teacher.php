@@ -4,7 +4,7 @@
 		require_once '../connection.php';
 		$t_id = $_SESSION['teacher_id'];
 		$s_id = $_POST['s_id'];
-		$sql = "SELECT st.id as st_id, st.name as st_name, st.email, ss.mark
+		$sql = "SELECT st.id as st_id, st.name as st_name, st.email, ss.mark, ss.count as ss_count
 			FROM subjects s JOIN program_subject ps ON s.id = ps.subject_id
 			JOIN program_student pst ON pst.program_id = ps.program_id
 			JOIN students st ON st.id = pst.student_id
@@ -40,9 +40,9 @@
 					$is_all_unmarked = false;
 				}
 				echo
-				'<tr>
+				'<tr'.($row['ss_count'] > 1 && !$has_mark ? ' class="text-danger"' : '').'>
 					<td>'.$i++.'</td>
-					<td>'.$row['st_name'].'</td>
+					<td>'.$row['st_name'].($row['ss_count'] > 1 && !$has_mark ? ' *' : '').'</td>
 					<td>'.$row['email'].'</td>
 					<td>'.
 					'<input type="hidden" name="st_id[]" value="'.$row['st_id'].'">'.
@@ -64,7 +64,9 @@
 			else {
 				echo
 				'<tr class="bg-light">
-					<td colspan="3"></td>
+					<td colspan="3" class="text-left text-danger pl-3">
+						<i>* Sinh viên đăng ký thi lại</i>
+					</td>
 					<td colspan="1" class="text-center" id="js-btn-cell">
 						<button type="button" class="btn btn-dark" id="btn-grading" onclick="enableChangeMode()">
 							<i class="fa fa-lg fa-wrench"></i> Sửa điểm

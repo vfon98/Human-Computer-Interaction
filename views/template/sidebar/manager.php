@@ -2,11 +2,17 @@
 	<div class="sidebar-heading"><?php echo $_SESSION['logged_user'] ?></div>
 	<div class="list-group list-group-flush">
 		<a href="../manager/registrars.php" class="list-group-item list-group-item-action bg-dark active">
-			Danh sách đăng ký
+			<i class="fa fa-graduation-cap fa-fw mr-1"></i> Danh sách đăng ký
 		</a>
-		<a href="../manager/programs_manager.php" class="list-group-item list-group-item-action bg-dark">Quản lý CTDT</a>
-		<a href="../manager/subjects_manager.php" class="list-group-item list-group-item-action bg-dark">Quản lý môn học</a>
-		<a href="../manager/graduates_manager.php" class="list-group-item list-group-item-action bg-dark">Xét tốt nghiệp</a>
+		<a href="../manager/programs_manager.php" class="list-group-item list-group-item-action bg-dark">
+			<i class="fa fa-television fa-fw mr-1"></i> Quản lý CTDT
+		</a>
+		<a href="../manager/subjects_manager.php" class="list-group-item list-group-item-action bg-dark">
+			<i class="fa fa-wrench fa-fw mr-1"></i> Quản lý môn học
+		</a>
+		<a href="../manager/graduates_manager.php" class="list-group-item list-group-item-action bg-dark">
+			<i class="fa fa-calendar-check-o fa-fw mr-1"></i> Xét tốt nghiệp
+		</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 <!-- 		<a href="#" class="list-group-item list-group-item-action bg-dark">Profile</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark">Status</a> -->

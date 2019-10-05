@@ -2,7 +2,7 @@
 	<div class="sidebar-heading">Quản trị hệ thống</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/admin" class="list-group-item list-group-item-action bg-dark active">
-			Quản lý tài khoản
+			<i class="fa fa-cogs fa-fw mr-1"></i> Quản lý tài khoản
 		</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 <!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
