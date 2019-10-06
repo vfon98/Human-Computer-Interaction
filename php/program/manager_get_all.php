@@ -29,7 +29,11 @@
 					</a>
 				</td>
 				<td>
-					<a href="/php/program/update.php?id='.$row['id'].'" class="btn btn-secondary js-btn-update"><i class="fa fa-wrench"></i> Sửa</a>
+					<button class="btn btn-secondary js-btn-update"
+						onclick="passIdToModal('.$row['id'].')"
+						data-toggle="modal" data-target="#modal-update-program">
+							<i class="fa fa-wrench"></i> Sửa
+					</button>
 
 					<a href="/php/program/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del"><i class="fa fa-trash-o"></i> Xóa</a>
 				</td>
