@@ -148,7 +148,8 @@ CREATE TABLE `program_student` (
   `is_paid` bit(1) DEFAULT b'0',
   `is_extra` bit(1) DEFAULT b'0',
   `is_graduated` bit(1) DEFAULT b'0',
-  `avg_mark` float DEFAULT NULL
+  `avg_mark` float DEFAULT NULL,
+  `created_at` DATETIME DEFAULT current_timestamp
 ) ;
 
 --
@@ -297,7 +298,8 @@ CREATE TABLE `student_subject` (
   `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL,
-  `mark` float DEFAULT NULL
+  `mark` float DEFAULT NULL,
+  count INT DEFAULT 1
 ) ;
 
 --

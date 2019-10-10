@@ -86,9 +86,14 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="/">Trang chủ</a>
 					</li>
-			<!-- 					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li> -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+							<i class="fa fa-globe"></i> Tiếng Việt
+						</a>
+						<div class="dropdown-menu dropdown-menu-right text-center">
+							<button class="dropdown-item m-0"><i class="fa fa-fw fa-language mx-2"></i> English</button>
+						</div>
+					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fa fa-user"></i> Tài khoản
@@ -98,11 +103,11 @@
 							<a class="dropdown-item" href="#"
 								data-toggle="modal" data-target="#modal-account"
 							>
-								<i class="fa fa-wrench text-dark"></i>&nbsp; Sửa thông tin
+								<i class="fa fa-fw fa-wrench text-dark"></i>&nbsp; Sửa thông tin
 							</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="../logout.php" title="Ctrl+Shift+X">
-								<i class="fa fa-power-off text-danger"></i>&nbsp; Đăng xuất
+								<i class="fa fa-fw fa-power-off text-danger"></i>&nbsp; Đăng xuất
 							</a>
 						</div>
 					</li>

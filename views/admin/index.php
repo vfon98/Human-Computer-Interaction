@@ -32,14 +32,15 @@
 						</fieldset>
 						<fieldset class="form-group">
 							<label>Tên đăng nhập</label>
-							<input class="form-control" id="inp-user" type="text" name="username" placeholder="VD: nguyenvana">
+							<input class="form-control" id="inp-username" type="text" name="username" placeholder="VD: nguyenvana">
+							<div class="invalid-feedback">Tài khoản đã tồn tại !</div>
 						</fieldset>
 						<fieldset class="form-group">
 							<label>Mật khẩu</label>
 							<input class="form-control" type="password" name="pass" placeholder="Tối thiểu 4 ký tự" minlength="4">
 						</fieldset>
 
-						<button class="btn btn-success" type="submit">
+						<button id="btn-submit-account" class="btn btn-success" type="submit">
 							Thêm tài khoản <i class="fa fa-angle-double-right"></i>
 						</button>
 					</form>
@@ -173,6 +174,22 @@
 	function passIdToModal(id) {
 		$('#hid-acc-id').val(id);
 	}
+
+	$('#inp-username').change(function() {
+		let username = $(this).val();
+		$.post('/php/account/check_username.php', {
+			username: username
+		}).then(res => {
+			if (res === 'existed') {
+				$(this).addClass('is-invalid');
+				$('#btn-submit-account').prop('disabled', true);
+			}
+			else {
+				$(this).removeClass('is-invalid');
+				$('#btn-submit-account').prop('disabled', false);
+			}
+		});
+	});
 </script>
 
 <?php include '../template/footer.php'; ?>
