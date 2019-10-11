@@ -97,7 +97,7 @@
 						<table class="table table-inverse table-hover table-striped">
 							<thead>
 								<tr>
-									<th>STT</th>
+									<th class="text-center">STT</th>
 									<th>Tên chương trình</th>
 									<th>Học phí</th>
 									<th>Tùy chọn</th>
@@ -108,11 +108,11 @@
 								require '../php/program/get_all.php';
 								$i = 1;
 								while($row = $result->fetch_assoc()) {
-									echo 
+									echo
 									'<tr>
-									<td>'.$i++.'</td>
+									<td class="text-center">'.$i++.'</td>
 									<td>'.$row['name'].'</td>
-									<td>'.$row['tuition'].' VND</td>
+									<td>'.number_format($row['tuition']).' VND</td>
 									<td><button onclick="setProgram('.$row['id'].')" class="btn btn-link p-0">
 										Đăng ký <i class="fa fa-paper-plane"></i></button>
 									</td>

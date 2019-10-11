@@ -98,7 +98,7 @@
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên PHP</h4>
 	  		      <p class="card-text">Ngôn ngữ lập trình phía server phổ biến trên các hệ thống máy chủ hiện nay !</p>
-	  		      <a href="views/register.php" class="btn btn-primary">Đăng ký học !</a>
+	  		      <a href="views/register.php" class="btn btn-outline-primary"><i class="fa fa-user-plus"></i> Đăng ký học</a>
 	  		    </div>
 	  		  </div>
 	  	</div>
@@ -107,8 +107,8 @@
 	  		    <img class="card-img-top border-bottom" src="assets/img/lang_nodejs.png" alt="Lập trình viên NodeJs">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên NodeJs</h4>
-	  		      <p class="card-text">Ngôn ngữ cực kỳ mạnh mẽ, thích hợp cho các hệ thống real-time tương tác cao</p>
-	  		      <a href="views/register.php" class="btn btn-primary">Đăng ký học !</a>
+	  		      <p class="card-text">Ngôn ngữ cực kỳ mạnh mẽ, thích hợp cho các hệ thống real-time tương tác cao.</p>
+	  		      <a href="views/register.php" class="btn btn-outline-primary"><i class="fa fa-user-plus"></i> Đăng ký học</a>
 	  		    </div>
 	  		  </div>
 	  	</div>
@@ -117,8 +117,8 @@
 	  		    <img class="card-img-top border" src="assets/img/lang_python.gif" alt="Lập trình viên Python">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên Python</h4>
-	  		      <p class="card-text">Ngôn ngữ thích hợp cho các hệ thống lớn, Machine learning, Deep learning và AI</p>
-	  		      <a href="views/register.php" class="btn btn-primary">Đăng ký học !</a>
+	  		      <p class="card-text">Ngôn ngữ thích hợp cho các hệ thống lớn, Machine learning, Deep learning và AI.</p>
+	  		      <a href="views/register.php" class="btn btn-outline-primary"><i class="fa fa-user-plus"></i> Đăng ký học</a>
 	  		    </div>
 	  		  </div>
 	  	</div>
@@ -129,8 +129,8 @@
 	  		    <img class="card-img-top border-bottom" src="assets/img/lang_web.png" alt="Lập trình viên Front end">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên Frontend</h4>
-	  		      <p class="card-text">Tạo ra giao diện tương tác cho các trang web, thiết kế và đánh giá UX/UI</p>
-	  		      <a href="views/register.php" class="btn btn-primary">Đăng ký học !</a>
+	  		      <p class="card-text">Tạo ra giao diện tương tác cho các trang web, thiết kế và đánh giá UX/UI.</p>
+	  		      <a href="views/register.php" class="btn btn-outline-primary"><i class="fa fa-user-plus"></i> Đăng ký học</a>
 	  		    </div>
 	  		  </div>
 	  	</div>
@@ -139,8 +139,8 @@
 	  		    <img class="card-img-top" src="assets/img/lang_android.png" alt="Lập trình viên Android">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên Android</h4>
-	  		      <p class="card-text">Tạo ra các ứng dụng, trò chơi trên hệ điều hành Android - Hệ điều hành phổ biến nhất hiện nay</p>
-	  		      <a href="views/register.php" class="btn btn-primary">Đăng ký học !</a>
+	  		      <p class="card-text">Tạo ra các ứng dụng, trò chơi trên hệ điều hành Android - Hệ điều hành phổ biến nhất hiện nay.</p>
+	  		      <a href="views/register.php" class="btn btn-outline-primary"><i class="fa fa-user-plus"></i> Đăng ký học</a>
 	  		    </div>
 	  		  </div>
 	  	</div>
@@ -149,8 +149,8 @@
 	  		    <img class="card-img-top" src="assets/img/lang_reactjs.png" alt="Lập trình viên ReactJs">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên ReactJs</h4>
-	  		      <p class="card-text">Một Frontend Framework giúp tăng nhanh tốc độ phát triển và trải nghiệm người dùng</p>
-	  		      <a href="views/register.php" class="btn btn-primary">Đăng ký học !</a>
+	  		      <p class="card-text">Một Frontend Framework giúp tăng nhanh tốc độ phát triển và trải nghiệm người dùng.</p>
+	  		      <a href="views/register.php" class="btn btn-outline-primary"><i class="fa fa-user-plus"></i> Đăng ký học</a>
 	  		    </div>
 	  		  </div>
 	  	</div>
@@ -162,19 +162,19 @@
 	  		<hr class="mt-0">
 	  		<div class="row text-left" id="contact-info">
 	  			<div class="col-4">
-	  				<p><i class="fa fa-map-marker fa-fw fa-lg"></i> 3/2, Phường An Khánh, Quận Ninh Kiều, Cần Thơ</p>
-	  				<p><i class="fa fa-phone fa-fw fa-lg"></i> 01234xxxxxx</p>
+	  				<p><i class="fa fa-map-marker fa-fw fa-lg mr-1"></i> Quận Ninh Kiều, Cần Thơ</p>
+	  				<p><i class="fa fa-phone fa-fw fa-lg mr-1"></i> 01234xxxxxx</p>
 	  			</div>
 	  			<div class="col-4">
-	  				<p><i class="fa fa-envelope-o fa-fw fa-lg"></i> ptst-training@gmail.com</p>
-	  				<p><i class="fa fa-globe fa-fw fa-lg"></i> ptst-training.com</p>
+	  				<p><i class="fa fa-envelope-o fa-fw fa-lg mr-1"></i> ptst-training@gmail.com</p>
+	  				<p><i class="fa fa-globe fa-fw fa-lg mr-1"></i> ptst-training.com</p>
 	  			</div>
 	  			<div class="col-4">
-	  				<p><i class="fa fa-facebook-official fa-fw fa-lg"></i> facebook.com/ptsttraining</p>
-	  				<p><i class="fa fa-youtube fa-fw fa-lg"></i> youtube.com/ptsttraining</p>
+	  				<p><i class="fa fa-facebook-official fa-fw fa-lg mr-1"></i> facebook.com/ptsttraining</p>
+	  				<p><i class="fa fa-youtube fa-fw fa-lg mr-1"></i> youtube.com/ptsttraining</p>
 	  			</div>
 	  		</div>
-	  		<hr>
+	  		<hr class="mt-0">
 	  		<p id="copyright" class="text-center text-white">Copyright 2019 &copy; - Powered by PTST&reg;</p>
 	  	</footer>
 	  </div>
