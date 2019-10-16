@@ -17,6 +17,7 @@
 				VALUES ('$p_id', '$st_id', 0, 1)";
 		echo $sql;
 		$conn->query($sql);
+		// die();
 		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=new');
 	}
 	else {

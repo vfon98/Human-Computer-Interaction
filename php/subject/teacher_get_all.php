@@ -11,6 +11,7 @@
 				LEFT JOIN program_subject ps ON s.id = ps.subject_id
 				LEFT JOIN program_student pst ON pst.program_id = ps.program_id AND pst.status='Đăng ký'
 				WHERE t.username='$username' GROUP BY sub_id, s.name";
+		// echo $sql;
 		$result = $conn->query($sql);
 		$i = 1;
 		while ($row = $result->fetch_assoc()) {

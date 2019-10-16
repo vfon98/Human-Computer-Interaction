@@ -10,6 +10,7 @@
 			JOIN students st ON st.id = pst.student_id
 			LEFT JOIN student_subject ss ON ss.student_id = st.id AND ss.subject_id = s.id
 			WHERE pst.status='Đăng ký' AND s.id='$s_id'";
+		// echo $sql;
 		$result = $conn->query($sql);
 	}
 ?>

@@ -8,6 +8,8 @@
 
 		$sql = "UPDATE program_student SET status='Đăng ký' WHERE id='$ps_id' AND status='Tạm hoãn'";
 		$conn->query($sql);
+		echo $sql;
+		// die();
 		header('location: ../../views/success/program_activated.php');
 	}
 	else {

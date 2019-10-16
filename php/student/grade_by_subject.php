@@ -9,9 +9,11 @@
 		$length = count($_POST['st_id']);
 		for ($i=0; $i < $length ; $i++) { 
 			$sql = "INSERT INTO student_subject (student_id, subject_id, mark) 
-					VALUES ('$arr_id[$i]', '$s_id', '$arr_mark[$i]')";
+					VALUES ('$arr_id[$i]', '$s_id', '$arr_mark[$i]') ON DUPLICATE KEY 
+					UPDATE mark=IF(count >= 2 AND $arr_mark[$i] >= 5.5, 5.5, $arr_mark[$i])";
 			$conn->query($sql);
 		}
+		echo $sql;
 		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=graded&s_id='.$s_id);
 	}
 ?>
