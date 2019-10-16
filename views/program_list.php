@@ -29,7 +29,7 @@
 <body>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-	  <div class="container">
+	  <div class="container-fluid">
 	    <a class="navbar-brand" href="#">
 	    	<!-- <img src="/assets/img/logo_ctu.gif" alt="logo" style="height: 2rem"> -->
 	    	Quản lý đào tạo

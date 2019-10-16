@@ -16,12 +16,12 @@
 				<i class="fa fa-bar-chart fa-fw mr-1"></i> Kết quả học tập</a>';
 		}
 		else {
-			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark">Chương trình đào tạo</a>';
-			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark">Kết quả học tập</a>';
+			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark"><i class="fa fa-television fa-fw mr-1"></i> Chương trình đào tạo</a>';
+			echo '<a href="#" data-toggle="modal" data-target="#modal-notification" class="list-group-item list-group-item-action bg-dark"><i class="fa fa-bar-chart fa-fw mr-1"></i> Kết quả học tập</a>';
 			echo 
 			'<a class="list-group-item list-group-item-action bg-dark"
 			data-toggle="modal" href="#modal-tuition"
-			>Đóng học phí</a>';
+			><i class="fa fa-usd fa-fw mr-1"></i> Đóng học phí</a>';
 		}
 		?>
 		<a href="" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>

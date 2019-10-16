@@ -4,7 +4,7 @@
 
 <div class="container-fluid pt-3">
 	<div class="row">
-		<div class="col-5">
+		<div class="col-md-5">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4>Thông tin sinh viên</h4>
@@ -61,7 +61,7 @@
 			}
 		?>
 
-		<div class="col-7">
+		<div class="col-md-7">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4>

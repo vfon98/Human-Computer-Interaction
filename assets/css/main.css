@@ -51,12 +51,6 @@ body, html {
 	padding-bottom: .25rem !important;
 }
 
-/*table.dataTable thead .sorting::before, 
-table.dataTable thead .sorting::after, 
-table.dataTable thead .sorting_asc::before, 
-table.dataTable thead .sorting_asc::after, 
-table.dataTable thead .sorting_desc {
-	content: "";
-	display: none;
-    background : none;
-}*/
+#table-student > tbody > tr > td:first-child {
+	font-weight: 600;
+}
