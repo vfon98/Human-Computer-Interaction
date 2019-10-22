@@ -19,23 +19,28 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="/">Quản lý đào tạo</a>
-	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item">
-	          <a class="nav-link" href="/">Trang chủ</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">Liên hệ</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="program_list.php">Chương trình đào tạo</a>
-	        </li>
-	        <li class="nav-item active">
-	          <a class="nav-link" href="/views/register.php">Đăng ký học</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="/views/login.php">Đăng nhập</a>
-	        </li>
-	      </ul>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	      	<ul class="navbar-nav ml-auto">
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="/">Trang chủ</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="#">Liên hệ</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="program_list.php">Chương trình đào tạo</a>
+	      	  </li>
+	      	  <li class="nav-item active">
+	      	    <a class="nav-link" href="/views/register.php">Đăng ký học</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="/views/login.php">Đăng nhập</a>
+	      	  </li>
+	      	</ul>
+	      </div>
 	  </div>
 	</nav>
 

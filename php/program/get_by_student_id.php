@@ -26,7 +26,9 @@
 					'.$row['status'].'
 				  </button>
 				  <div class="dropdown-menu">
-				    <a class="dropdown-item text-info" href="/php/program/active_program.php?id='.$row['ps_id'].'">
+				    <a class="dropdown-item text-info" 
+				    	href="/php/program/active_program.php?id='.$row['ps_id'].'&st_id='.$st_id.'"
+				    >
 				    	<i class="fa fa-check"></i> Đăng ký
 				    </a>
 				  </div>

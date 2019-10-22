@@ -9,6 +9,7 @@
 		if ($row['count'] > 1) {
 			$ps_id = $_GET['id'];
 			$sql = "UPDATE program_student SET status='Tạm hoãn' WHERE id='$ps_id' AND status='Đăng ký'";
+			// die($sql);
 			$conn->query($sql);
 			header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=delay');
 		}

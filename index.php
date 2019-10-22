@@ -17,29 +17,38 @@
 </head>
 <body>
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="#">
 	    	<!-- <img src="/assets/img/logo_ctu.gif" alt="logo" style="height: 2rem"> -->
 	    	Quản lý đào tạo
 		</a>
-	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item active">
-	          <a class="nav-link" href="#">Trang chủ</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#footer-link">Liên hệ</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="./views/program_list.php">Chương trình đào tạo</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="./views/register.php">Đăng ký học</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="./views/login.php">Đăng nhập</a>
-	        </li>
-	      </ul>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+	      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	      	<ul class="navbar-nav ml-auto">
+	      	  <li class="nav-item active">
+	      	  <!--<li class="nav-item">
+	      	    <a class="nav-link" href="#"><i class="fa fa-globe"></i> vi</a>
+	      	  </li> -->
+	      	    <a class="nav-link" href="#">Trang chủ</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="#footer-link">Liên hệ</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="./views/program_list.php">Chương trình đào tạo</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="./views/register.php">Đăng ký học</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="./views/login.php">Đăng nhập</a>
+	      	  </li>
+	      	</ul>
+	      </div>
 	  </div>
 	</nav>
 
@@ -47,12 +56,12 @@
 	<div class="container-fluid">
 	  <!-- <h1 class="mt-4" style="font-family: sans-serif;">Hệ thống quản lý đào tạo</h1> -->
 	  <div class="row">
-	  	<div class="col-12 p-0">
-	  		<div id="main-carousel" class="carousel slide" data-ride="carousel" data-interval="2500" data-pause="false" data-keyboard="true">
+	  	<div class="col-md-12 p-0">
+	  		<div id="main-carousel" class="carousel slide" data-ride="carousel" data-interval="2500" data-pause="false">
 	  		  <ul class="carousel-indicators">
-	  		    <li data-target="#demo" data-slide-to="0" class="active"></li>
-	  		    <li data-target="#demo" data-slide-to="1"></li>
-	  		    <li data-target="#demo" data-slide-to="2"></li>
+	  		    <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+	  		    <li data-target="#main-carousel" data-slide-to="1"></li>
+	  		    <li data-target="#main-carousel" data-slide-to="2"></li>
 	  		  </ul>
 			  	<div id="btn-register" class="btn text-white font-weight-bold border pb-4">
 			  		<div id="central-name" class="">Trung tâm đào tạo Lập trình viên PTST</div>
@@ -81,18 +90,18 @@
 	  		      </div>   
 	  		    </div>
 	  		  </div>
-	  		  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+	  		  <a class="carousel-control-prev" href="#main-carousel" data-slide="prev">
 	  		    <span class="carousel-control-prev-icon"></span>
 	  		  </a>
-	  		  <a class="carousel-control-next" href="#demo" data-slide="next">
+	  		  <a class="carousel-control-next" href="#main-carousel" data-slide="next">
 	  		    <span class="carousel-control-next-icon"></span>
 	  		  </a>
 	  		</div>
 	  	</div>
 	  </div>
 	  <!-- END CAROUSEL -->
-	  <div class="row my-4 px-5">
-	  	<div class="col-4">
+	  <div class="row my-4 px-md-5">
+	  	<div class="col-md-4">
 	  		<div class="card shadow">
 	  		    <img class="card-img-top" src="assets/img/lang_php.png" alt="Lập trình viên PHP">
 	  		    <div class="card-body bg-light">
@@ -102,7 +111,7 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-4">
+	  	<div class="col-md-4">
 	  		<div class="card shadow">
 	  		    <img class="card-img-top border-bottom" src="assets/img/lang_nodejs.png" alt="Lập trình viên NodeJs">
 	  		    <div class="card-body bg-light">
@@ -112,7 +121,7 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-4">
+	  	<div class="col-md-4">
 	  		<div class="card shadow">
 	  		    <img class="card-img-top border" src="assets/img/lang_python.gif" alt="Lập trình viên Python">
 	  		    <div class="card-body bg-light">
@@ -123,8 +132,8 @@
 	  		  </div>
 	  	</div>
 	  </div>
-	  <div class="row px-5 pb-4 pt-2">
-	  	<div class="col-4">
+	  <div class="row px-md-5 pb-md-4 pt-md-2">
+	  	<div class="col-md-4">
 	  		<div class="card shadow">
 	  		    <img class="card-img-top border-bottom" src="assets/img/lang_web.png" alt="Lập trình viên Front end">
 	  		    <div class="card-body bg-light">
@@ -134,7 +143,7 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-4">
+	  	<div class="col-md-4">
 	  		<div class="card shadow">
 	  		    <img class="card-img-top" src="assets/img/lang_android.png" alt="Lập trình viên Android">
 	  		    <div class="card-body bg-light">
@@ -144,7 +153,7 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-4">
+	  	<div class="col-md-4">
 	  		<div class="card shadow">
 	  		    <img class="card-img-top" src="assets/img/lang_reactjs.png" alt="Lập trình viên ReactJs">
 	  		    <div class="card-body bg-light">
@@ -161,15 +170,15 @@
 	  		<p class="text-center" id="center-name">Trung tâm đào tạo lập trình viên PTST&reg;</p>
 	  		<hr class="mt-0">
 	  		<div class="row text-left" id="contact-info">
-	  			<div class="col-4">
+	  			<div class="col-md-4">
 	  				<p><i class="fa fa-map-marker fa-fw fa-lg mr-1"></i> Quận Ninh Kiều, Cần Thơ</p>
 	  				<p><i class="fa fa-phone fa-fw fa-lg mr-1"></i> 01234xxxxxx</p>
 	  			</div>
-	  			<div class="col-4">
+	  			<div class="col-md-4">
 	  				<p><i class="fa fa-envelope-o fa-fw fa-lg mr-1"></i> ptst-training@gmail.com</p>
 	  				<p><i class="fa fa-globe fa-fw fa-lg mr-1"></i> ptst-training.com</p>
 	  			</div>
-	  			<div class="col-4">
+	  			<div class="col-md-4">
 	  				<p><i class="fa fa-facebook-official fa-fw fa-lg mr-1"></i> facebook.com/ptsttraining</p>
 	  				<p><i class="fa fa-youtube fa-fw fa-lg mr-1"></i> youtube.com/ptsttraining</p>
 	  			</div>

@@ -54,7 +54,9 @@
 			if ($is_all_unmarked) {
 				echo
 				'<tr class="bg-light">
-					<td colspan="3"></td>
+					<td colspan="3" class="text-left text-danger pl-3">
+						<i>* Sinh viên đăng ký thi lại</i>
+					</td>
 					<td colspan="1" class="text-center" id="js-btn-cell">
 						<button type="button" class="btn btn-danger" id="btn-grading" onclick="enableGradingMode()">
 							<i class="fa fa-lg fa-pencil-square-o"></i> Chấm điểm
@@ -85,7 +87,7 @@
 		$('#form-grading').attr('action', '/php/student/grade_by_subject.php');
 		console.log($('#form-grading').attr('action'));
 		$('.js-mark-cell').html(
-			`<input type="number" name="mark[]" class="inp-mark" style="width: 45px" 
+			`<input type="number" name="mark[]" class="inp-mark" style="width: 50px; text-align: center" 
 				min="0" max="10" step=".1" value="5" required/>`
 		);
 		$('#js-btn-cell').html(
@@ -104,7 +106,7 @@
 			arr_mark.push(mark);
 		});
 		$('.js-mark-cell').html(
-			`<input type="number" name="mark[]" class="inp-mark" style="width: 45px" 
+			`<input type="number" name="mark[]" class="inp-mark" style="width: 50px; text-align: center" 
 				min="0" max="10" step=".1"/>`
 		);
 		// FILL INPUT WITH PREVIOUS VALUES

@@ -34,35 +34,40 @@
 	    	<!-- <img src="/assets/img/logo_ctu.gif" alt="logo" style="height: 2rem"> -->
 	    	Quản lý đào tạo
 		</a>
-	      <ul class="navbar-nav ml-auto">
-	        <li class="nav-item">
-	          <a class="nav-link" href="/">Trang chủ</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="#">Liên hệ</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link active" href="#">Chương trình đào tạo</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="register.php">Đăng ký học</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="login.php">Đăng nhập</a>
-	        </li>
-	      </ul>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	      	<ul class="navbar-nav ml-auto">
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="/">Trang chủ</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="#">Liên hệ</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link active" href="#">Chương trình đào tạo</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="register.php">Đăng ký học</a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	    <a class="nav-link" href="login.php">Đăng nhập</a>
+	      	  </li>
+	      	</ul>
+	      </div>
 	  </div>
 	</nav>
 
 	<!-- Page Content -->
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-md-12">
 				<div class="card shadow mt-2 mb-4">
 					<div class="card-header bg-info text-white">
 						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
-					<div class="card-body">
+					<div class="card-body table-responsive-md">
 						<table class="table table-inverse table-hover table-striped text-center" id="tbl-program">
 							<thead>
 								<tr>
