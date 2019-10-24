@@ -13,7 +13,7 @@
 		header('location: ../error/unauthorized.php');
 	}
 ?>
-<table class="table table-inverse table-striped table-hover text-center m-0">
+<table class="table table-responsive-md table-inverse table-striped table-hover text-center m-0">
 	<thead>
 		<tr>
 			<th>STT</th>

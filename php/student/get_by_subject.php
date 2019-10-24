@@ -14,7 +14,7 @@
 ?>
 
 <input type="hidden" name="s_id" value="<?php echo $s_id ?>">
-<table class="table table-inverse table-hover table-striped mb-2 text-center">
+<table class="table table-responsive-md table-inverse table-hover table-striped mb-2 text-center">
 	<thead>
 		<tr>
 			<th>STT</th>

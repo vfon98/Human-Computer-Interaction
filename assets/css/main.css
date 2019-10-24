@@ -8,6 +8,16 @@ body, html {
 	height: 100%;
 }
 
+@media (max-width: 768px) {
+	.row div[class*='col-']:nth-child(2) {
+		margin-top: 1rem;
+	}
+
+	.table {
+		white-space: nowrap;
+	}
+}
+
 #left-sidebar {
 	margin-top: 3.5em;
 	height: 100%;
@@ -54,3 +64,4 @@ body, html {
 #table-student > tbody > tr > td:first-child {
 	font-weight: 600;
 }
+

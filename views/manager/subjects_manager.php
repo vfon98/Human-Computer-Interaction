@@ -5,7 +5,7 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-4">
+		<div class="col-md-4">
 			<div class="card shadow">
 				<div class="card-header bg-info text-white">
 					<h5 class="mb-0">Thêm môn học</h5>
@@ -35,13 +35,13 @@
 			</div>
 		</div>
 		<!-- TABLE OF PROGRAMS -->
-		<div class="col-8">
+		<div class="col-md-8">
 			<div class="card shadow p-0 mb-5">
 				<div class="card-header bg-info text-white">
 					<h5 class="mb-0 text-center">Danh sách môn học</h5>
 				</div>
 				<div class="card-body">
-					<table class="text-center table table-inverse table-striped table-hover" id="tbl-subject">
+					<table class="text-center table table-responsive-md table-inverse table-striped table-hover" id="tbl-subject">
 						<thead>
 							<tr>
 								<th>STT</th>

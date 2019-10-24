@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
 	<a href="programs_manager.php" class="btn btn-link"><i class="fa fa-reply"></i> Trở về</a>
 	<div class="card shadow">
 		<div class="card-header bg-info text-white p-2 text-center">
-			<h4 class="em">Chương trình: <em><?php echo $p_name; ?></em></h5>
+			<h4 class="em">Chương trình: <em class="font-weight-bold"><?php echo $p_name; ?></em></h5>
 			<h6>Thời gian đào tạo: <?php echo $duration ?></h5>
 		</div>
 		<div class="card-body py-2">
@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
 				<i class="fa fa-address-card-o"></i> Danh sách sinh viên
 			</button>
 			<div class="row">
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card shadow">
 						<div class="card-header">
 							<h4 class="mb-0 text-center">Thêm môn học</h4>
@@ -50,13 +50,13 @@ if (isset($_GET['id'])) {
 						</div>
 					</div>
 				</div>
-				<div class="col-8">
+				<div class="col-md-8">
 					<div class="card shadow mb-4">
 						<div class="card-header">
 							<h4 class="mb-0 text-center">Danh sách môn học</h4>
 						</div>
 						<div class="card-body py-2">
-							<table class="table table-striped table-inverse table-hover" id="tbl-subject">
+							<table class="table table-responsive-md table-striped table-inverse table-hover" id="tbl-subject">
 								<thead>
 									<tr>
 										<th>STT</th>

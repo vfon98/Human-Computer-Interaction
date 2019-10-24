@@ -98,7 +98,7 @@
 					<div class="card-header bg-info text-white">
 						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
-					<div class="card-body">
+					<div class="card-body pt-2">
 						<table class="table table-inverse table-hover table-striped">
 							<thead>
 								<tr>

@@ -3,7 +3,7 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-5">
+		<div class="col-md-5">
 			<div class="card shadow">
 				<div class="card-header bg-secondary text-white pb-0 text-center">
 					<h5>Thêm tài khoản</h5>
@@ -11,8 +11,8 @@
 				<div class="card-body">
 					<form action="/php/teacher/create.php" method="POST">
 						<div class="form-group row">
-							<label class="col-4 col-form-label">Loại tài khoản</label>
-							<div class="col-sm-8 p-0 ml-n3">
+							<label class="col-md-5 col-form-label">Loại tài khoản:</label>
+							<div class="col-md-7 p-md-0 ml-md-n3">
 								<select class="form-control" name="acc-role" id="sel-acc-role" autofocus>
 									<option value="teacher">Giáo viên</option>
 									<option value="manager">Quản lý CTDT</option>
@@ -47,13 +47,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-7">
+		<div class="col-md-7">
 			<div class="card shadow mb-5">
 				<div class="card-header bg-secondary text-white pb-0 text-center">
 					<h5>Danh sách tài khoản</h5>
 				</div>
 				<div class="card-body pt-3">
-					<table class="table table-inverse table-striped table-hover text-center" id="tbl-account">
+					<table class="table table-responsive-md table-inverse table-striped table-hover text-center" id="tbl-account">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -112,7 +112,7 @@
 <script>
 	$(document).ready(function() {
 		$('#tbl-account').DataTable({
-			dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+			// dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
 			ordering: true,
 			language: {
 				url: "/assets/lang-vi.json"

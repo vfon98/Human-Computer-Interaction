@@ -4,7 +4,7 @@
 <div class="container-fluid p-3" id="root">
 	<div class="row">
 		<!-- ADD NEW PROGRAM MODEL -->
-		<div class="col-12">
+		<div class="col-md-12">
 			<button class="btn btn-success mb-2" data-toggle="modal" data-target="#modalAdd">
 				<i class="fa fa-plus"></i> Thêm mới CTDT
 			</button>
@@ -62,25 +62,27 @@
 		<div class="col-12">
 			<div class="card shadow p-0 mb-4">
 				<div class="card-header bg-info text-white">
-					<h4 class="mb-0 text-center">Danh sách CTDT đang quản lý</h4>
+					<h5 class="mb-0 text-center">Danh sách CTDT đang quản lý</h5>
 				</div>
 				<div class="card-body py-2">
-					<table class="text-center table table-inverse table-striped table-hover" id="tbl-programs">
-						<thead>
-							<tr>
-								<th>STT</th>
-								<th class="text-left">Tên chương trình</th>
-								<th>Thời gian</th>
-								<th>Ngày bắt đầu</th>
-								<th>Học phí</th>
-								<th>Quản lý</th>
-								<th>Tùy chọn</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php require '../../php/program/manager_get_all.php'; ?>
-						</tbody>
-					</table>
+					<div class="table-responsive-md">
+						<table class="text-center table table-inverse table-striped table-hover" id="tbl-programs">
+							<thead>
+								<tr>
+									<th>STT</th>
+									<th class="text-left">Tên chương trình</th>
+									<th>Thời gian</th>
+									<th>Ngày bắt đầu</th>
+									<th>Học phí</th>
+									<th>Quản lý</th>
+									<th>Tùy chọn</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php require '../../php/program/manager_get_all.php'; ?>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>

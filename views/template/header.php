@@ -51,7 +51,11 @@
 			  "showMethod": "slideDown",
 			  "hideMethod": "slideToggle",
 			  "tapToDismiss": true
-			}
+			};
+
+			$('#js-caret-menu').click(function() {
+				$(this).toggleClass('fa-rotate-180');
+			});
 		});
 	</script>
 </head>
@@ -82,34 +86,39 @@
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"  style="font-size: 17px">
 				<button class="btn btn-dark btn-outline-secondary" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
 				<a class="navbar-brand ml-2" href="/">Quản lý đào tạo</a>
-				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-					<li class="nav-item active">
-						<a class="nav-link" href="/">Trang chủ</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-							<i class="fa fa-globe"></i> Tiếng Việt
-						</a>
-						<div class="dropdown-menu dropdown-menu-right text-center">
-							<button class="dropdown-item m-0"><i class="fa fa-fw fa-language mx-2"></i> English</button>
-						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fa fa-user"></i> Tài khoản
-						</a>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-							<!-- <a class="dropdown-item" href="#">Thay đổi quyền</a> -->
-							<a class="dropdown-item" href="#"
-								data-toggle="modal" data-target="#modal-account"
-							>
-								<i class="fa fa-fw fa-wrench text-dark"></i>&nbsp; Sửa thông tin
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<i class="fa fa-caret-down fa-lg" id="js-caret-menu"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+						<li class="nav-item active">
+							<a class="nav-link" href="/">Trang chủ</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+								<i class="fa fa-globe"></i> Tiếng Việt
 							</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="../logout.php" title="Ctrl+Shift+X">
-								<i class="fa fa-fw fa-power-off text-danger"></i>&nbsp; Đăng xuất
+							<div class="dropdown-menu dropdown-menu-right text-center">
+								<button class="dropdown-item m-0"><i class="fa fa-fw fa-language mx-2"></i> English</button>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-user"></i> Tài khoản
 							</a>
-						</div>
-					</li>
-				</ul>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+								<!-- <a class="dropdown-item" href="#">Thay đổi quyền</a> -->
+								<a class="dropdown-item" href="#"
+									data-toggle="modal" data-target="#modal-account"
+								>
+									<i class="fa fa-fw fa-wrench text-dark"></i>&nbsp; Sửa thông tin
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="../logout.php" title="Ctrl+Shift+X">
+									<i class="fa fa-fw fa-power-off text-danger"></i>&nbsp; Đăng xuất
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</nav>			

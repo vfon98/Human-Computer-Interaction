@@ -4,7 +4,7 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-5">
+		<div class="col-md-5 col-sm-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h5>Thông tin cá nhân</h5>
@@ -35,13 +35,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-7">
+		<div class="col-md-7 col-sm-6">
 			<div class="card shadow">
 				<div class="card-header bg-info text-white">
 					<h5 class="text-center mb-0">Môn học phụ trách</h5>
 				</div>
 				<div class="card-body pt-2">
-					<table class="table table-sm table-hover table-striped table-inverse text-center">
+					<table class="table table-responsive-md table-sm table-hover table-striped table-inverse text-center">
 						<thead>
 							<tr>
 								<th>STT</th>

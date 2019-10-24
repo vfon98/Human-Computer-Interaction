@@ -3,13 +3,13 @@
 
 <div class="container-fluid p-3">
 	<div class="row">
-		<div class="col">
+		<div class="col-md">
 			<div class="card shadow">
 				<div class="card-header bg-info text-white text-center pb-1">
 					<h4>Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
 				</div>
 				<div class="card-body py-3 px-3">
-					<table class="table table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
+					<table class="table table-responsive-md table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
 						<thead>
 							<tr>
 								<th>STT</th>

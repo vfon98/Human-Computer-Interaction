@@ -9,7 +9,7 @@
 		$result = $conn->query($sql);
 	}
 ?>
-<table class="table table-inverse table-sm table-hover table-striped text-center mb-n3">
+<table class="table table-responsive-md table-inverse table-sm table-hover table-striped text-center mb-n3">
 	<thead>
 		<tr>
 			<th>STT</th>

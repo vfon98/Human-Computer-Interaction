@@ -10,7 +10,7 @@
 					<h4>Thông tin sinh viên</h4>
 				</div>
 				<div class="card-body py-2">
-					<table class="table table-sm table-inverse table-hover table-borderless" id="table-student">
+					<table class="table table-responsive-md table-sm table-inverse table-hover table-borderless" id="table-student">
 						<thead>
 						</thead>
 						<tbody>
@@ -69,7 +69,7 @@
 					</h4>
 				</div>
 				<div class="card-body">
-					<table class="table table-inverse table-hover table-striped mb-1" id="tbl-current-program">
+					<table class="table table-responsive-md table-inverse table-hover table-striped mb-1" id="tbl-current-program">
 						<thead>
 							<tr>
 								<th>STT</th>

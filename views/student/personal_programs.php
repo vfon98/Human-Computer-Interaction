@@ -3,7 +3,7 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-6">
+		<div class="col-md-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4>Chương trình đào tạo</h4>
@@ -14,7 +14,7 @@
 					>
 						<i class="fa fa-plus-circle"></i> Đăng ký mới CTDT
 					</button>
-					<table class="table table-sm table-inverse table-hover table-striped text-center">
+					<table class="table table-responsive-sm table-sm table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
 								<th>STT</th>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-6">
+		<div class="col-md-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4>Khóa đào tạo đã tham gia</h4>
@@ -42,7 +42,7 @@
 					>
 						<i class="fa fa-plus-circle"></i> Thêm khóa đào tạo
 					</button>
-					<table class="table table-sm table-inverse table-hover table-striped text-center">
+					<table class="table table-responsive-md table-sm table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
 								<th>STT</th>
