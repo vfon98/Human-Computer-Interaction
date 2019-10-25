@@ -100,10 +100,11 @@
 	  	</div>
 	  </div>
 	  <!-- END CAROUSEL -->
+	  <!-- BEGIN IMAGES SECTOR -->
 	  <div class="row my-4 px-md-5">
-	  	<div class="col-md-4">
+	  	<div class="col-md-6 col-lg-4 mb-md-4">
 	  		<div class="card shadow">
-	  		    <img class="card-img-top" src="assets/img/lang_php.png" alt="Lập trình viên PHP">
+	  		    <img class="card-img-top img-fluid" src="assets/img/lang_php.png" alt="Lập trình viên PHP">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên PHP</h4>
 	  		      <p class="card-text">Ngôn ngữ lập trình phía server phổ biến trên các hệ thống máy chủ hiện nay !</p>
@@ -111,9 +112,9 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-md-4">
+	  	<div class="col-md-6 col-lg-4 mb-md-4">
 	  		<div class="card shadow">
-	  		    <img class="card-img-top border-bottom" src="assets/img/lang_nodejs.png" alt="Lập trình viên NodeJs">
+	  		    <img class="card-img-top img-fluid border-bottom" src="assets/img/lang_nodejs.png" alt="Lập trình viên NodeJs">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên NodeJs</h4>
 	  		      <p class="card-text">Ngôn ngữ cực kỳ mạnh mẽ, thích hợp cho các hệ thống real-time tương tác cao.</p>
@@ -121,9 +122,9 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-md-4">
+	  	<div class="col-md-6 col-lg-4 mb-md-4">
 	  		<div class="card shadow">
-	  		    <img class="card-img-top border" src="assets/img/lang_python.gif" alt="Lập trình viên Python">
+	  		    <img class="card-img-top img-fluid border" src="assets/img/lang_python.gif" alt="Lập trình viên Python">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên Python</h4>
 	  		      <p class="card-text">Ngôn ngữ thích hợp cho các hệ thống lớn, Machine learning, Deep learning và AI.</p>
@@ -131,11 +132,10 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  </div>
-	  <div class="row px-md-5 pb-md-4 pt-md-2">
-	  	<div class="col-md-4">
+
+	  	<div class="col-md-6 col-lg-4 mb-md-4">
 	  		<div class="card shadow">
-	  		    <img class="card-img-top border-bottom" src="assets/img/lang_web.png" alt="Lập trình viên Front end">
+	  		    <img class="card-img-top img-fluid border-bottom" src="assets/img/lang_web.png" alt="Lập trình viên Front end">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên Frontend</h4>
 	  		      <p class="card-text">Tạo ra giao diện tương tác cho các trang web, thiết kế và đánh giá UX/UI.</p>
@@ -143,9 +143,9 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-md-4">
+	  	<div class="col-md-6 col-lg-4 mb-md-4">
 	  		<div class="card shadow">
-	  		    <img class="card-img-top" src="assets/img/lang_android.png" alt="Lập trình viên Android">
+	  		    <img class="card-img-top img-fluid" src="assets/img/lang_android.png" alt="Lập trình viên Android">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên Android</h4>
 	  		      <p class="card-text">Tạo ra các ứng dụng, trò chơi trên hệ điều hành Android - Hệ điều hành phổ biến nhất hiện nay.</p>
@@ -153,9 +153,9 @@
 	  		    </div>
 	  		  </div>
 	  	</div>
-	  	<div class="col-md-4">
+	  	<div class="col-md-6 col-lg-4 mb-md-4">
 	  		<div class="card shadow">
-	  		    <img class="card-img-top" src="assets/img/lang_reactjs.png" alt="Lập trình viên ReactJs">
+	  		    <img class="card-img-top img-fluid" src="assets/img/lang_reactjs.png" alt="Lập trình viên ReactJs">
 	  		    <div class="card-body bg-light">
 	  		      <h4 class="card-title">Lập trình viên ReactJs</h4>
 	  		      <p class="card-text">Một Frontend Framework giúp tăng nhanh tốc độ phát triển và trải nghiệm người dùng.</p>
@@ -165,21 +165,27 @@
 	  	</div>
 	  </div>
 	  <!-- FOOTER -->
-	  <div class="row bg-dark text-white" id="footer-link">
+	  <div class="row bg-dark text-white mt-n3" id="footer-link">
 	  	<footer class="col pt-0">
 	  		<p class="text-center" id="center-name">Trung tâm đào tạo lập trình viên PTST&reg;</p>
 	  		<hr class="mt-0">
 	  		<div class="row text-left" id="contact-info">
-	  			<div class="col-md-4">
+	  			<div class="col-md-6 col-lg-4">
 	  				<p><i class="fa fa-map-marker fa-fw fa-lg mr-1"></i> Quận Ninh Kiều, Cần Thơ</p>
-	  				<p><i class="fa fa-phone fa-fw fa-lg mr-1"></i> 01234xxxxxx</p>
 	  			</div>
-	  			<div class="col-md-4">
-	  				<p><i class="fa fa-envelope-o fa-fw fa-lg mr-1"></i> ptst-training@gmail.com</p>
+	  			<div class="col-md-6 col-lg-4">
 	  				<p><i class="fa fa-globe fa-fw fa-lg mr-1"></i> ptst-training.com</p>
 	  			</div>
-	  			<div class="col-md-4">
+	  			<div class="col-md-6 col-lg-4">
 	  				<p><i class="fa fa-facebook-official fa-fw fa-lg mr-1"></i> facebook.com/ptsttraining</p>
+	  			</div>
+	  			<div class="col-md-6 col-lg-4">
+	  				<p><i class="fa fa-phone fa-fw fa-lg mr-1"></i> 01234xxxxxx</p>
+	  			</div>
+	  			<div class="col-md-6 col-lg-4">
+	  				<p><i class="fa fa-envelope-o fa-fw fa-lg mr-1"></i> ptst-training@gmail.com</p>
+	  			</div>
+	  			<div class="col-md-6 col-lg-4">
 	  				<p><i class="fa fa-youtube fa-fw fa-lg mr-1"></i> youtube.com/ptsttraining</p>
 	  			</div>
 	  		</div>

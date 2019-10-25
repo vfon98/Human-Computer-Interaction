@@ -85,7 +85,7 @@
 	</div><!-- /.modal-dialog -->
 </div>
 <!-- COURSES MODAL -->
-<div class="modal fade" id="modal-courses">
+<div class="modal fade" id="modal-courses" tabindex="-1">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">

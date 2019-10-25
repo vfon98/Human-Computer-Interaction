@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Đăng ký học</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -16,7 +17,7 @@
 	</style>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="/">Quản lý đào tạo</a>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -46,7 +47,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-6 pt-2">
+			<div class="col-md-6 pt-2">
 				<div class="card shadow">
 					<div class="card-body pt-2">
 						<form id="js-register-form" action="/php/student/register_program.php" method="POST">
@@ -93,13 +94,13 @@
 				</div>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 d-none d-sm-block">
 				<div class="card mt-2 shadow">
 					<div class="card-header bg-info text-white">
 						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
 					</div>
-					<div class="card-body pt-2">
-						<table class="table table-inverse table-hover table-striped">
+					<div class="card-body pt-2 text-nowrap">
+						<table class="table table-responsive-lg table-inverse table-hover table-striped">
 							<thead>
 								<tr>
 									<th class="text-center">STT</th>
