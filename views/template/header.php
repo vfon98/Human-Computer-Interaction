@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Quản lý đào tạo</title>
+	<title i18n lang-key="eduMgr">Quản lý đào tạo</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 	<!-- BOOSTRAP CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -58,6 +58,7 @@
 			});
 		});
 	</script>
+	<script src="/assets/js/i18n.js"></script>
 </head>
 <body>
 	<div class="d-flex" id="wrapper">
@@ -85,37 +86,38 @@
 		<div id="page-content-wrapper">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom"  style="font-size: 17px">
 				<button class="btn btn-dark btn-outline-secondary" id="menu-toggle"><span class="navbar-toggler-icon"></span></button>
-				<a class="navbar-brand ml-2" href="/">Quản lý đào tạo</a>
+				<a class="navbar-brand ml-2" href="/" i18n lang-key="eduMgr">Quản lý đào tạo</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 					<i class="fa fa-caret-down fa-lg" id="js-caret-menu"></i>
 				</button>
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
 					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 						<li class="nav-item active">
-							<a class="nav-link" href="/">Trang chủ</a>
+							<a class="nav-link" href="/" i18n lang-key="home">Trang chủ</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-								<i class="fa fa-globe"></i> Tiếng Việt
+							<a class="nav-link dropdown-toggle btn" role="button" data-toggle="dropdown">
+								<i class="fa fa-globe"></i> <span id="js-cur-lang">Tiếng Việt</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right text-center">
-								<button class="dropdown-item m-0"><i class="fa fa-fw fa-language mx-2"></i> English</button>
+								<a class="dropdown-item m-0 btn" id="btn-change-lang-en"><i class="fa fa-fw fa-language mx-2"></i> <span id="js-toggle-lang">English</span>
+								</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-user"></i> Tài khoản
+								<i class="fa fa-user"></i> <span i18n lang-key="account">Tài khoản</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 								<!-- <a class="dropdown-item" href="#">Thay đổi quyền</a> -->
 								<a class="dropdown-item" href="#"
 									data-toggle="modal" data-target="#modal-account"
 								>
-									<i class="fa fa-fw fa-wrench text-dark"></i>&nbsp; Sửa thông tin
+									<i class="fa fa-fw fa-wrench text-dark"></i>&nbsp; <span i18n lang-key="changeInfo">Sửa thông tin</span>
 								</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="../logout.php" title="Ctrl+Shift+X">
-									<i class="fa fa-fw fa-power-off text-danger"></i>&nbsp; Đăng xuất
+									<i class="fa fa-fw fa-power-off text-danger"></i>&nbsp; <span i18n lang-key="logout">Đăng xuất</span>
 								</a>
 							</div>
 						</li>

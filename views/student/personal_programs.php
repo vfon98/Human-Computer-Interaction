@@ -6,50 +6,52 @@
 		<div class="col-md-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>Chương trình đào tạo</h4>
+					<h4 i18n lang-key="trainingPro">Chương trình đào tạo</h4>
 				</div>
 				<div class="card-body pt-2">
 					<button type="button" class="btn btn-sm btn-success mb-2"
 						data-toggle="modal" data-target="#modal-programs"
 					>
-						<i class="fa fa-plus-circle"></i> Đăng ký mới CTDT
+						<i class="fa fa-plus-circle"></i> <span i18n lang-key="regNewPro">Đăng ký mới CTDT</span>
 					</button>
-					<table class="table table-responsive-sm table-sm table-inverse table-hover table-striped text-center">
-						<thead>
-							<tr>
-								<th>STT</th>
-								<th>Tên CTDT</th>
-								<th>Thời gian</th>
-								<th>Học phí</th>
-								<th>Trạng thái</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php require '../../php/program/get_by_student_id.php'; ?>
-						</tbody>
-					</table>		
+					<div class="table-responsive-md">
+						<table class="table table-sm table-inverse table-hover table-striped text-center">
+							<thead>
+								<tr>
+									<th i18n lang-key="no">STT</th>
+									<th i18n lang-key="proName">Tên CTDT</th>
+									<th class="text-nowrap" i18n lang-key="duration">Thời gian</th>
+									<th i18n lang-key="tuition">Học phí</th>
+									<th i18n lang-key="status">Trạng thái</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php require '../../php/program/get_by_student_id.php'; ?>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>Khóa đào tạo đã tham gia</h4>
+					<h4 i18n lang-key="partiCourses">Khóa đào tạo đã tham gia</h4>
 				</div>
 				<div class="card-body pt-2">
 					<button type="button" class="btn btn-sm btn-success mb-2"
 						data-toggle="modal" data-target="#modal-courses"
 					>
-						<i class="fa fa-plus-circle"></i> Thêm khóa đào tạo
+						<i class="fa fa-plus-circle"></i> <span i18n lang-key="addCourse">Thêm khóa đào tạo</span>
 					</button>
-					<table class="table table-responsive-md table-sm table-inverse table-hover table-striped text-center">
+					<table class="table table-responsive-md text-nowrap table-sm table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
-								<th>STT</th>
-								<th>Tên khóa</th>
-								<th>Ngày bắt đầu</th>
-								<th>Ngày kết thúc</th>
-								<th>Tùy chọn</th>
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="courseName">Tên khóa</th>
+								<th i18n lang-key="beginDate">Ngày bắt đầu</th>
+								<th i18n lang-key="endDate">Ngày kết thúc</th>
+								<th i18n lang-key="option">Tùy chọn</th>
 							</tr>
 						</thead>
 						<tbody>

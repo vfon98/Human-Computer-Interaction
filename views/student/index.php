@@ -7,7 +7,7 @@
 		<div class="col-md-5">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>Thông tin sinh viên</h4>
+					<h4 i18n lang-key="studentInfo">Thông tin sinh viên</h4>
 				</div>
 				<div class="card-body py-2">
 					<table class="table table-responsive-md table-sm table-inverse table-hover table-borderless" id="table-student">
@@ -15,15 +15,15 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Họ tên: </td>
+								<td i18n lang-key="fullName">Họ tên: </td>
 								<td><?php echo $row['st_name'] ?></td>
 							</tr>
 							<tr>
-								<td>Tài khoản: </td>
+								<td i18n lang-key="username">Tài khoản: </td>
 								<td><?php echo $logged_user ?></td>
 							</tr>
 							<tr>
-								<td>Ngày sinh: </td>
+								<td i18n lang-key="birthday">Ngày sinh: </td>
 								<td><?php echo $row['birthday'] ?></td>
 							</tr>
 							<tr>
@@ -31,22 +31,22 @@
 								<td><?php echo $row['email'] ?></td>
 							</tr>
 							<tr>
-								<td>Địa chỉ: </td>
+								<td i18n lang-key="address">Địa chỉ: </td>
 								<td><?php echo $row['address'] ?></td>
 							</tr>
 							<tr>
-								<td>Chương trình: </td>
+								<td i18n lang-key="proName">Chương trình: </td>
 								<td><?php echo $row['p_name'] ?></td>
 							</tr>
 							<tr>
-								<td>Ngày đăng ký: </td>
+								<td i18n lang-key="regTime">Ngày đăng ký: </td>
 								<td><?php echo $row['created_at']; ?></td>
 							</tr>
 							<tr>
-								<td>Học phí: </td>
+								<td i18n lang-key="tuition">Học phí: </td>
 								<td class="font-weight-bold 
 									<?php echo ($row['is_paid'] ? 'text-success' : 'text-danger') ?>">
-									<?php echo ($row['is_paid'] ? 'Đã đóng' : 'Chưa đóng') ?>
+									<?php echo ($row['is_paid'] ? '<span i18n lang-key="paid">Đã đóng</span>' : '<span i18n lang-key="unpaid">Chưa đóng</span>') ?>
 								</td>
 							</tr>
 						</tbody>
@@ -64,7 +64,7 @@
 		<div class="col-md-7">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>
+					<h4 i18n lang-key="currentPro">
 						Chương trình hiện tại
 					</h4>
 				</div>
@@ -72,10 +72,10 @@
 					<table class="table table-responsive-md table-inverse table-hover table-striped mb-1" id="tbl-current-program">
 						<thead>
 							<tr>
-								<th>STT</th>
-								<th>Mã môn</th>
-								<th>Tên môn</th>
-								<th>GV phụ trách</th>
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="subID">Mã môn</th>
+								<th i18n lang-key="subName">Tên môn</th>
+								<th i18n lang-key="resTeacher">GV phụ trách</th>
 							</tr>
 						</thead>
 						<tbody>

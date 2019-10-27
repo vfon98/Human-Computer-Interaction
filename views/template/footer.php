@@ -46,5 +46,6 @@
 			$("#wrapper").toggleClass("toggled");
 		});
 	</script>
+    <!-- <script src="/assets/js/i18n.js"></script> -->
 </body>
 </html>

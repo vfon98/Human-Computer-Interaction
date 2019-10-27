@@ -14,7 +14,7 @@
 				<td>'.$row['begin_at'].'</td>
 				<td>'.$row['end_at'].'</td>
 				<td>
-					<a href="/php/course/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del"> <i class="fa fa-trash-o"></i> Xóa</a>
+					<a href="/php/course/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del"> <i class="fa fa-trash-o"></i> <span i18n lang-key="delete">Xóa</span></a>
 				</td>
 			</tr>';
 		}

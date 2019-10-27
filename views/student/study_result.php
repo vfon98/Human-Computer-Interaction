@@ -6,19 +6,19 @@
 		<div class="col-md">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>Kết quả học tập</h4>
+					<h4 i18n lang-key="studyResult">Kết quả học tập</h4>
 				</div>
 				<div class="card-body pt-2 pb-1">
 					<table class="table table-responsive-md table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
-								<th>STT</th>
-								<th>Mã môn</th>
-								<th>Tên môn học</th>
-								<th>GV phụ trách</th>
-								<th>Lần thi</th>
-								<th style="width: 180px">Điểm</th>
-								<th>Tích lũy</th>
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="subID">Mã môn</th>
+								<th i18n lang-key="subName">Tên môn học</th>
+								<th i18n lang-key="resTeacher">GV phụ trách</th>
+								<th i18n lang-key="times">Lần thi</th>
+								<th i18n lang-key="mark" style="width: 180px">Điểm</th>
+								<th i18n lang-key="accum">Tích lũy</th>
 							</tr>
 						</thead>
 						<tbody>
