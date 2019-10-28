@@ -23,7 +23,7 @@
 				<td>'.$row['total_students'].'</td>
 				<td>
 					<button onclick="ajaxGetDetail('.$row['s_id'].')" data-toggle="modal" data-target="#modal-student-list" class="btn btn-link">
-						Chi tiết <i class="fa fa-info-circle"></i>
+						<span i18n lang-key="details">Chi tiết</span> <i class="fa fa-info-circle"></i>
 					</button>
 				</td>
 			</tr>';

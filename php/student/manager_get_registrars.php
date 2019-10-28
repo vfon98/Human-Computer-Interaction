@@ -25,14 +25,14 @@
 		}
 		echo 
 		'<tr class="bg-light">
-			<td colspan="4" class="font-italic text-info pl-3">* Sinh viên đăng ký nhiều CTDT</td>
+			<td colspan="4" class="font-italic text-info pl-3" i18n lang-key="multiPro">* Sinh viên đăng ký nhiều CTDT</td>
 			<td colspan="4" class="text-right">
 				<button name="btn-approve" type="submit" class="btn btn-success js-btn-approve">
-					<i class="fa fa-check"></i> Duyệt
+					<i class="fa fa-check"></i> <span i18n lang-key="approve">Duyệt</span>
 				</button>
 
 				<button name="btn-decline" type="submit" class="btn btn-danger js-btn-decline">
-					<i class="fa fa-times"></i> Loại
+					<i class="fa fa-times"></i> <span i18n lang-key="decline">Loại</span>
 				</button>
 			</td>
 		</tr>';

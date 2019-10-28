@@ -41,7 +41,7 @@
 					<h5 class="mb-0 text-center">Danh sách môn học</h5>
 				</div>
 				<div class="card-body">
-					<table class="text-center table table-responsive-md table-inverse table-striped table-hover" id="tbl-subject">
+					<table class="text-center table table-sm text-nowrap table-responsive-md table-inverse table-striped table-hover" id="tbl-subject">
 						<thead>
 							<tr>
 								<th>STT</th>

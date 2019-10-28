@@ -24,9 +24,9 @@
 				<td>'.getAccType($row['role']).'</td>
 				<td class="p-2">
 					<button data-toggle="modal" data-target="#modal-change-password"
-						onclick="passIdToModal('.$row['id'].')" type="button" class="btn btn-danger"
+						onclick="passIdToModal('.$row['id'].')" type="button" class="btn btn-outline-danger text-nowrap"
 					>
-						<i class="fa fa-wrench" aria-hidden="true"></i> Đổi MK
+						<i class="fa fa-wrench" aria-hidden="true"></i> <span i18n lang-key="change">Đổi MK</span>
 					</button>
 				</td>
 			</tr>';

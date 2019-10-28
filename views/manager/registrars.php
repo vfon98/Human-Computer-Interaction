@@ -4,23 +4,23 @@
 <div class="container-fluid">
 	<div class="card shadow mt-2">
 		<div class="card-header bg-info text-white">
-			<h5 class="text-center mb-0">Danh sách học viên đăng ký</h5>
+			<h5 class="text-center mb-0" i18n lang-key="registrars">Danh sách học viên đăng ký</h5>
 		</div>
 		<div class="card-body px-1 py-2">
 			<div class="table-responsive">
 				<table class="table table-sm table-hover table-striped shadow" id="tbl-registrar">
 					<thead>
 						<tr>
-							<th class="text-center">STT</th>
-							<th>Tên học viên</th>
-							<th>Ngày sinh</th>
-							<th>Địa chỉ</th>
-							<th>Chương trình</th>
-							<th>Tài khoản</th>
-							<th>Ngày đăng ký</th>
+							<th i18n lang-key="no" class="text-center">STT</th>
+							<th i18n lang-key="studentName">Tên học viên</th>
+							<th i18n lang-key="birthday">Ngày sinh</th>
+							<th i18n lang-key="address">Địa chỉ</th>
+							<th i18n lang-key="proName">Chương trình</th>
+							<th i18n lang-key="username">Tài khoản</th>
+							<th i18n lang-key="regTime">Ngày đăng ký</th>
 							<th class="text-center">
 								<button id="btn-check-all" class="btn btn-light p-0" style="width: 100px">
-									<i class="fa fa-check-square-o fa-lg"></i> <strong id="js-chbx-all">Chọn tất</strong>
+									<i class="fa fa-check-square-o fa-lg"></i> <strong id="js-chbx-all" i18n lang-key="selectAll">Chọn tất</strong>
 								</button>
 							</th>
 						</tr>

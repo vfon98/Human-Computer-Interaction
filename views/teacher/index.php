@@ -7,7 +7,7 @@
 		<div class="col-md-5 col-sm-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h5>Thông tin cá nhân</h5>
+					<h5 i18n lang-key="personalInfo">Thông tin cá nhân</h5>
 				</div>
 				<div class="card-body py-2">
 					<table class="table table-sm table-inverse table-hover table-borderless" id="table-student">
@@ -15,7 +15,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Họ tên: </td>
+								<td><span i18n lang-key="fullName">Họ tên</span>: </td>
 								<td><?php echo $row['name'] ?></td>
 							</tr>
 							<tr>
@@ -23,11 +23,11 @@
 								<td><?php echo $row['email'] ?></td>
 							</tr>
 							<tr>
-								<td>Tài khoản: </td>
+								<td><span i18n lang-key="username">Tài khoản</span>: </td>
 								<td><?php echo $_SESSION['logged_user'] ?></td>
 							</tr>
 							<tr>
-								<td>Ngày đăng ký: </td>
+								<td><span i18n lang-key="regTime">Ngày đăng ký</span>: </td>
 								<td><?php echo $row['created_at']; ?></td>
 							</tr>
 						</tbody>
@@ -38,17 +38,17 @@
 		<div class="col-md-7 col-sm-6">
 			<div class="card shadow">
 				<div class="card-header bg-info text-white">
-					<h5 class="text-center mb-0">Môn học phụ trách</h5>
+					<h5 class="text-center mb-0" i18n lang-key="resSubjects">Môn học phụ trách</h5>
 				</div>
 				<div class="card-body pt-2">
 					<table class="table table-responsive-md table-sm table-hover table-striped table-inverse text-center">
 						<thead>
 							<tr>
-								<th>STT</th>
-								<th>Mã môn</th>
-								<th>Tên môn học</th>
-								<th>Sỉ số</th>
-								<th>Danh sách lớp</th>
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="subID">Mã môn</th>
+								<th i18n lang-key="subName">Tên môn học</th>
+								<th i18n lang-key="totals">Sỉ số</th>
+								<th i18n lang-key="studentList">Danh sách lớp</th>
 							</tr>
 						</thead>
 						<tbody>

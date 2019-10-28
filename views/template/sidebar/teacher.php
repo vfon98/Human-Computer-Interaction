@@ -4,10 +4,10 @@
 	</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/teacher" class="list-group-item list-group-item-action bg-dark active">
-			<i class="fa fa-graduation-cap fa-fw mr-1"></i> Quản lý giảng dạy
+			<i class="fa fa-graduation-cap fa-fw mr-1"></i> <span i18n lang-key="teachingMgr">Quản lý giảng dạy</span>
 		</a>
 		<a href="/views/teacher/subject_grading.php" class="list-group-item list-group-item-action bg-dark">
-			<i class="fa fa-pencil fa-fw mr-1"></i> Chấm điểm môn học
+			<i class="fa fa-pencil fa-fw mr-1"></i> <span i18n lang-key="subjectGrading">Chấm điểm môn học</span>
 		</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 <!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
@@ -28,7 +28,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Thông tin tài khoản</h4>
+				<h4 class="modal-title" i18n lang-key="accountInfo">Thông tin tài khoản</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -37,11 +37,11 @@
 				<div class="modal-body">
 					<input type="hidden" name="user_id" value="<?php echo $_SESSION['logged_id'] ?>">
 					<fieldset class="form-group">
-						<label>Tên đăng nhập</label>
+						<label i18n lang-key="username">Tên đăng nhập</label>
 						<input type="text" name="t_username" class="form-control" value="<?php echo $_SESSION['logged_user'] ?>" readonly>
 					</fieldset>
 					<fieldset class="form-group">
-						<label>Họ tên</label>
+						<label i18n lang-key="fullName">Họ tên</label>
 						<input type="text" name="t_name" class="form-control" value="<?php echo $row['name'] ?>" required>
 					</fieldset>
 					<fieldset class="form-group">
@@ -49,20 +49,20 @@
 						<input type="email" name="t_email" class="form-control" value="<?php echo $row['email'] ?>" required>
 					</fieldset>
 					<fieldset class="form-group was-validated">
-						<label>Mật khẩu mới</label>
-						<input type="password" name="new_pass" class="form-control" id="new-pass" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+						<label i18n lang-key="newPass">Mật khẩu mới</label>
+						<input type="password" name="new_pass" class="form-control" id="new-pass" placeholder="Tối thiểu 4 ký tự" i18n-place="At least 4 characters" minlength="4" required>
 					</fieldset>
 					<fieldset class="form-group">
-						<label>Nhập lại mật khẩu mới</label>
-						<input type="password" class="form-control" id="re-pass" placeholder="Tối thiểu 4 ký tự" required>
+						<label i18n lang-key="rePass">Nhập lại mật khẩu mới</label>
+						<input type="password" class="form-control" id="re-pass" placeholder="Tối thiểu 4 ký tự" i18n-place="At least 4 characters" required>
 					</fieldset>
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-success" id="btn-submit">
-						<i class="fa fa-download"></i> Cập nhật
+						<i class="fa fa-download"></i> <span i18n lang-key="update">Cập nhật</span>
 					</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">
-						<i class="fa fa-times"></i> Đóng
+						<i class="fa fa-times"></i> <span i18n lang-key="close">Đóng</span>
 					</button>
 				</div>
 			</form>

@@ -6,23 +6,23 @@
 		<div class="col-md-5">
 			<div class="card shadow">
 				<div class="card-header bg-secondary text-white pb-0 text-center">
-					<h5>Thêm tài khoản</h5>
+					<h5 i18n lang-key="addAcc">Thêm tài khoản</h5>
 				</div>
 				<div class="card-body">
 					<form action="/php/teacher/create.php" method="POST">
 						<div class="form-group row">
-							<label class="col-md-5 col-form-label">Loại tài khoản:</label>
+							<label class="col-md-5 col-form-label" i18n lang-key="accType">Loại tài khoản:</label>
 							<div class="col-md-7 p-md-0 ml-md-n3">
 								<select class="form-control" name="acc-role" id="sel-acc-role" autofocus>
-									<option value="teacher">Giáo viên</option>
-									<option value="manager">Quản lý CTDT</option>
+									<option value="teacher" i18n lang-key="teacher">Giáo viên</option>
+									<option value="manager" i18n lang-key="eduMgr">Quản lý CTDT</option>
 								</select>
 							</div>
 						</div>
 						<hr>
 						<fieldset class="form-group" id="inp-name">
-							<label>Tên giáo viên</label>
-							<input class="form-control" id="inp-teacher" type="text" name="name" placeholder="VD: Nguyễn Văn A">
+							<label i18n lang-key="teacherName">Tên giáo viên</label>
+							<input class="form-control" id="inp-teacher" type="text" name="name" placeholder="VD: Nguyễn Văn A" i18n-place="Ex: John Doe">
 						</fieldset>
 						<fieldset class="form-group" id="inp-email">
 							<label>Email</label>
@@ -31,17 +31,17 @@
 							>
 						</fieldset>
 						<fieldset class="form-group">
-							<label>Tên đăng nhập</label>
-							<input class="form-control" id="inp-username" type="text" name="username" placeholder="VD: nguyenvana">
-							<div class="invalid-feedback">Tài khoản đã tồn tại !</div>
+							<label i18n lang-key="username">Tên đăng nhập</label>
+							<input class="form-control" id="inp-username" type="text" name="username" placeholder="VD: nguyenvana" i18n-place="Ex: johndoe">
+							<div class="invalid-feedback" i18n lang-key="existedAcc">Tài khoản đã tồn tại !</div>
 						</fieldset>
 						<fieldset class="form-group">
-							<label>Mật khẩu</label>
-							<input class="form-control" type="password" name="pass" placeholder="Tối thiểu 4 ký tự" minlength="4">
+							<label i18n lang-key="password">Mật khẩu</label>
+							<input class="form-control" type="password" name="pass" placeholder="Tối thiểu 4 ký tự" minlength="4" i18n-place="At least 4 characters">
 						</fieldset>
 
 						<button id="btn-submit-account" class="btn btn-success" type="submit">
-							Thêm tài khoản <i class="fa fa-angle-double-right"></i>
+							<span i18n lang-key="addAcc">Thêm tài khoản</span> <i class="fa fa-angle-double-right"></i>
 						</button>
 					</form>
 				</div>
@@ -50,16 +50,16 @@
 		<div class="col-md-7">
 			<div class="card shadow mb-5">
 				<div class="card-header bg-secondary text-white pb-0 text-center">
-					<h5>Danh sách tài khoản</h5>
+					<h5 i18n lang-key="accountList">Danh sách tài khoản</h5>
 				</div>
 				<div class="card-body pt-3">
 					<table class="table table-responsive-md table-inverse table-striped table-hover text-center" id="tbl-account">
 						<thead>
 							<tr>
-								<th>STT</th>
-								<th>Tên đăng nhập</th>
-								<th>Loại tài khoản</th>
-								<th>Mật khẩu</th>
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="username">Tên đăng nhập</th>
+								<th i18n lang-key="accType">Loại tài khoản</th>
+								<th i18n lang-key="password">Mật khẩu</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -78,7 +78,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Đổi mật khẩu tài khoản</h4>
+				<h4 class="modal-title" i18n lang-key="changePass">Đổi mật khẩu tài khoản</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -88,20 +88,20 @@
 					<!-- HIDDEN VALUE PASS BY JS -->
 					<input type="hidden" name="acc-id" id="hid-acc-id" value="">
 					<fieldset class="form-group was-validated">
-						<label>Mật khẩu mới</label>
-						<input name="new-pass" id="new-pass-user" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+						<label i18n lang-key="newPass">Mật khẩu mới</label>
+						<input name="new-pass" id="new-pass-user" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" i18n-place="At least 4 characters" minlength="4" required>
 					</fieldset>
 					<fieldset class="form-group">
-						<label>Nhập lại mật khẩu mới</label>
-						<input id="re-pass-user" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" minlength="4" required>
+						<label i18n lang-key="rePass">Nhập lại mật khẩu mới</label>
+						<input id="re-pass-user" type="password" class="form-control" placeholder="Tối thiểu 4 ký tự" i18n-place="At least 4 characters" minlength="4" required>
 					</fieldset>
 				</div>
 				<div class="modal-footer">
 					<button type="submit" id="btn-submit-user" class="btn btn-secondary" disabled>
-						<i class="fa fa-save"></i> Lưu thay đổi
+						<i class="fa fa-save"></i> <span i18n lang-key="update">Lưu thay đổi</span>
 					</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">
-						<i class="fa fa-close"></i> Đóng
+						<i class="fa fa-close"></i> <span i18n lang-key="close">Đóng</span>
 					</button>
 				</div>
 			</form>

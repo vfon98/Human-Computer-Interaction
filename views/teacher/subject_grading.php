@@ -6,13 +6,13 @@
 		<div class="col">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
-					<h4>Chấm điểm môn học</h4>
+					<h4 i18n lang-key="subjectGrading">Chấm điểm môn học</h4>
 				</div>
 				<div class="card-body">
 					<div class="form-group">
-						<label for="js-sel-subject"><strong>Chọn môn học: </strong></label>
+						<label for="js-sel-subject"><strong i18n lang-key="chooseSub">Chọn môn học:</strong></label>
 						<select class="custom-select col-md-5 ml-1" id="js-sel-subject" autofocus>
-							<option selected disabled>-- Vui lòng chọn môn học --</option>
+							<option i18n lang-key="pleaseChoose" selected disabled>-- Vui lòng chọn môn học --</option>
 							<?php include '../../php/subject/get_options_by_teacher_id.php'; ?>
 						</select>
 					</div>
@@ -44,6 +44,7 @@
 			s_id: s_id
 		}).then(res => {
 			$('#ajax-content').html(res);
+			$('#btn-change-lang').trigger('click');
 		});
 	}
 </script>

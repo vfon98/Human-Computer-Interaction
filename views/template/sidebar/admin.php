@@ -1,8 +1,8 @@
 <div class="bg-dark border-right" id="sidebar-wrapper">
-	<div class="sidebar-heading">Quản trị hệ thống</div>
+	<div class="sidebar-heading" i18n lang-key="sysadmin">Quản trị hệ thống</div>
 	<div class="list-group list-group-flush">
 		<a href="/views/admin" class="list-group-item list-group-item-action bg-dark active">
-			<i class="fa fa-cogs fa-fw mr-1"></i> Quản lý tài khoản
+			<i class="fa fa-cogs fa-fw mr-1"></i> <span i18n lang-key="accountMgr">Quản lý tài khoản</span>
 		</a>
 		<a href="#" class="list-group-item list-group-item-action bg-dark empty-list-group-item"></a>
 <!-- 				<a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
@@ -15,7 +15,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Thông tin tài khoản</h4>
+				<h4 class="modal-title" i18n lang-key="accountInfo">Thông tin tài khoản</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -24,24 +24,24 @@
 				<div class="modal-body">
 					<input type="hidden" name="user_id" value="<?php echo $_SESSION['logged_id'] ?>">
 					<fieldset class="form-group">
-						<label>Tên đăng nhập</label>
+						<label i18n lang-key="username">Tên đăng nhập</label>
 						<input type="text" class="form-control" value="<?php echo $_SESSION['logged_user'] ?>" disabled>
 					</fieldset>
 					<fieldset class="form-group was-validated">
-						<label>Mật khẩu mới</label>
+						<label i18n lang-key="newPass">Mật khẩu mới</label>
 						<input type="password" name="new_pass" class="form-control" id="new-pass" minlength="4" placeholder="Tối thiểu 4 ký tự" required>
 					</fieldset>
 					<fieldset class="form-group">
-						<label>Nhập lại mật khẩu mới</label>
+						<label i18n lang-key="rePass">Nhập lại mật khẩu mới</label>
 						<input type="password" class="form-control" id="re-pass" placeholder="Tối thiểu 4 ký tự" required>
 					</fieldset>
 				</div>
 				<div class="modal-footer">
 					<button type="submit" class="btn btn-success" id="btn-submit">
-						<i class="fa fa-download"></i> Cập nhật
+						<i class="fa fa-download"></i> <span i18n lang-key="update">Cập nhật</span>
 					</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">
-						<i class="fa fa-times"></i> Đóng
+						<i class="fa fa-times"></i> <span i18n lang-key="close">Đóng</span>
 					</button>
 				</div>
 			</form>

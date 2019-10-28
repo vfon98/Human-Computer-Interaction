@@ -100,7 +100,7 @@
 								<i class="fa fa-globe"></i> <span id="js-cur-lang">Tiếng Việt</span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right text-center">
-								<a class="dropdown-item m-0 btn" id="btn-change-lang-en"><i class="fa fa-fw fa-language mx-2"></i> <span id="js-toggle-lang">English</span>
+								<a class="dropdown-item m-0 btn" id="btn-change-lang"><i class="fa fa-fw fa-language mx-2"></i> <span id="js-toggle-lang">English</span>
 								</a>
 							</div>
 						</li>
