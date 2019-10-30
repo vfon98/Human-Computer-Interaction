@@ -11,7 +11,7 @@
 				<div class="card-body">
 					<div class="form-group">
 						<label for="js-sel-subject"><strong i18n lang-key="chooseSub">Chọn môn học:</strong></label>
-						<select class="custom-select col-md-5 ml-1" id="js-sel-subject" autofocus>
+						<select class="custom-select col-lg-6 ml-1" id="js-sel-subject" autofocus>
 							<option i18n lang-key="pleaseChoose" selected disabled>-- Vui lòng chọn môn học --</option>
 							<?php include '../../php/subject/get_options_by_teacher_id.php'; ?>
 						</select>

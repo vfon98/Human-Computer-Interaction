@@ -16,7 +16,7 @@
 ?>
 <form action="/php/student/grade_by_subject.php" method="POST" id="form-grading">
 	<input type="hidden" name="s_id" value="<?php echo $s_id ?>">
-	<table class="table table-responsive-md table-inverse table-hover text-center table-striped mb-0">
+	<table class="table table-responsive-lg table-inverse table-hover text-center table-striped mb-0">
 		<thead>
 			<th i18n lang-key="no">STT</th>
 			<th i18n lang-key="studentName">Tên sinh viên</th>

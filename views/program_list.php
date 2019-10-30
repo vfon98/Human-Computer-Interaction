@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Trang chủ</title>
+	<title i18n lang-key="homepage">Trang chủ</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/main.css">
@@ -30,9 +30,9 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="#">
-	    	<!-- <img src="/assets/img/logo_ctu.gif" alt="logo" style="height: 2rem"> -->
-	    	Quản lý đào tạo
+	    <a class="navbar-brand" href="/">
+            <img src="/assets/img/PTST-logo-white.png" alt="logo" width="50" class="my-n3 mx-n1 ml-n2">
+	    	<span i18n lang-key="eduMgr">Quản lý đào tạo</span>
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>
@@ -40,19 +40,28 @@
 	      <div class="collapse navbar-collapse" id="collapsibleNavbar">
 	      	<ul class="navbar-nav ml-auto">
 	      	  <li class="nav-item">
-	      	    <a class="nav-link" href="/">Trang chủ</a>
+	      	    <a class="nav-link" href="/" i18n lang-key="homepage">Trang chủ</a>
 	      	  </li>
 	      	  <li class="nav-item">
-	      	    <a class="nav-link" href="#">Liên hệ</a>
+	      	    <a class="nav-link" href="/#footer-link" i18n lang-key="contact">Liên hệ</a>
+	      	  </li>
+	      	  <li class="nav-item dropdown">
+	      	  	<a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
+	      	  		<i class="fa fa-globe"></i> <span id="js-cur-lang">Tiếng Việt</span>
+	      	  	</a>
+	      	  	<div class="dropdown-menu dropdown-menu-right">
+	      	  		<a class="dropdown-item m-0 btn" id="btn-change-lang"><i class="fa fa-fw fa-language mx-2"></i> <span id="js-toggle-lang">English</span>
+	      	  		</a>
+	      	  	</div>
 	      	  </li>
 	      	  <li class="nav-item">
-	      	    <a class="nav-link active" href="#">Chương trình đào tạo</a>
+	      	    <a class="nav-link active" href="#" i18n lang-key="proList">Chương trình đào tạo</a>
 	      	  </li>
 	      	  <li class="nav-item">
-	      	    <a class="nav-link" href="register.php">Đăng ký học</a>
+	      	    <a class="nav-link" href="register.php" i18n lang-key="register">Đăng ký học</a>
 	      	  </li>
 	      	  <li class="nav-item">
-	      	    <a class="nav-link" href="login.php">Đăng nhập</a>
+	      	    <a class="nav-link" href="login.php" i18n lang-key="login">Đăng nhập</a>
 	      	  </li>
 	      	</ul>
 	      </div>
@@ -65,18 +74,18 @@
 			<div class="col-md-12">
 				<div class="card shadow mt-2 mb-4">
 					<div class="card-header bg-info text-white">
-						<h4 class="text-center mb-0">Danh sách chương trình đào tạo</h4>
+						<h4 class="text-center mb-0" i18n lang-key="proList">Danh sách chương trình đào tạo</h4>
 					</div>
-					<div class="card-body table-responsive-md">
+					<div class="card-body table-responsive-lg">
 						<table class="table table-inverse table-hover table-striped text-center" id="tbl-program">
 							<thead>
 								<tr>
-									<th>STT</th>
-									<th>Tên chương trình</th>
-									<th>Thời gian</th>
-									<th>Ngày bắt đầu</th>
-									<th>Học phí</th>
-									<th>Danh sách môn học</th>
+									<th i18n lang-key="no">STT</th>
+									<th i18n lang-key="proName">Tên chương trình</th>
+									<th i18n lang-key="duration">Thời gian</th>
+									<th i18n lang-key="beginDate">Ngày bắt đầu</th>
+									<th i18n lang-key="tuition">Học phí</th>
+									<th i18n lang-key="subList">Danh sách môn học</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -97,7 +106,7 @@
 												data-toggle="modal" data-target="#modal-detail"
 												onclick="ajaxGetDetail('.$row['id'].')"
 											>
-												Chi tiết <i class="fa fa-info-circle"></i>
+												<span i18n lang-key="details">Chi tiết</span> <i class="fa fa-info-circle"></i>
 											</button>
 										</td>
 									</tr>';
@@ -117,7 +126,7 @@
 		<div class="modal-dialog modal-dialog-scrollable" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">Danh sách môn học</h4>
+					<h4 class="modal-title" i18n lang-key="subList">Danh sách môn học</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 						<span class="sr-only">Close</span>
@@ -127,10 +136,10 @@
 					<table class="table table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
-								<th>STT</th>
-								<th>Mã môn</th>
-								<th>Tên môn học</th>
-								<th>GV phụ trách</th>
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="subID">Mã môn</th>
+								<th i18n lang-key="subName">Tên môn học</th>
+								<th i18n lang-key="resTeacher">GV phụ trách</th>
 							</tr>
 						</thead>
 						<tbody id="table-content">
@@ -139,12 +148,13 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">
-						<i class="fa fa-times"></i> Đóng
+						<i class="fa fa-times"></i> <span i18n lang-key="close">Đóng</span>
 					</button>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+	<script src="/assets/js/i18n.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#tbl-program').DataTable({

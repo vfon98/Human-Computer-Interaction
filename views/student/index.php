@@ -4,13 +4,13 @@
 
 <div class="container-fluid pt-3">
 	<div class="row">
-		<div class="col-md-5">
+		<div class="col-lg-5">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4 i18n lang-key="studentInfo">Thông tin sinh viên</h4>
 				</div>
 				<div class="card-body py-2">
-					<table class="table table-responsive-md table-sm table-inverse table-hover table-borderless" id="table-student">
+					<table class="table table-responsive-lg table-sm table-inverse table-hover table-borderless" id="table-student">
 						<thead>
 						</thead>
 						<tbody>
@@ -61,7 +61,7 @@
 			}
 		?>
 
-		<div class="col-md-7">
+		<div class="col-lg-7">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4 i18n lang-key="currentPro">

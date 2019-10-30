@@ -13,22 +13,22 @@ if (isset($_GET['id'])) {
 }
 ?>
 <div class="container-fluid">
-	<a href="programs_manager.php" class="btn btn-link"><i class="fa fa-reply"></i> Trở về</a>
+	<a href="programs_manager.php" class="btn btn-link"><i class="fa fa-reply"></i> <span i18n lang-key="back">trở về</span></a>
 	<div class="card shadow">
 		<div class="card-header bg-info text-white p-2 text-center">
-			<h4 class="em">Chương trình: <em class="font-weight-bold"><?php echo $p_name; ?></em></h5>
-			<h6>Thời gian đào tạo: <?php echo $duration ?></h5>
+			<h4 class="em"><span i18n lang-key="program">chương trình</span>: <em class="font-weight-bold"><?php echo $p_name; ?></em></h5>
+			<h6><span i18n lang-key="duration">thời gian đào tạo</span>: <?php echo $duration ?></h5>
 		</div>
 		<div class="card-body py-2">
 			<button type="button" class="btn btn-light text-primary mb-2"
 				data-toggle="modal" data-target="#modal-student-list">
-				<i class="fa fa-address-card-o"></i> Danh sách sinh viên
+				<i class="fa fa-address-card-o"></i> <span i18n lang-key="studentList">Danh sách sinh viên</span>
 			</button>
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="card shadow">
 						<div class="card-header">
-							<h4 class="mb-0 text-center">Thêm môn học</h4>
+							<h4 class="mb-0 text-center" i18n lang-key="addSub">Thêm môn học</h4>
 						</div>
 						<div class="card-body pt-0">
 							<form action="/php/program/add_subject.php" method="POST">
@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
 								<button type="button" class="btn btn-sm btn-secondary my-2"
 									data-toggle="modal" data-target="#modal-new-subject"
 								>
-									<i class="fa fa-plus"></i> Tạo mới môn học
+									<i class="fa fa-plus"></i> <span i18n lang-key="addNewSub">Tạo mới môn học</span>
 								</button>
 								<fieldset class="form-group">
 									<select name="subject-id[]" class="form-control" size="10" multiple>
@@ -44,25 +44,25 @@ if (isset($_GET['id'])) {
 									</select>
 								</fieldset>
 								<button type="submit" class="btn btn-success">
-									Thêm vào CTDT <i class="fa fa-angle-double-right"></i>
+									<span i18n lang-key="addSubToPro">Thêm vào CTDT</span> <i class="fa fa-angle-double-right"></i>
 								</button>
 							</form>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-lg-8">
 					<div class="card shadow mb-4">
 						<div class="card-header">
-							<h4 class="mb-0 text-center">Danh sách môn học</h4>
+							<h4 class="mb-0 text-center" i18n lang-key="subList">Danh sách môn học</h4>
 						</div>
 						<div class="card-body py-2">
 							<table class="table table-responsive-md table-striped table-inverse table-hover" id="tbl-subject">
 								<thead>
 									<tr>
-										<th>STT</th>
-										<th>Mã môn</th>
-										<th>Tên môn</th>
-										<th>Tùy chọn</th>
+										<th i18n lang-key="no">STT</th>
+										<th i18n lang-key="subID">Mã môn</th>
+										<th i18n lang-key="subName">Tên môn</th>
+										<th i18n lang-key="option" class="text-center">Tùy chọn</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -84,7 +84,7 @@ if (isset($_GET['id'])) {
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Thêm mới môn học</h4>
+				<h4 class="modal-title" i18n lang-key="addNewSub">Thêm mới môn học</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 					<span class="sr-only">Close</span>
@@ -93,28 +93,28 @@ if (isset($_GET['id'])) {
 			<div class="modal-body">
 				<form action="/php/subject/create.php" method="POST">
 					<fieldset class="form-group">
-						<label>Mã môn</label>
-						<input name="sub-id" type="text" class="form-control" placeholder="Nhập tên chương trình" maxlength="50" value="<?php echo $next_id; ?>" readonly>
+						<label i18n lang-key="subID">Mã môn</label>
+						<input name="sub-id" type="text" class="form-control" placeholder="Nhập tên chương trình" i18n-place="Enter subject ID" maxlength="50" value="<?php echo $next_id; ?>" readonly>
 					</fieldset>
 					<fieldset class="form-group">
-						<label>Tên môn</label>
+						<label i18n lang-key="subName" i18n lang-key="subName">Tên môn</label>
 						<input name="name" type="text" class="form-control" 
-							placeholder="VD: Lập trình căn bản" autofocus required>
+							placeholder="VD: Lập trình căn bản" i18n-place="Ex: Basic programming" autofocus required>
 					</fieldset>
 					<fieldset class="form-group">
-						<label>Giáo viên phụ trách</label>
+						<label i18n lang-key="resTeacher">Giáo viên phụ trách</label>
 						<select name="teacher" id="" class="form-control" required>
-							<option value="" disabled selected>-- Chọn giáo viên phụ trách --</option>
+							<option i18n lang-key="chooseTeacher" value="" disabled selected>-- Chọn giáo viên phụ trách --</option>
 							<?php require '../../php/teacher/get_name.php'; ?>
 						</select>
 					</fieldset>
 					<button type="submit" class="btn btn-success">
-						<i class="fa fa-plus"></i> Thêm môn học
+						<i class="fa fa-plus"></i> <span i18n lang-key="addSub">Thêm môn học</span>
 					</button>
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Đóng</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> <span i18n lang-key="close">Đóng</span></button>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
@@ -124,14 +124,14 @@ if (isset($_GET['id'])) {
 	<div class="modal-dialog modal-xl" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title">Danh sách sinh viên đăng ký</h4>
+				<h4 class="modal-title" i18n lang-key="studentList">Danh sách sinh viên đăng ký</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
 			</div>
 			<div class="modal-body py-2">
 				<?php include '../../php/student/get_by_program_id.php' ?>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Đóng</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> <span i18n lang-key="close">Đóng</span></button>
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->

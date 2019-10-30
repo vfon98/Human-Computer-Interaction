@@ -15,11 +15,11 @@
 					<td>'.$i++.'</td>
 					<td>'.$row['sub_id'].'</td>
 					<td>'.$row['name'].'</td>
-					<td>
+					<td class="text-center">
 						<a href="/php/program/del_subject.php?p_id='.$p_id.'&s_id='.$row['id'].'" 
 							class="btn btn-danger js-btn-del"
 						>
-							<i class="fa fa-trash-o"></i> Xóa
+							<i class="fa fa-trash-o"></i> <span i18n lang-key="delete">Xóa</span>
 						</a>
 					</td>
 				</tr>';

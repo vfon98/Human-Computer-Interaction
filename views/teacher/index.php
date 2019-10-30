@@ -4,13 +4,13 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-md-5 col-sm-6">
+		<div class="col-lg-5">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h5 i18n lang-key="personalInfo">Thông tin cá nhân</h5>
 				</div>
 				<div class="card-body py-2">
-					<table class="table table-sm table-inverse table-hover table-borderless" id="table-student">
+					<table class="table table-responsive-lg table-sm table-inverse table-hover table-borderless" id="table-student">
 						<thead>
 						</thead>
 						<tbody>
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-7 col-sm-6">
+		<div class="col-lg-7">
 			<div class="card shadow">
 				<div class="card-header bg-info text-white">
 					<h5 class="text-center mb-0" i18n lang-key="resSubjects">Môn học phụ trách</h5>

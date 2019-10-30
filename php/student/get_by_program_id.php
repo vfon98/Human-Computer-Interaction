@@ -16,14 +16,14 @@
 <table class="table table-responsive-md table-inverse table-striped table-hover text-center m-0">
 	<thead>
 		<tr>
-			<th>STT</th>
-			<th>Họ tên</th>
-			<th>Ngày sinh</th>
+			<th i18n lang-key="no">STT</th>
+			<th i18n lang-key="fullName">Họ tên</th>
+			<th i18n lang-key="birthday">Ngày sinh</th>
 			<th>Email</th>
-			<th>Địa chỉ</th>
-			<th>Tên đăng nhập</th>
-			<th>Ngày nhập học</th>
-			<th>Trạng thái</th>
+			<th i18n lang-key="address">Địa chỉ</th>
+			<th i18n lang-key="username">Tên đăng nhập</th>
+			<th i18n lang-key="regTime">Ngày nhập học</th>
+			<th i18n lang-key="status">Trạng thái</th>
 		</tr>
 	</thead>
 	<tbody>

@@ -3,13 +3,13 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-md">
+		<div class="col-lg">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4 i18n lang-key="studyResult">Kết quả học tập</h4>
 				</div>
 				<div class="card-body pt-2 pb-1">
-					<table class="table table-responsive-md table-inverse table-hover table-striped text-center">
+					<table class="table table-responsive-lg table-inverse table-hover table-striped text-center">
 						<thead>
 							<tr>
 								<th i18n lang-key="no">STT</th>

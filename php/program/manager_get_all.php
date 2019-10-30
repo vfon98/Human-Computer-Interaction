@@ -9,7 +9,7 @@
 			echo
 			'<tr>
 				<td colspan="7" class="text-center text-danger">
-					<h5><strong>Bạn chưa thêm chương trình đào tạo !</strong></h5>
+					<h5><strong i18n lang-key="noPro">Bạn chưa thêm chương trình đào tạo !</strong></h5>
 				</td>
 			</tr>';
 		}
@@ -25,17 +25,17 @@
 					.number_format($row['tuition']).' &#8363;
 				</td>
 				<td>
-					<a href="/views/manager/program_detail.php?id='.$row['id'].'" class="btn btn-warning"><i class="fa fa-cog"></i> Quản lý
+					<a href="/views/manager/program_detail.php?id='.$row['id'].'" class="btn btn-warning"><i class="fa fa-cog"></i> <span i18n lang-key="manage">Quản lý</span>
 					</a>
 				</td>
 				<td>
 					<button class="btn btn-secondary js-btn-update"
 						onclick="passIdToModal('.$row['id'].')"
 						data-toggle="modal" data-target="#modal-update-program">
-							<i class="fa fa-wrench"></i> Sửa
+							<i class="fa fa-wrench"></i> <span i18n lang-key="update">Sửa</span>
 					</button>
 
-					<a href="/php/program/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del"><i class="fa fa-trash-o"></i> Xóa</a>
+					<a href="/php/program/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del"><i class="fa fa-trash-o"></i> <span i18n lang-key="delete">Xóa</span></a>
 				</td>
 			</tr>';
 		}

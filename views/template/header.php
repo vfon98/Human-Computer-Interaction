@@ -96,10 +96,10 @@
 							<a class="nav-link" href="/" i18n lang-key="home">Trang chủ</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle btn" role="button" data-toggle="dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fa fa-globe"></i> <span id="js-cur-lang">Tiếng Việt</span>
 							</a>
-							<div class="dropdown-menu dropdown-menu-right text-center">
+							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item m-0 btn" id="btn-change-lang"><i class="fa fa-fw fa-language mx-2"></i> <span id="js-toggle-lang">English</span>
 								</a>
 							</div>

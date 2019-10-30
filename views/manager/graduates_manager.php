@@ -3,23 +3,23 @@
 
 <div class="container-fluid p-3">
 	<div class="row">
-		<div class="col-md">
+		<div class="col-lg">
 			<div class="card shadow">
 				<div class="card-header bg-info text-white text-center pb-1">
-					<h4>Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
+					<h4 i18n lang-key="graduationStu">Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
 				</div>
 				<div class="card-body py-3 px-3">
-					<table class="table table-responsive-md table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
+					<table class="table table-responsive-lg table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
 						<thead>
-							<tr>
-								<th>STT</th>
-								<th>Họ tên</th>
-								<th>Ngày sinh</th>
+							<tr class="text-nowrap p-0">
+								<th i18n lang-key="no">STT</th>
+								<th i18n lang-key="fullName">Họ tên</th>
+								<th i18n lang-key="birthday">Ngày sinh</th>
 								<th>Email</th>
-								<th>Chương trình</th>
-								<th>Điểm TB</th>
-								<th>Xếp loại</th>
-								<th>Tùy chọn</th>
+								<th i18n lang-key="program">Chương trình</th>
+								<th i18n lang-key="avgMark">Điểm TB</th>
+								<th i18n lang-key="grade">Xếp loại</th>
+								<th i18n lang-key="option">Tùy chọn</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -37,8 +37,9 @@
 		$('#tbl-graduates').DataTable({
 			dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
 			ordering: false,
+            sorting: false,
 			language: {
-				url: "/assets/lang-vi.json"
+                url: "/assets/lang-vi.json"
 			}
 		});
 	});

@@ -2,16 +2,16 @@
 	function getGradeByMark($mark)
 	{
 		if ($mark >= 9 && $mark <= 10) {
-			return 'Xuất sắc';
+			return '<span i18n lang-key="excellent">Xuất sắc</span>';
 		}
 		else if ($mark >= 8) {
-			return 'Giỏi';
+			return '<span i18n lang-key="veryGood">Giỏi</span>';
 		}
 		else if ($mark >= 7) {
-			return 'Khá';
+			return '<span i18n lang-key="good">Khá</span>';
 		}
 		else {
-			return 'Trung bình';
+			return '<span i18n lang-key="average">Trung bình</span>';
 		}
 	}
 	if ($_SESSION['logged_role'] == 'manager') {
@@ -45,7 +45,7 @@
 				.'</td>
 				<td>
 					<button onclick="printDiploma('.$row['st_id'].')" class="btn btn-link">
-						<i class="fa fa-print"></i> In bằng tốt nghiệp
+						<i class="fa fa-print"></i> <span i18n lang-key="print">In bằng tốt nghiệp</span>
 					</button>
 				</td>
 			</tr>';

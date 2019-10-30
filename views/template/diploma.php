@@ -20,16 +20,16 @@
 	function getGradeByMark($mark)
 	{
 		if ($mark >= 9 && $mark <= 10) {
-			return 'Xuất sắc';
+			return '<span i18n lang-key="excellent">Xuất sắc</span>';
 		}
 		else if ($mark >= 8) {
-			return 'Giỏi';
+			return '<span i18n lang-key="veryGood">Giỏi</span>';
 		}
 		else if ($mark >= 7) {
-			return 'Khá';
+			return '<span i18n lang-key="good">Khá</span>';
 		}
 		else {
-			return 'Trung bình';
+			return '<span i18n lang-key="average">Trung bình</span>';
 		}
 	}
 ?>
@@ -38,53 +38,76 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="/assets/css/diploma.css">
-	<title>In bằng tốt nghiệp</title>
+	<title i18n lang-key="print">In bằng tốt nghiệp</title>
+    <script src="/assets/js/i18n.js"></script>
+    <script>
+    	$(document).ready(function() {
+    		let currentLang = getCurrentLang();
+    		if (currentLang && currentLang === 'en') {
+    		    changeLangEN();
+    		    let monthInNum = parseInt($('#month-in-num').text());
+    		    let monthInText = changeMonthToText(monthInNum);
+    		    $('#month-in-num').text(monthInText);
+    		}
+    	});
+    	function changeMonthToText(monthIndex) {
+    		const monthNames = ["January", "February", "March", "April", "May", "June",
+    		  "July", "August", "September", "October", "November", "December"
+    		];
+    		return monthNames[monthIndex-1];
+    	}
+    </script>
 </head>
 <body>
 	<div class="page">
         <div class="subpage">
-        	<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+        	<p i18n lang-key="nationalBrand">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
         	<br>
 			<strong>
-				<p>TRUNG TÂM ĐÀO TẠO LẬP TRÌNH VIÊN PTST</p>
-				<p>cấp</p>
+				<p i18n lang-key="centerName">TRUNG TÂM ĐÀO TẠO LẬP TRÌNH VIÊN PTST</p>
+				<p i18n lang-key="hasConferred">cấp</p>
 			</strong>
-        	<h1 style="color: red">BẰNG TỐT NGHIỆP</h1>
+        	<h1 i18n lang-key="diploma" style="color: red">BẰNG TỐT NGHIỆP</h1>
         	<h3 style="text-transform: uppercase"><strong><?php echo $row['p_name'] ?></strong></h3>
         	<br>
         	<table>
         		<tr>
-        			<td>Cho:</td>
+        			<td i18n lang-key="upon">Cho:</td>
         			<td><?php echo $row['st_name'] ?></td>
         		</tr>
         		<tr>
-        			<td>Ngày sinh:</td>
+        			<td i18n lang-key="DOB">Ngày sinh:</td>
         			<td><?php echo $row['birthday'] ?></td>
         		</tr>
         		<tr>
-        			<td>Năm tốt nghiệp:</td>
+        			<td i18n lang-key="yearOfGraduation">Năm tốt nghiệp:</td>
         			<td><?php echo $row['cur_year'] ?></td>
         		</tr>
         		<tr>
-        			<td>Điểm trung bình:</td>
+        			<td i18n lang-key="gpa">Điểm trung bình:</td>
         			<td><?php echo $row['avg_mark'] ?></td>
         		</tr>
         		<tr>
-        			<td>Xếp loại tốt nghiệp:</td>
+        			<td i18n lang-key="degreeClass">Xếp loại tốt nghiệp:</td>
         			<td><?php echo getGradeByMark($row['avg_mark']) ?></td>
         		</tr>
         		<tr>
-        			<td>Hình thức đào tạo:</td>
-        			<td>Chính quy</td>
+        			<td i18n lang-key="modeOfStudy">Hình thức đào tạo:</td>
+        			<td i18n lang-key="fulltime">Chính quy</td>
         		</tr>
         	</table>
         	<br> 
         	<div id="footer">
-        		<p>Cần Thơ, <?php echo 'ngày '.$row['cur_day'].' tháng '.$row['cur_month']. ' năm '.$row['cur_year'] ?></p>
+        		<p><span i18n lang-key="cantho">Cần Thơ</span>, <?php echo '<span i18n lang-key="dNone">ngày </span>'
+        			.$row['cur_day'].'<span i18n lang-key="dNone"> tháng</span> '
+        			.'<span id="month-in-num">'.$row['cur_month']. '</span><span i18n lang-key="dNone"> năm</span> '
+        			.$row['cur_year'] ?>
+        		</p>
         		<div id="footer--logo">
         			<img src="/assets/img/ptst_logo_edited.png" alt="Logo trung tâm PTST">
-        			<p><strong>Trung Tâm PTST</strong></p>
+        			<p><strong i18n lang-key="centerName">Trung Tâm PTST</strong></p>
         		</div>
         	</div>
         </div>    

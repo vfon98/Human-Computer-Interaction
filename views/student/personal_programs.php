@@ -3,7 +3,7 @@
 
 <div class="container-fluid pt-2">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-lg-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4 i18n lang-key="trainingPro">Chương trình đào tạo</h4>
@@ -14,7 +14,7 @@
 					>
 						<i class="fa fa-plus-circle"></i> <span i18n lang-key="regNewPro">Đăng ký mới CTDT</span>
 					</button>
-					<div class="table-responsive-md">
+					<div class="table-responsive-lg">
 						<table class="table table-sm table-inverse table-hover table-striped text-center">
 							<thead>
 								<tr>
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-lg-6">
 			<div class="card shadow">
 				<div class="card-header text-center pb-1 bg-info text-white">
 					<h4 i18n lang-key="partiCourses">Khóa đào tạo đã tham gia</h4>
