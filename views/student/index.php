@@ -114,10 +114,16 @@
 	$(document).ready(function() {
 		$(document).ready(function() {
 			$('#tbl-current-program').DataTable({
-				dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
+				dom: "<'row'<'col-md-4'l><'col-md-8'f>>tip",
 				ordering: false,
 				language: {
-					url: "/assets/lang-vi.json"
+					url: dtLangUrl
+				},
+				initComplete: function () {
+					// Change lang after dtTable loaded
+					if (sessionStorage.getItem('currentLang') === 'en') {
+						changeLangEN();
+					}
 				}
 			});
 		});

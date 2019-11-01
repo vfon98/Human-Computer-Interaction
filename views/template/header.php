@@ -57,6 +57,8 @@
 				$(this).toggleClass('fa-rotate-180');
 			});
 		});
+		// The url that define which language of data table to display
+		var dtLangUrl = "/assets/lang-vi.json";
 	</script>
 	<script src="/assets/js/i18n.js"></script>
 </head>

@@ -66,7 +66,7 @@
                 </div>
                 <div class="card-body py-2">
                     <div class="table-responsive-lg">
-                        <table class="text-center table table-inverse table-striped table-hover" id="tbl-programs">
+                        <table class="text-center table text-nowrap table-inverse table-striped table-hover" id="tbl-programs">
                             <thead>
                                 <tr>
                                     <th i18n lang-key="no">STT</th>
@@ -144,8 +144,21 @@
             ordering: false,
             language: {
                 url: "/assets/lang-vi.json"
+            },
+            initComplete: function () {
+                // Change lang after dtTable loaded
+                if (sessionStorage.getItem('currentLang') === 'en') {
+                    changeLangEN();
+                }
             }
         });
+
+        $('#js-toggle-lang').click(function() {
+            changeLocaleUnit();
+        });
+        if (sessionStorage.getItem('currentLang') === 'en') {
+            changeLocaleUnit();
+        }
 
         $('.js-btn-update').click(function() {
             let tr = $(this).closest('tr');
@@ -163,6 +176,17 @@
     });
     function passIdToModal(id) {
         $('#hidden-program-id').val(id.toString());
+    }
+    function changeLocaleUnit() {
+        $('#tbl-programs tr').each(function () {
+            let moneyRow = $(this).find('td').eq(4);
+            moneyRow.text(moneyRow.text().replace(/,/g, '.'));
+        });
+        $('#tbl-programs tr').each(function () {
+            let dateRow = $(this).find('td').eq(3);
+            let date = dateRow.text().split('/');
+            dateRow.text(date[2]+'/'+date[1]+'/'+date[0]);
+        });
     }
 </script>
 

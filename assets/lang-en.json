@@ -1,0 +1,16 @@
+{
+	"sProcessing":   "Processing...",
+	"sLengthMenu":   "<span class='text-secondary'>Show _MENU_ entries</span>",
+	"sZeroRecords":  "<h5 class='text-danger'>No matching record found !</h5>",
+	"sInfo":         "Showing <b>_END_</b> of <b>_TOTAL_</b> entries",
+	"sInfoEmpty":    "Empty !",
+	"sInfoFiltered": "(filtered from _MAX_ entries)",
+	"sInfoPostFix":  "",
+	"sSearch":       "<span class='text-secondary'>Search:</span>",
+	"oPaginate": {
+		"sFirst":    "First",
+		"sLast":     "Last",
+		"sPrevious": "<i class='fa fa-chevron-left'></i>",
+		"sNext":     "<i class='fa fa-chevron-right'></i>"
+	}
+}

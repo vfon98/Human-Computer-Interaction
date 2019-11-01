@@ -32,10 +32,10 @@
 			ajaxGetStudentList(s_id);
 		});
 		<?php
-		if (isset($_GET['s_id'])) {
-			$s_id = $_GET['s_id'];
-			echo "ajaxGetStudentList($s_id);";
-		}
+			if (isset($_GET['s_id'])) {
+				$s_id = $_GET['s_id'];
+				echo "ajaxGetStudentList($s_id);";
+			}
 		?>
 	});
 	
@@ -44,7 +44,9 @@
 			s_id: s_id
 		}).then(res => {
 			$('#ajax-content').html(res);
-			$('#btn-change-lang').trigger('click');
+			if (sessionStorage.getItem('currentLang') === 'en') {
+				changeLangEN();
+			}
 		});
 	}
 </script>

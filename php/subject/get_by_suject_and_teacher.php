@@ -55,11 +55,11 @@
 				echo
 				'<tr class="bg-light">
 					<td colspan="3" class="text-left text-danger pl-3">
-						<i>* Sinh viên đăng ký thi lại</i>
+						<i i18n lang-key="retestStu">* Sinh viên đăng ký thi lại</i>
 					</td>
-					<td colspan="1" class="text-center" id="js-btn-cell">
+					<td colspan="1" class="text-center text-nowrap" id="js-btn-cell">
 						<button type="button" class="btn btn-danger" id="btn-grading" onclick="enableGradingMode()">
-							<i class="fa fa-lg fa-pencil-square-o"></i> <span i18n lang-key="grade">Chấm điểm</span>
+							<i class="fa fa-lg fa-pencil-square-o"></i> <span i18n lang-key="gradeNow">Chấm điểm</span>
 						</button>
 					</td>
 				</tr>';
@@ -70,7 +70,7 @@
 					<td colspan="3" class="text-left text-danger pl-3">
 						<i i18n lang-key="retestStu">* Sinh viên đăng ký thi lại</i>
 					</td>
-					<td colspan="1" class="text-center" id="js-btn-cell">
+					<td colspan="1" class="text-center text-nowrap" id="js-btn-cell">
 						<button type="button" class="btn btn-dark" id="btn-grading" onclick="enableChangeMode()">
 							<i class="fa fa-lg fa-wrench"></i> <span i18n lang-key="changeMark">Sửa điểm</span>
 						</button>
@@ -91,10 +91,11 @@
 				min="0" max="10" step=".1" value="5" required/>`
 		);
 		$('#js-btn-cell').html(
-			`<button type="submit" class="btn btn-success mr-1"><i class="fa fa-check"></i> Lưu</button>
+			`<button type="submit" class="btn btn-success mr-1"><i class="fa fa-check"></i> <div i18n lang-key="save">Lưu</div></button>
 			<button type="button" onclick="cancelGradingMode()" class="btn btn-danger" id="btn-cancel"><i class="fa fa-times"></i> <span i18n lang-key="cancel">Hủy</span></button>`
 		);
 		$('.inp-mark').eq(0).focus().select();
+		changeLangAfterClick();
 	}
 	function enableChangeMode() {
 		$('#form-grading').attr('action', '/php/student/change_mark_by_subject.php');
@@ -119,28 +120,37 @@
 			<button type="button" onclick="cancelChangeMode()" class="btn btn-danger" id="btn-cancel"><i class="fa fa-times"></i> <span i18n lang-key="cancel">Hủy</span></button>`
 		);
 		$('.inp-mark').eq(0).focus().select();
+		changeLangAfterClick();
 	}
 	function cancelGradingMode() {
 		$('.js-mark-cell').html(
-			'Chưa có'
+			'<span i18n lang-key="none">Chưa có</span>'
 		);
 		$('#js-btn-cell').html(
 			`<button type="button" class="btn btn-danger" id="btn-grading" onclick="enableGradingMode()">
-				<i class="fa fa-lg fa-pencil-square-o"></i> Chấm điểm
+				<i class="fa fa-lg fa-pencil-square-o"></i> <span i18n lang-key="gradeNow">Chấm điểm</span>
 			</button>`
 		);
+		changeLangAfterClick();
 	}
 	function cancelChangeMode() {
 		$('.js-mark-cell').each(function(index, el) {
 			if (!isNaN(arr_mark[index]))
 				$(this).text(arr_mark[index]);
 			else
-				$(this).text('Chưa có');
+				$(this).text('<span i18n lang-key="none">Chưa có</span>');
 		});
 		$('#js-btn-cell').html(
 			`<button type="button" class="btn btn-dark" id="btn-grading" onclick="enableChangeMode()">
-				<i class="fa fa-lg fa-wrench"></i> Sửa điểm
+				<i class="fa fa-lg fa-wrench"></i> <span i18n lang-key="changeMark">Sửa điểm</span>
 			</button>`
 		);
+		changeLangAfterClick();
+	}
+
+	function changeLangAfterClick() {
+		if (sessionStorage.getItem('currentLang') === 'en') {
+			changeLangEN();
+		}
 	}
 </script>

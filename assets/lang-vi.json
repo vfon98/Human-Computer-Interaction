@@ -1,16 +1,16 @@
 {
-					"sProcessing":   "Đang xử lý...",
-				    "sLengthMenu":   "<span class='text-secondary'>Số dòng mỗi trang:</span> _MENU_",
-				    "sZeroRecords":  "<h5 class='text-danger'>Không tìm thấy dòng nào phù hợp !</h5>",
-				    "sInfo":         "Đang xem <b>_END_</b> trong tổng số <b>_TOTAL_</b> mục",
-				    "sInfoEmpty":    "Không có mục nào !",
-				    "sInfoFiltered": "(được lọc từ _MAX_ mục)",
-				    "sInfoPostFix":  "",
-				    "sSearch":       "<span class='text-secondary'>Tìm kiếm:</span>",
-				    "oPaginate": {
-				       "sFirst":    "Đầu",
-				       "sLast":     "Cuối",
-				       "sPrevious": "<i class='fa fa-chevron-left'></i>",
-				       "sNext":     "<i class='fa fa-chevron-right'></i>"
-				    }
-				}
+	"sProcessing":   "<span i18n lang-key='dtProcessing'>Đang xử lý...</span>",
+	"sLengthMenu":   "<span class='text-secondary' i18n lang-key='dtRowPerPage'>Số dòng mỗi trang:</span> _MENU_ <span class='text-secondary' i18n lang-key='dtEntries'></span>",
+	"sZeroRecords":  "<h5 class='text-danger' i18n lang-key='dtNotFound'>Không tìm thấy dòng nào phù hợp !</h5>",
+	"sInfo":         "<span i18n lang-key='dtShowing'>Đang xem</span> <b>_END_</b> <span i18n lang-key='of'>trong tổng số</span> <b>_TOTAL_</b> <span i18n lang-key='dtEntries'>mục</span>",
+	"sInfoEmpty":    "<span i18n lang-key='dtNotFound'>Không có mục nào !</span>",
+	"sInfoFiltered": "(<span i18n lang-key='dtFilteredFrom'>được lọc từ</span> _MAX_ <span i18n lang-key='dtEntries'>mục</span>)",
+	"sInfoPostFix":  "",
+	"sSearch":       "<span class='text-secondary' i18n lang-key='dtSearch'>Tìm kiếm:</span>",
+	"oPaginate": {
+		"sFirst":    "<span i18n lang-key='dtFirst'>Đầu</span>",
+		"sLast":     "<span i18n lang-key='dtLast'>Cuối</span>",
+		"sPrevious": "<i class='fa fa-chevron-left'></i>",
+		"sNext":     "<i class='fa fa-chevron-right'></i>"
+	}
+}

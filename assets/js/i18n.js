@@ -19,6 +19,7 @@ let langEN = {
     // Basic
     home: 'Home',
     none: 'None',
+    gradeNow: 'Grade now',
     save: 'Save',
     back: 'Back',
     years: 'Years',
@@ -136,6 +137,7 @@ let langEN = {
     addSubToPro: 'Add subject to program',
     updatePro: 'Update program information',
     updateSub: 'Update subject information',
+    requestGraduation: 'Graduation request',
     // User pages
     login: 'Log in',
     noRegistered: 'Do not registered ?',
@@ -184,6 +186,17 @@ let langEN = {
     gpa: 'GPA:',
     cantho: 'Can Tho',
     dNone: '',
+    // DATA TABLE i18n
+    dtEntries: 'entries',
+    dtRowPerPage: 'Showing',
+    dtSearch: 'Search:',
+    dtNotFound: 'No matching record found !',
+    dtShowing: 'Showing',
+    of: 'of',
+    dtProcessing: 'Processing...',
+    dtFilteredFrom: 'Filtered from',
+    dtFirst: 'First',
+    dtLast: 'Last',
 }
 
 function getCurrentLang() {

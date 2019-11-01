@@ -9,7 +9,7 @@
 					<h4 i18n lang-key="graduationStu">Danh sách sinh viên đủ điều kiện tốt nghiệp</h4>
 				</div>
 				<div class="card-body py-3 px-3">
-					<table class="table table-responsive-lg table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
+					<table class="table table-responsive-lg text-nowrap table-inverse table-sm table-hover table-striped text-center mb-0" id="tbl-graduates">
 						<thead>
 							<tr class="text-nowrap p-0">
 								<th i18n lang-key="no">STT</th>
@@ -39,10 +39,30 @@
 			ordering: false,
             sorting: false,
 			language: {
-                url: "/assets/lang-vi.json"
+                url: dtLangUrl
+			},
+			initComplete: function () {
+				// Change lang after dtTable loaded
+				if (sessionStorage.getItem('currentLang') === 'en') {
+					changeLangEN();
+				}
 			}
 		});
+
+		$('#js-toggle-lang').click(function() {
+		    changeLocaleUnit();
+		});
+		if (sessionStorage.getItem('currentLang') === 'en') {
+		    changeLocaleUnit();
+		}
 	});
+	function changeLocaleUnit() {
+	    $('#tbl-graduates tr').each(function () {
+	        let dateRow = $(this).find('td').eq(2);
+	        let date = dateRow.text().split('/');
+	        dateRow.text(date[2]+'/'+date[1]+'/'+date[0]);
+	    });
+	}
 </script>
 
 <?php include '../template/footer.php'; ?>

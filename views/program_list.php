@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	
 	<style>
 		ul.pagination {
 			display: flex;
@@ -161,9 +162,33 @@
 				dom: "<'row'<'col-md-6'l><'col-md-6'f>>tip",
 				language: {
 					url: "/assets/lang-vi.json"
+				},
+				initComplete: function () {
+					// Change lang after dtTable loaded
+					if (sessionStorage.getItem('currentLang') === 'en') {
+						changeLangEN();
+					}
 				}
 			});
+
+			$('#js-toggle-lang').click(function() {
+				changeLocaleUnit();
+			});
+			if (sessionStorage.getItem('currentLang') === 'en') {
+				changeLocaleUnit();
+			}
 		});
+		function changeLocaleUnit() {
+			$('#tbl-program tr').each(function () {
+				let moneyRow = $(this).find('td').eq(4);
+				moneyRow.text(moneyRow.text().replace(/,/g, '.'));
+			});
+			$('#tbl-program tr').each(function () {
+				let dateRow = $(this).find('td').eq(3);
+				let date = dateRow.text().split('/');
+				dateRow.text(date[2]+'/'+date[1]+'/'+date[0]);
+			});
+		}
 	</script>
 	<script>
 		function ajaxGetDetail(id) {

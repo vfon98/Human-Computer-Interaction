@@ -68,7 +68,7 @@
 				<?php
 				if ($passed_nums === $subjects_nums) {
 					if (!$is_graduated) {
-						echo '<button id="btn-graduation" type="button" class="btn btn-info"><i class="fa fa-paper-plane"></i> Xét tốt nghiệp</button>';
+						echo '<button id="btn-graduation" type="button" class="btn btn-info"><i class="fa fa-paper-plane"></i> <span i18n lang-key="requestGraduation">Xét tốt nghiệp</span></button>';
 					}
 					else {
 						echo '<button class="btn btn-danger" disabled><i class="fa fa-check-circle"></i> Đã xét tốt nghiệp</button>';

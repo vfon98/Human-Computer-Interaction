@@ -111,20 +111,21 @@
 
 <script>
 	$(document).ready(function() {
-		var dtConfig = {
-			dom: "<'.row'<'.col-lg-6'l><'.col-lg-6'f>>tip",
+		let dtConfig = {
+			dom: "<'.row'<'.col-lg-4'l><'.col-lg-8'f>>tip",
 			ordering: true,
 			language: {
-				url: "/assets/lang-vi.json"
+				url: dtLangUrl
+			},
+			initComplete: function () {
+				// Change lang after dtTable loaded
+				if (sessionStorage.getItem('currentLang') === 'en') {
+					changeLangEN();
+				}
 			}
 		};
+		// let dtConfigEN = {...dtConfig, language: {}};
 		let dtTable = $('#tbl-account').dataTable(dtConfig);
-		$('#js-test-click').click(function() {
-			console.log("kjfl");
-			dtTable.fnDestroy();
-		    dtTable = null;
-			dtTable = $('#tbl-account').DataTable();
-		});
 	});
 </script>
 
