@@ -1,4 +1,9 @@
 <?php
+	// $host = 'localhost';
+	// $username = 'id11207168_root';
+	// $pass = '123456';
+	// $db = 'id11207168_education_program';
+
 	$host = 'localhost';
 	$username = 'root';
 	$pass = '';

@@ -24,7 +24,7 @@
 							</tr>
 							<tr>
 								<td i18n lang-key="birthday">Ngày sinh: </td>
-								<td><?php echo $row['birthday'] ?></td>
+								<td id="js-birthday"><?php echo $row['birthday'] ?></td>
 							</tr>
 							<tr>
 								<td>Email: </td>
@@ -112,22 +112,31 @@
 
 <script>
 	$(document).ready(function() {
-		$(document).ready(function() {
-			$('#tbl-current-program').DataTable({
-				dom: "<'row'<'col-md-4'l><'col-md-8'f>>tip",
-				ordering: false,
-				language: {
-					url: dtLangUrl
-				},
-				initComplete: function () {
-					// Change lang after dtTable loaded
-					if (sessionStorage.getItem('currentLang') === 'en') {
-						changeLangEN();
-					}
+		$('#tbl-current-program').DataTable({
+			dom: "<'row'<'col-xl-4'l><'col-xl-8'f>>tip",
+			ordering: false,
+			language: {
+				url: dtLangUrl
+			},
+			initComplete: function () {
+				// Change lang after dtTable loaded
+				if (sessionStorage.getItem('currentLang') === 'en') {
+					changeLangEN();
 				}
-			});
+			}
 		});
+		$('#js-toggle-lang').click(function() {
+			changeLocaleUnit();
+		});
+		if (sessionStorage.getItem('currentLang') === 'en') {
+			changeLocaleUnit();
+		}
 	});
+	function changeLocaleUnit() {
+		let aOldDate = $('#js-birthday').text().split("/");
+		let newDate = aOldDate[2]+'/'+aOldDate[1]+'/'+aOldDate[0];
+		$('#js-birthday').text(newDate);
+	}
 </script>
 
 <?php include '../template/footer.php'; ?>

@@ -37,7 +37,7 @@
                         </fieldset>
                         <fieldset class="form-group">
                             <label i18n lang-key="beginDate">Ngày bắt đầu</label>
-                            <input name="begin-at" type="date" class="form-control">
+                            <input name="begin-at" type="date" class="form-control" required>
                         </fieldset>
                         <fieldset class="form-group">
                             <label i18n lang-key="tuition">Học phí</label>

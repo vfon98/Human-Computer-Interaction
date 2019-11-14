@@ -188,6 +188,10 @@
 				let date = dateRow.text().split('/');
 				dateRow.text(date[2]+'/'+date[1]+'/'+date[0]);
 			});
+			$('#tbl-program tr').each(function () {
+				let durationRow = $(this).find('td').eq(2);
+				durationRow.text(durationRow.text().replace(/năm/g, 'years'));
+			});
 		}
 	</script>
 	<script>

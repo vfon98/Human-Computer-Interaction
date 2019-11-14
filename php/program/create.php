@@ -10,6 +10,6 @@
 		$sql = "INSERT INTO programs (name, duration, begin_at, tuition, manager_acc) 
 			VALUES ('$name', '$duration', '$begin_at', '$tuition', '$manager_acc')";
 		$conn->query(htmlspecialchars($sql));
-		header("location: ".$_SERVER['HTTP_REFERER']);
+		header('location: '.parse_url($_SERVER['HTTP_REFERER'])['path'].'?m=add');
 	}
 ?>

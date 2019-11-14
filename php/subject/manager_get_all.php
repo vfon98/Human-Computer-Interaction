@@ -14,12 +14,12 @@
 				<td>'.$row['s_name'].'</td>
 				<td>'.$row['t_name'].'</td>
 				<td>
-					<button class="btn btn-secondary js-btn-update mb-1 js-btn-update"
+					<button class="btn btn-secondary js-btn-update js-btn-update"
 						data-toggle="modal" data-target="#modal-subject"
 						data-t-id="'.$row['t_id'].'"><i class="fa fa-wrench"></i> <span i18n lang-key="update">Sửa</span></button>
 
 					<a href="/php/subject/delete.php?id='.$row['id'].'" class="btn btn-danger js-btn-del">
-						<i class="fa fa-trash-o"></i> <span i18n lang-key="delete">xóa</span>
+						<i class="fa fa-trash-o"></i> <span i18n lang-key="delete">Xóa</span>
 					</a>
 				</td>
 			</tr>';
